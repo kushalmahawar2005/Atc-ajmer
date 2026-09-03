@@ -1,0 +1,75 @@
+/* ================================================================
+   ATC — DESIGN TOKENS (single source of truth)
+   Ported from the live site's css/tokens.css. Raw values (hex
+   colours, sizes, font names) belong here and nowhere else.
+   ================================================================ */
+
+:root {
+  /* 1. BRAND COLOURS */
+  --primary: #00374c;
+  --primary-dark: #002a3a;
+  --primary-light: #eaf5f8;
+  --primary-bright: #075f7f;
+  --header-bg: #00374c;
+
+  /* 2. NEUTRALS */
+  --navy: #0f172a;
+  --navy-mid: #1e293b;
+  --bg: #f8fafc;
+  --bg-warm: #f3f9fb;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --border-warm: #c9e3ea;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+
+  /* 3. SEMANTIC STATE COLOURS */
+  --success: #1c9d5b;
+  --warning: #f57f17;
+  --danger: #c62828;
+  --info: #2563eb;
+
+  /* 4. TYPOGRAPHY */
+  --font-heading: var(--font-merriweather), Georgia, serif;
+  --font-body: var(--font-inter), "Segoe UI", system-ui, sans-serif;
+  --font-hindi: var(--font-noto-devanagari), var(--font-inter), sans-serif;
+
+  /* 5. TYPE SCALE */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.25rem;
+
+  /* 6. SPACING SCALE */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-4-5: 30px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+
+  /* 7. BORDER RADIUS */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 18px;
+  --radius-pill: 999px;
+
+  /* 8. ELEVATION */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.14);
+
+  /* 9. MOTION */
+  --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* 10. LAYOUT — fixed site-header height */
+  --header-h: 78px;
+  --header-h-mobile: 68px;
+}

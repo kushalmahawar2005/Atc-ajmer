@@ -1,0 +1,335 @@
+/* ================================================================
+   HEADER — ported from the live site's global.css header section.
+   ================================================================ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: var(--header-bg);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.inner {
+  /* Full-bleed row: no max-width cap, so the logo hugs the true left
+     edge of the bar on wide desktops. */
+  padding: 0 28px;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+/* --- Logo --- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand img {
+  height: 58px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* --- Phone numbers, immediately right of the logo --- */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.contact span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.88);
+  white-space: nowrap;
+  line-height: 1.6;
+}
+
+/* --- Mobile toggle --- */
+.navToggle {
+  display: none;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: background var(--transition);
+  color: #fff;
+}
+
+.navToggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.toggleLabel {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.toggleBars {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toggleBars span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+
+/* --- Desktop right area --- */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* --- Desktop nav --- */
+.nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  display: block;
+  padding: 12px 11px;
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: color var(--transition);
+  position: relative;
+  white-space: nowrap;
+  letter-spacing: 0.1px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.85);
+  transition: width var(--transition);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+.navLink:hover::after {
+  width: 70%;
+}
+
+/* Dropdown arrow */
+.navArrow {
+  display: inline-block;
+  font-size: 9px;
+  margin-left: 3px;
+  transition: transform var(--transition);
+  vertical-align: middle;
+}
+
+.dropdown:hover .navArrow,
+.dropdown:focus-within .navArrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown panel */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--surface);
+  min-width: 230px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.18s ease;
+  box-shadow: var(--shadow-lg);
+  border-radius: 0 0 var(--radius) var(--radius);
+  border-top: 3px solid var(--header-bg);
+  z-index: 200;
+}
+
+.dropdown:hover .dropdownMenu,
+.dropdown:focus-within .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdownMenu li a {
+  display: block;
+  padding: 9px 16px;
+  color: var(--navy-mid);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition:
+    background var(--transition),
+    color var(--transition),
+    padding-left var(--transition);
+  border-left: 3px solid transparent;
+}
+
+.dropdownMenu li a:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-left-color: var(--primary);
+  padding-left: 22px;
+}
+
+/* Download App button */
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 12.5px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  transition: all var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 6px;
+  letter-spacing: 0.2px;
+}
+
+.downloadBtn:hover {
+  background: rgba(255, 255, 255, 0.26);
+  border-color: rgba(255, 255, 255, 0.75);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Language toggle --- */
+.langWrap {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.langBtn {
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--font-body);
+  transition: all var(--transition);
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.langBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.langBtnActive {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.langNote {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
+.langSep {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  user-select: none;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 1024px) {
+  .navLink {
+    padding: 12px 8px;
+    font-size: 12.5px;
+  }
+
+  .contact {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    height: var(--header-h-mobile);
+    padding: 0 14px;
+  }
+
+  .brand img {
+    height: 46px;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .navToggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand img {
+    height: 44px;
+  }
+}

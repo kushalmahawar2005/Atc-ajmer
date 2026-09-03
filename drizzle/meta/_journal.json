@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1788352519163,
+      "tag": "0000_parallel_sunfire",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1788353550901,
+      "tag": "0001_reflective_risque",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1788354471303,
+      "tag": "0002_mute_eternity",
+      "breakpoints": true
+    }
+  ]
+}

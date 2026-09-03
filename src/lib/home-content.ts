@@ -1,0 +1,228 @@
+/**
+ * Home page content, mirroring the live site.
+ *
+ * These are the values the DB tables in `src/db/schema.ts` will eventually
+ * serve; keeping them in one module means swapping in a query later touches
+ * only the page, not the section components.
+ */
+
+export const sliderImages = [
+  { src: "/images/slider/slider1.jpeg", alt: "ATC" },
+  { src: "/images/slider/slider3.jpeg", alt: "ATC" },
+  { src: "/images/slider/slider4.jpeg", alt: "ATC" },
+  { src: "/images/slider/slider5.jpeg", alt: "ATC" },
+];
+
+export const stats = [
+  { number: "19+", label: "Years of Excellence" },
+  { number: "36", label: "In Top 50 — RAS 2024" },
+  { number: "72", label: "In Top 100 — RAS 2024" },
+  { number: "72", label: "In Top 100 — RAS 2023" },
+];
+
+export const newBatches = [
+  "RAS Foundation - 11 August 2026",
+  "RAS Pre / PSI - 14 July 2026",
+  "IAS & RAS Integrated Batch - 16 June 2026",
+  "IAS Foundation Batch - 16 June 2026",
+];
+
+export const enrollFeatures = [
+  "✓ Offline & Online Modes",
+  "✓ Hindi & English Medium",
+  "✓ Expert Faculty",
+];
+
+export const homeCourses = [
+  {
+    href: "/courses/ias-foundation",
+    image: "/images/ias-foundation.jpeg",
+    title: "IAS Foundation Course",
+    description:
+      "This foundation course prepares you for the UPSC civil services exam for all its stages including IAS Prelims + Mains + Interview. There will be regular tests for both subjective and objective exams inclusive of extensive guidance for CSAT paper.",
+  },
+  {
+    href: "/courses/ras-foundation",
+    image: "/images/ras-foundation-course.jpeg",
+    title: "RAS Foundation Course",
+    description:
+      "Starting with the basics of all the subjects covering entire syllabus of RAS exam this foundation course prepares you for RAS Prelims Mains and Interview. Join this course to join the most prestigious services of Rajasthan.",
+  },
+  {
+    href: "/courses/rajasthan-psi",
+    image: "/images/rajasthan-psi.jpg",
+    title: "Rajasthan PSI Course",
+    description:
+      "Classroom and Online course for the complete preparation of Rajasthan PSI exam. Objective Test series with latest current affairs also included.",
+  },
+  {
+    href: "/courses/ias-ras-integrated",
+    image: "/images/integrated-course.jpg",
+    title: "IAS RAS 3 Years Integrated Course",
+    description:
+      "Three Years Integrated Course for the Preparation of UPSC and RPSC Exams Along with Graduation.",
+  },
+  {
+    href: "/courses/test-series",
+    image: "/images/test-series.jpeg",
+    title: "Test Series Programs",
+    description:
+      "Subjective and Objective Test series program for the preparation of IAS Prelims and IAS Mains exam.",
+  },
+  {
+    href: "/courses/ias-ras-interview",
+    image: "/images/interview.jpeg",
+    title: "Interview Guidance Program",
+    description:
+      "This Exclusive Course for Interview Guidance and Mock Interview Programs Prepares you for Interviews of IAS, RAS and PSI Exams.",
+  },
+];
+
+export const whyChooseUs = [
+  {
+    title: "Expert Faculty:",
+    body: "Learn from our experienced faculties in respective subjects.",
+  },
+  { title: "Comprehensive Coverage:", body: "Complete syllabus with regular updates" },
+  {
+    title: "Proven Results:",
+    body: "Highest number selections in last 19 years (72 in Top 100 in RAS 2023)",
+  },
+  { title: "Personalized Mentorship:", body: "One-on-one guidance sessions" },
+  { title: "Study Material:", body: "High-quality notes and practice questions" },
+  { title: "Test Series:", body: "All India mock tests with detailed analysis" },
+];
+
+export const quickLinks: { label: string; href: string; external?: boolean }[] = [
+  { label: "Knowledge Base For IAS & RAS Exams", href: "/knowledge-base" },
+  { label: "Our Past Selections", href: "/about/selections" },
+  { label: "NCERT Books PDF Download", href: "/content/ncert-pdf-download" },
+  {
+    label: "Rajasthan Sujas Download",
+    href: "https://dipr.rajasthan.gov.in/pages/sm/government-order/attachments/134/85/10/1702",
+    external: true,
+  },
+  { label: "Economic Survey (Raj & India)", href: "/content/economic-survey" },
+  { label: "UPSC Exam Resources", href: "/content/ias-exam-resources" },
+  { label: "RAS Exam Resources", href: "/content/ras-exam-resources" },
+];
+
+export const appDownloads = [
+  {
+    href: "https://appx-content-v2.classx.co.in/windows/Springboard_Academy%20UHS5%20Setup%200.0.3%20(1).zip",
+    icon: "fab fa-windows",
+    sub: "Download for",
+    name: "Windows",
+  },
+  {
+    href: "https://appx-content-v2.classx.co.in/windows/Spring_Board Academy-0.0.1.dmg",
+    icon: "fab fa-apple",
+    sub: "Download for Mac",
+    name: "Intel Chip",
+  },
+  {
+    href: "https://drive.usercontent.google.com/download?id=11hF7B3Ghgw_kJH0VDHdQdw2DVEEmr1ef&export=download&authuser=0",
+    icon: "fab fa-apple",
+    sub: "Download for Mac",
+    name: "Apple Chip (M1/M2)",
+  },
+  {
+    href: "https://play.google.com/store/apps/details?id=spring.board.acs&pcampaignid=web_share&pli=1",
+    icon: "fab fa-google-play",
+    sub: "Get it on",
+    name: "Google Play",
+  },
+  {
+    href: "https://apps.apple.com/in/app/springboard-academy-jaipur/id6444765712",
+    icon: "fab fa-app-store-ios",
+    sub: "Download on the",
+    name: "App Store",
+  },
+];
+
+export const videos = [
+  {
+    id: "eytXGJE1cjo",
+    image: "/images/toppers-meet.jpeg",
+    alt: "71 Toppers of RAS 2023",
+    title: "71 Toppers of RAS 2023 Share their Strategy",
+  },
+  {
+    id: "jQBMFpfi4vA",
+    image: "/images/syllabus.jpeg",
+    alt: "Overview of RAS Syllabus Change",
+    title: "Overview of RAS Syllabus Change",
+  },
+  {
+    id: "-EXJhpM_8Wc",
+    image: "/images/daf-guidance.jpeg",
+    alt: "How to Fill DAF for RAS Interview",
+    title: "How to Fill DAF for RAS Interview - Vijay Sir",
+  },
+];
+
+export const socialLinks = [
+  {
+    key: "instagram",
+    href: "https://www.instagram.com/springboardacademyofficial?igsh=bHV6bmU3dmU5MjMy",
+    title: "Instagram",
+    icon: "fab fa-instagram",
+  },
+  {
+    key: "facebook",
+    href: "https://www.facebook.com/SpringboardAcademyOfficial/?rdid=oN2YJ52jVK8uDxX8",
+    title: "Facebook",
+    icon: "fab fa-facebook-f",
+  },
+  {
+    key: "youtube",
+    href: "https://www.youtube.com/@SpringboardAcademyOnline",
+    title: "YouTube",
+    icon: "fab fa-youtube",
+  },
+  {
+    key: "telegram",
+    href: "https://t.me/springboard1953",
+    title: "Telegram",
+    icon: "fab fa-telegram-plane",
+  },
+  {
+    key: "whatsapp",
+    href: "https://whatsapp.com/channel/0029VamJmZx0LKZDSXXq7D2n",
+    title: "WhatsApp Channel",
+    icon: "fab fa-whatsapp",
+  },
+];
+
+export const footerColumns = [
+  {
+    heading: "About Us",
+    links: [
+      { label: "About Institute", href: "/about" },
+      { label: "Ajmer Centre", href: "/about/ajmer-centre" },
+      { label: "Contact Us", href: "/about/contact" },
+      { label: "Our Past Selections", href: "/about/selections" },
+    ],
+  },
+  {
+    heading: "Test Series",
+    links: [
+      { label: "IAS Prelims & Mains", href: "/courses/ias-test-series" },
+      { label: "RAS Prelims & Mains", href: "/courses/ras-test-series" },
+      { label: "Rajasthan PSI", href: "/courses/psi-test-series" },
+      { label: "All Test Series", href: "/courses/test-series" },
+    ],
+  },
+  {
+    heading: "Our Courses",
+    links: [
+      { label: "IAS Foundation Course", href: "/courses/ias-foundation" },
+      { label: "RAS Foundation Course", href: "/courses/ras-foundation" },
+      { label: "Rajasthan PSI & RAS Pre", href: "/courses/rajasthan-psi" },
+      { label: "View All Courses", href: "/courses" },
+    ],
+  },
+];
+
+export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@SpringboardAcademyOnline";
+export const WHATSAPP_CHAT_URL = "https://wa.me/918955577492";

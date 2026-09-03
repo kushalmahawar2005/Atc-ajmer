@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+@import "../styles/components.css";
+
+/* Expose the design tokens to Tailwind utilities too. */
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-navy: var(--navy);
+  --color-surface: var(--surface);
+  --color-muted: var(--text-muted);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-heading);
+}
+
+/* ----------------------------------------------------------------
+   RESET & BASE — mirrors the live site's global.css
+   ---------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* The site is light-only; stop Chrome's auto dark mode from inverting it. */
+  color-scheme: only light;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Offsets the public site's fixed header. The admin panel has its own
+   layout and sits outside this wrapper. */
+.site-shell {
+  padding-top: var(--header-h);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+@media (max-width: 768px) {
+  .site-shell {
+    padding-top: var(--header-h-mobile);
+  }
+}

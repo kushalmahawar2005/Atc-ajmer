@@ -301,7 +301,7 @@
 .eq-drawer.open { right: 0; }
 
 .eq-drawer-head {
-    background: #F48232;
+    background: linear-gradient(130deg, #002532 0%, #00374c 45%, var(--primary-dark) 100%);
     padding: 16px 18px 14px;
     flex-shrink: 0;
     position: sticky;

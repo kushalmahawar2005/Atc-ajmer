@@ -12,7 +12,7 @@ export default function manifest(): MetadataRoute.Manifest {
     display: "standalone",
     orientation: "portrait",
     background_color: "#ffffff",
-    theme_color: "#F48232",
+    theme_color: "#00374C",
     lang: "en-IN",
     categories: ["education"],
     icons: [{ src: "/images/atc-logo.png", sizes: "1254x1254", type: "image/png", purpose: "any" }],

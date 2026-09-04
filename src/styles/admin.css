@@ -494,7 +494,7 @@
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: #F48232;
+  background: linear-gradient(135deg, #001f2b 0%, #002d3d 45%, var(--primary-dark) 100%);
 }
 
 .adm-login-card {

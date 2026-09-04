@@ -346,7 +346,7 @@ a.btnbg:hover { background: var(--primary-dark); color: #fff; }
     align-items: center;
     gap: 12px;
     padding: 16px 14px;
-    background: #F48232;
+    background: linear-gradient(130deg, #001f2b 0%, #002d3d 45%, var(--primary-dark) 100%);
     border-radius: var(--radius) var(--radius) 0 0;
     text-decoration: none;
     transition: filter var(--transition);
@@ -744,7 +744,7 @@ a.btnbg:hover { background: var(--primary-dark); color: #fff; }
 }
 
 .download-card:hover {
-    background: #F48232;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #002a3a 100%);
     transform: translateY(-3px);
     box-shadow: 0 10px 32px rgba(0,55,76,0.48);
     color: #fff;

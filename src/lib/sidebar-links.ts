@@ -46,7 +46,6 @@ export const sidebarSections = [
     links: [
       { label: "Our Past Selections", href: "/about/selections" },
       { label: "Our Teachers", href: "/about/teachers" },
-      { label: "Download App", href: "/about/springboard-app" },
       { label: "Contact Us", href: "/about/contact" },
     ],
   },

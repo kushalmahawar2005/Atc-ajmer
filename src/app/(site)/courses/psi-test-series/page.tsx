@@ -50,7 +50,7 @@ Additionally, we provide personal mentorship to every aspirant. Our mentors guid
 *💰 <b>Fees*</b>
 <b>* ₹2000/- For Non-ATC Students |&nbsp;&nbsp; ₹1000/- (GST extra) For ATC students | Free for candidates Selected in 2021 Vacancy</b><br />
 </p>
-<p style={{ textAlign: "right" }}><a href="/download/psi-test-2026-may.pdf" className="btnbg">Download Test Schedule </a><a href="/about/springboard-app" className="btnbg">Download App</a></p>
+<p style={{ textAlign: "right" }}><a href="/download/psi-test-2026-may.pdf" className="btnbg">Download Test Schedule </a></p>
 </dd>
 </dl>
 <CoursePlans slug="psi-test-series" />

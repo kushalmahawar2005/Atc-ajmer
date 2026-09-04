@@ -75,7 +75,7 @@ At ATC, we believe in a holistic approach. Beyond test-taking, our program offer
 *💰 <b>Fees*</b>
 <b>Offline :- * ₹8000/- For Non-ATC Students (Prelims + Mains Integrated) | &nbsp;&nbsp; ₹4000/- For ATC students</b><br />
 <b>Online :- ₹6000/- (GST extra)</b></p>
-<p style={{ textAlign: "right" }}><a href="/download/ras-pre-mains-int-2026.pdf" className="btnbg">Download Test Schedule </a><a href="/about/springboard-app" className="btnbg">Download App</a></p>
+<p style={{ textAlign: "right" }}><a href="/download/ras-pre-mains-int-2026.pdf" className="btnbg">Download Test Schedule </a></p>
 </dd>
 </dl>
 <CoursePlans slug="ras-test-series" />

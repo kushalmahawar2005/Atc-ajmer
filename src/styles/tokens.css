@@ -6,15 +6,15 @@
 
 :root {
   /* 1. BRAND COLOURS */
-  --primary: #00374c;
-  --primary-dark: #002a3a;
+  --primary: #F48232;
+  --primary-dark: #F48232;
   --primary-light: #eaf5f8;
-  --primary-bright: #075f7f;
-  --header-bg: #00374c;
+  --primary-bright: #F48232;
+  --header-bg: #F48232;
 
   /* 2. NEUTRALS */
-  --navy: #0f172a;
-  --navy-mid: #1e293b;
+  --navy: #F48232;
+  --navy-mid: #F48232;
   --bg: #f8fafc;
   --bg-warm: #f3f9fb;
   --surface: #ffffff;

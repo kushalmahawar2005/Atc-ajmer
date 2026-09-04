@@ -107,39 +107,6 @@ export const quickLinks: { label: string; href: string; external?: boolean }[] =
   { label: "RAS Exam Resources", href: "/content/ras-exam-resources" },
 ];
 
-export const appDownloads = [
-  {
-    href: "https://appx-content-v2.classx.co.in/windows/Springboard_Academy%20UHS5%20Setup%200.0.3%20(1).zip",
-    icon: "fab fa-windows",
-    sub: "Download for",
-    name: "Windows",
-  },
-  {
-    href: "https://appx-content-v2.classx.co.in/windows/Spring_Board Academy-0.0.1.dmg",
-    icon: "fab fa-apple",
-    sub: "Download for Mac",
-    name: "Intel Chip",
-  },
-  {
-    href: "https://drive.usercontent.google.com/download?id=11hF7B3Ghgw_kJH0VDHdQdw2DVEEmr1ef&export=download&authuser=0",
-    icon: "fab fa-apple",
-    sub: "Download for Mac",
-    name: "Apple Chip (M1/M2)",
-  },
-  {
-    href: "https://play.google.com/store/apps/details?id=spring.board.acs&pcampaignid=web_share&pli=1",
-    icon: "fab fa-google-play",
-    sub: "Get it on",
-    name: "Google Play",
-  },
-  {
-    href: "https://apps.apple.com/in/app/springboard-academy-jaipur/id6444765712",
-    icon: "fab fa-app-store-ios",
-    sub: "Download on the",
-    name: "App Store",
-  },
-];
-
 export const videos = [
   {
     id: "eytXGJE1cjo",

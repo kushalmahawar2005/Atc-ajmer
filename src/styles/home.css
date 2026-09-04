@@ -23,7 +23,7 @@ html, body { overflow-x: hidden; }
 /* KB: compact strip ~30% */
 .dual-panel--kb {
     flex: 0 0 30%;
-    background: linear-gradient(130deg, #001f2b 0%, #002d3d 40%, var(--primary-dark) 70%, #00374c 100%);
+    background: #F48232;
     border-right: 1px solid rgba(255,255,255,0.13);
     display: flex;
     align-items: center;
@@ -174,7 +174,7 @@ html, body { overflow-x: hidden; }
 }
 
 .exams-ras-new {
-    background: #00374c;
+    background: #F48232;
     color: #fff;
     font-size: 9px;
     font-weight: 800;
@@ -239,7 +239,7 @@ html, body { overflow-x: hidden; }
     align-items: center;
     justify-content: center;
     padding: 14px 28px;
-    background: linear-gradient(135deg, #f59e0b 0%, #00374c 100%);
+    background: #F48232;
     border-radius: 12px;
     color: #fff !important;
     font-size: 15px;
@@ -474,7 +474,7 @@ html, body { overflow-x: hidden; }
 }
 
 .enroll-banner-left {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1e3a5f 100%);
+    background: #F48232;
     padding: 32px 36px;
     flex: 1;
     position: relative;
@@ -864,7 +864,7 @@ a.home-contact-row:hover { color: var(--primary); }
    ================================================================ */
 .app-download {
     margin-bottom: 36px;
-    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 55%, #1a3a5c 100%);
+    background: #F48232;
     padding: 40px 36px;
     border-radius: var(--radius);
     box-shadow: var(--shadow-lg);

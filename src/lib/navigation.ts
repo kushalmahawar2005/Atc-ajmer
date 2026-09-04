@@ -77,5 +77,4 @@ export const mainNav: NavItem[] = [
   { label: "Contact", mobileLabel: "Contact Us", href: "/about/contact" },
 ];
 
-export const DOWNLOAD_APP_HREF = "/about/springboard-app";
 export const SELECTIONS_HREF = "/about/selections";

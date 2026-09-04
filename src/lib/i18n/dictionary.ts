@@ -19,7 +19,6 @@ export const hindiDictionary: Record<string, string> = {
   "Exam Resources": "परीक्षा संसाधन",
   Contact: "संपर्क",
   "Contact Us": "संपर्क करें",
-  "Download App": "ऐप डाउनलोड करें",
   Menu: "मेन्यू",
   "Director's Message": "निदेशक का संदेश",
   "About Institute": "संस्थान के बारे में",
@@ -119,24 +118,12 @@ export const hindiDictionary: Record<string, string> = {
   "Why Choose Us?": "हमें क्यों चुनें?",
   "Quick Links": "त्वरित लिंक",
   "Get in Touch": "संपर्क करें",
-  "Download Our Study Apps": "हमारे अध्ययन ऐप डाउनलोड करें",
   "Popular Video Links for Your Civil Services Preparation":
     "आपकी सिविल सेवा तैयारी हेतु लोकप्रिय वीडियो",
   "View More Videos on our Official YouTube Channel →":
     "हमारे आधिकारिक यूट्यूब चैनल पर और वीडियो देखें →",
   "Read More": "और पढ़ें",
   "Read Less": "कम पढ़ें",
-
-  // ── App download buttons ─────────────────────────────────────────────
-  "Download for": "डाउनलोड करें",
-  "Download for Mac": "मैक के लिए डाउनलोड करें",
-  "Download on the": "डाउनलोड करें",
-  "Get it on": "प्राप्त करें",
-  Windows: "विंडोज",
-  "Intel Chip": "इंटेल चिप",
-  "Apple Chip (M1/M2)": "एप्पल चिप (M1/M2)",
-  "Google Play": "गूगल प्ले",
-  "App Store": "ऐप स्टोर",
 
   // ── Enquiry form ─────────────────────────────────────────────────────
   "Enquire Now": "अभी पूछताछ करें",

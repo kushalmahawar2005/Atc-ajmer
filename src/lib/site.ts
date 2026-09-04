@@ -31,7 +31,6 @@ export const ROUTES: { path: string; priority: number; changeFrequency: "daily" 
   { path: "/about/selections", priority: 0.9, changeFrequency: "weekly" },
   { path: "/about/teachers", priority: 0.7, changeFrequency: "monthly" },
   { path: "/about/contact", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/about/springboard-app", priority: 0.6, changeFrequency: "monthly" },
   { path: "/about/privacy", priority: 0.3, changeFrequency: "monthly" },
   { path: "/about/terms", priority: 0.3, changeFrequency: "monthly" },
   { path: "/about/refund-policy", priority: 0.3, changeFrequency: "monthly" },

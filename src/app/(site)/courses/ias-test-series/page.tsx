@@ -50,7 +50,7 @@ Our test series is divided into two parts to cover the entire examination: the o
 *💰 <b>Fees*</b>
 <b>* ₹2000/- For Non-ATC Students |&nbsp;&nbsp; ₹1000/- For ATC students</b><br />
 (Includes all 18 tests, Answer Keys, Solution Videos, and PDFs)<br /></p>
-<p style={{ textAlign: "right" }}><a href="/download/ias-pre-test-series-2026.pdf" className="btnbg">Download Test Schedule </a><a href="/about/springboard-app" className="btnbg">Download App</a></p>
+<p style={{ textAlign: "right" }}><a href="/download/ias-pre-test-series-2026.pdf" className="btnbg">Download Test Schedule </a></p>
 </dd>
 </dl>
 	

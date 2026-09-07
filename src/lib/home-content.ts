@@ -1,3 +1,5 @@
+import { CONTACT } from "./contact";
+
 /**
  * Home page content, mirroring the live site.
  *
@@ -14,10 +16,10 @@ export const sliderImages = [
 ];
 
 export const stats = [
-  { number: "19+", label: "Years of Excellence" },
-  { number: "36", label: "In Top 50 — RAS 2024" },
-  { number: "72", label: "In Top 100 — RAS 2024" },
-  { number: "72", label: "In Top 100 — RAS 2023" },
+  { number: "2019", label: "Founded in Ajmer" },
+  { number: "7", label: "Selections — RAS 2021" },
+  { number: "5", label: "Selections — RAS 2023" },
+  { number: "3", label: "Stages: Prelims, Mains & Interview" },
 ];
 
 export const newBatches = [
@@ -86,7 +88,7 @@ export const whyChooseUs = [
   { title: "Comprehensive Coverage:", body: "Complete syllabus with regular updates" },
   {
     title: "Proven Results:",
-    body: "Highest number selections in last 19 years (72 in Top 100 in RAS 2023)",
+    body: "7 selections in RAS 2021 and 5 selections in RAS 2023",
   },
   { title: "Personalized Mentorship:", body: "One-on-one guidance sessions" },
   { title: "Study Material:", body: "High-quality notes and practice questions" },
@@ -129,36 +131,9 @@ export const videos = [
 ];
 
 export const socialLinks = [
-  {
-    key: "instagram",
-    href: "https://www.instagram.com/springboardacademyofficial?igsh=bHV6bmU3dmU5MjMy",
-    title: "Instagram",
-    icon: "fab fa-instagram",
-  },
-  {
-    key: "facebook",
-    href: "https://www.facebook.com/SpringboardAcademyOfficial/?rdid=oN2YJ52jVK8uDxX8",
-    title: "Facebook",
-    icon: "fab fa-facebook-f",
-  },
-  {
-    key: "youtube",
-    href: "https://www.youtube.com/@SpringboardAcademyOnline",
-    title: "YouTube",
-    icon: "fab fa-youtube",
-  },
-  {
-    key: "telegram",
-    href: "https://t.me/springboard1953",
-    title: "Telegram",
-    icon: "fab fa-telegram-plane",
-  },
-  {
-    key: "whatsapp",
-    href: "https://whatsapp.com/channel/0029VamJmZx0LKZDSXXq7D2n",
-    title: "WhatsApp Channel",
-    icon: "fab fa-whatsapp",
-  },
+  { key: "instagram", href: CONTACT.instagram, title: "Instagram", icon: "fab fa-instagram" },
+  { key: "facebook", href: CONTACT.facebook, title: "Facebook", icon: "fab fa-facebook-f" },
+  { key: "whatsapp", href: CONTACT.whatsapp, title: "WhatsApp", icon: "fab fa-whatsapp" },
 ];
 
 export const footerColumns = [
@@ -192,4 +167,4 @@ export const footerColumns = [
 ];
 
 export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@SpringboardAcademyOnline";
-export const WHATSAPP_CHAT_URL = "https://wa.me/918955577492";
+export const WHATSAPP_CHAT_URL = CONTACT.whatsapp;

@@ -24,7 +24,7 @@ export default function Page() {
 					<div className="content" id="content">
            <p>ATC’s RAS Foundation course delivers a structured, exam-focused journey with daily 6 hours classes to build strong fundamentals and mastery across all stages—Prelims, Mains, and Interview—guided by experienced faculty and toppers’ mentorship in both Hindi and English mediums. The program blends complete syllabus coverage, weekly testing, rigorous answer writing evaluation, study materials, and mock interviews into a cohesive plan built for selection.</p><br />
 	
-<p>The course is designed to cover the complete syllabus of RPSC RAS comprehensively, integrating Rajasthan-specific subjects, GS, current affairs, and structured revision so nothing is left to chance. Offline and online formats are available, with classroom rigor complemented by recorded support and institute-tested pedagogy shaped since 2006.<br /><br /> 
+<p>The course is designed to cover the complete syllabus of RPSC RAS comprehensively, integrating Rajasthan-specific subjects, GS, current affairs, and structured revision so nothing is left to chance. Offline and online formats are available, with classroom rigor complemented by recorded support and institute-tested pedagogy shaped since 2019.<br /><br />
 <b>Class structure : </b> 
 Learners attend daily 6 hours classes that emphasize concept clarity, note-making, PYQ application, and regular doubt resolution in a disciplined routine aligned to exam timelines. This immersive schedule accelerates retention and builds exam temperament through continuous practice and mentor-led reinforcement. <br />
 <b>Personal mentorship : </b>

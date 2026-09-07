@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CONTACT } from "@/lib/contact";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
@@ -27,8 +28,8 @@ At ATC, we understand that every candidate is unique, and our approach reflects 
 		 </p>
 	 <br /><br />
 					<div className="new"><h3>Mock Interview Program for RAS 2024 Exam</h3></div><br /><br />
-	 <p>Classes for interview guidance for RAS 2024 exams are regularly conducted at our Jaipur centre. Mock Interviews program for RAS 2024 Exam will start sonn. To book a slot for your Mock Interview call us on the below mentioned numbers.<br /><br />
-<b>+91-9636977490, +91-8955577492, +91-7627085512</b>
+	 <p>Classes for interview guidance for RAS 2024 exams are regularly conducted at our Ajmer centre. Mock Interviews program for RAS 2024 Exam will start sonn. To book a slot for your Mock Interview call us on the below mentioned numbers.<br /><br />
+<a href={CONTACT.phones[0].href}>{CONTACT.phones[0].label}</a>{" | "}<a href={CONTACT.phones[1].href}>{CONTACT.phones[1].label}</a>
 		 </p></>
     </PageShell>
   );

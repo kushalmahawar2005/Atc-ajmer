@@ -1,3 +1,5 @@
+import { CONTACT } from "./contact";
+
 export type NavLink = {
   label: string;
   href: string;
@@ -20,15 +22,15 @@ export const IGNOU_URL = "https://egyankosh.co.in/";
 export const SUJAS_URL =
   "https://dipr.rajasthan.gov.in/pages/sm/government-order/attachments/134/85/10/1702";
 
-export const PHONE_PRIMARY = "+91 9636977490";
-export const PHONE_SECONDARY = "+91-8955577492";
+export const PHONE_PRIMARY = CONTACT.phones[0].label;
+export const PHONE_SECONDARY = CONTACT.phones[1].label;
 
 export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
   {
     label: "About Us",
     children: [
-      { label: "Director's Message", href: "/about/director-message" },
+      { label: "Founder & Vision", href: "/about/director-message" },
       { label: "About Institute", href: "/about" },
       { label: "Ajmer Center", href: "/about/ajmer-centre" },
       { label: "Our Past Selections", href: "/about/selections" },

@@ -18,8 +18,10 @@ export default function StructuredData() {
         image: `${SITE_URL}/images/atc-logo.png`,
         foundingDate: ORGANISATION.founded,
         description:
-          "ATC, Jaipur — classroom and online coaching for RAS, IAS and Rajasthan PSI, with test series and study material in Hindi and English.",
+          "ATC Ajmer, founded in 2019 by Arvind Tiwari, offers UPSC and RAS preparation for Prelims, Mains and Interview.",
         telephone: ORGANISATION.phones,
+        email: ORGANISATION.email,
+        hasMap: ORGANISATION.maps,
         address: {
           "@type": "PostalAddress",
           streetAddress: ORGANISATION.address.street,
@@ -27,17 +29,6 @@ export default function StructuredData() {
           addressRegion: ORGANISATION.address.region,
           postalCode: ORGANISATION.address.postalCode,
           addressCountry: ORGANISATION.address.country,
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: ORGANISATION.geo.lat,
-          longitude: ORGANISATION.geo.lng,
-        },
-        openingHoursSpecification: {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          opens: "09:00",
-          closes: "19:00",
         },
         areaServed: { "@type": "State", name: "Rajasthan" },
         sameAs: ORGANISATION.sameAs,

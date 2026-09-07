@@ -1,5 +1,7 @@
 "use client";
 
+import { CONTACT } from "@/lib/contact";
+
 import { Fragment } from "react";
 import Link from "next/link";
 import { useEnquire } from "@/components/layout/EnquireProvider";
@@ -65,29 +67,29 @@ export default function ThreeColumnSection() {
         </button>
 
         <div className="home-contact-info">
-          <a href="tel:+919636977490" className="home-contact-row">
+          <a href={CONTACT.phones[0].href} className="home-contact-row">
             <span className="home-contact-ic">
               <i className="fas fa-phone" aria-hidden="true" />
             </span>
-            <span>+91 9636977490</span>
+            <span>{CONTACT.phones[0].label}</span>
           </a>
-          <a href="tel:+918955577492" className="home-contact-row">
+          <a href={CONTACT.phones[1].href} className="home-contact-row">
             <span className="home-contact-ic">
               <i className="fas fa-phone" aria-hidden="true" />
             </span>
-            <span>+91 8955577492</span>
+            <span>{CONTACT.phones[1].label}</span>
           </a>
-          <div className="home-contact-row">
+          <a href={`mailto:${CONTACT.email}`} className="home-contact-row">
             <span className="home-contact-ic">
-              <i className="fas fa-clock" aria-hidden="true" />
+              <i className="fas fa-envelope" aria-hidden="true" />
             </span>
-            <span> 9 AM – 7 PM</span>
-          </div>
+            <span style={{ overflowWrap: "anywhere" }}>{CONTACT.email}</span>
+          </a>
           <Link href="/about/contact" className="home-contact-row">
             <span className="home-contact-ic">
               <i className="fas fa-map-marker-alt" aria-hidden="true" />
             </span>
-            <span>View All Locations</span>
+            <span>Visit Us in Ajmer</span>
           </Link>
         </div>
       </div>

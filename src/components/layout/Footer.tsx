@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
 
           <p className="copyright">
-            Copyright © 2006-2026 All rights reserved with ATC
+            Copyright © 2019-2026 All rights reserved with ATC
           </p>
         </div>
       </div>

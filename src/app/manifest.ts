@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "ATC — IAS & RAS Coaching",
     short_name: "ATC",
     description:
-      "RAS, IAS and Rajasthan PSI coaching from ATC, Jaipur — courses, test series, study material and exam resources.",
+      "RAS, IAS and Rajasthan PSI coaching from ATC, Ajmer — courses, test series, study material and exam resources.",
     start_url: "/",
     scope: "/",
     display: "standalone",

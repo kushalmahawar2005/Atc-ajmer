@@ -1,5 +1,7 @@
 "use client";
 
+import { CONTACT } from "@/lib/contact";
+
 import Link from "next/link";
 import { useEnquire } from "./EnquireProvider";
 import { sidebarSections } from "@/lib/sidebar-links";
@@ -51,13 +53,13 @@ export default function PageSidebar() {
         </div>
         <div>
           <div className="sb-contact-label">Call Us</div>
-          <a href="tel:+919636977490" className="sb-contact-num">
-            +91 9636977490
+          <a href={CONTACT.phones[0].href} className="sb-contact-num">
+            {CONTACT.phones[0].label}
           </a>
-          <a href="tel:+918955577492" className="sb-contact-num">
-            +91 8955577492
+          <a href={CONTACT.phones[1].href} className="sb-contact-num">
+            {CONTACT.phones[1].label}
           </a>
-          <div className="sb-contact-hours">Mon – Sat &nbsp;|&nbsp; 9 AM – 7 PM</div>
+          <a href={`mailto:${CONTACT.email}`} className="sb-contact-hours" style={{ overflowWrap: "anywhere" }}>{CONTACT.email}</a>
         </div>
       </div>
     </div>

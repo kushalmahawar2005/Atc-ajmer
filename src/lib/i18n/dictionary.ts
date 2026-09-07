@@ -10,6 +10,12 @@
  */
 export const hindiDictionary: Record<string, string> = {
   // ── Header / navigation ──────────────────────────────────────────────
+  "Founder & Vision": "संस्थापक और हमारा उद्देश्य",
+  "Founded in Ajmer": "अजमेर में स्थापना",
+  "Selections — RAS 2021": "आरएएस 2021 में चयन",
+  "Selections — RAS 2023": "आरएएस 2023 में चयन",
+  "Stages: Prelims, Mains & Interview": "चरण: प्रारंभिक, मुख्य परीक्षा और साक्षात्कार",
+  "Visit Us in Ajmer": "अजमेर में हमसे मिलें",
   Home: "होम",
   "About Us": "हमारे बारे में",
   Courses: "पाठ्यक्रम",
@@ -151,8 +157,8 @@ export const hindiDictionary: Record<string, string> = {
   "Privacy Policy": "गोपनीयता नीति",
   "Terms of Service": "सेवा की शर्तें",
   "Refund Policy": "धनवापसी नीति",
-  "Copyright © 2006-2026 All rights reserved with ATC":
-    "कॉपीराइट © 2006-2026 सर्वाधिकार सुरक्षित, स्प्रिंगबोर्ड अकादमी जयपुर",
+  "Copyright © 2019-2026 All rights reserved with ATC":
+    "कॉपीराइट © 2019-2026 सर्वाधिकार सुरक्षित, एटीसी अजमेर",
 
   // ── RAS promo banner ─────────────────────────────────────────────────
   "New Launch": "नया लॉन्च",

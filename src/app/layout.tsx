@@ -33,14 +33,14 @@ export const metadata: Metadata = {
     template: "%s | ATC",
   },
   description:
-    "ATC — RAS, IAS and Rajasthan PSI coaching with expert faculty, test series and study material in Hindi and English. 72 in Top 100 in RAS 2024.",
+    "ATC Ajmer — UPSC and RAS coaching founded in 2019 by Arvind Tiwari. Complete preparation for Prelims, Mains and Interview.",
   applicationName: "ATC",
   keywords: [
-    "RAS coaching in Jaipur",
-    "IAS coaching in Jaipur",
+    "RAS coaching in Ajmer",
+    "IAS coaching in Ajmer",
     "civil services coaching Rajasthan",
     "RAS test series",
-    "UPSC coaching Jaipur",
+    "UPSC coaching Ajmer",
     "Rajasthan PSI coaching",
     "RAS foundation course",
     "IAS foundation course",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: "Best Coaching Institute for RAS / IAS Civil Service Exams",
     description:
-      "Classroom and online coaching for RAS, IAS and Rajasthan PSI from ATC, Jaipur — 19+ years, 72 in Top 100 in RAS 2024.",
+      "ATC Ajmer — Knowledge is Growth... Growth is Life. 7 selections in RAS 2021 and 5 selections in RAS 2023.",
     images: [
       {
         url: "/images/atc-logo.png",
@@ -66,13 +66,6 @@ export const metadata: Metadata = {
         alt: "ATC logo",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ATC — RAS & IAS Coaching, Jaipur",
-    description:
-      "Courses, test series and study material for RAS, IAS and Rajasthan PSI aspirants.",
-    images: ["/images/atc-logo.png"],
   },
   robots: {
     index: true,

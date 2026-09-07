@@ -1,5 +1,7 @@
 "use client";
 
+import { CONTACT } from "@/lib/contact";
+
 import { useEffect, useRef, useState } from "react";
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -187,10 +189,10 @@ export default function EnquireDrawer({
           <div className="eq-contact-strip">
             <strong>Prefer to call?</strong>
             <br />
-            📞 <a href="tel:+919636977490">+91 9636977490</a> &nbsp;|&nbsp;{" "}
-            <a href="tel:+918955577492">+91 8955577492</a>
+            📞 <a href={CONTACT.phones[0].href}>{CONTACT.phones[0].label}</a> &nbsp;|&nbsp;{" "}
+            <a href={CONTACT.phones[1].href}>{CONTACT.phones[1].label}</a>
             <br />
-            🕘 Mon – Sat, 9 AM – 7 PM
+            <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
           </div>
         </div>
       </div>

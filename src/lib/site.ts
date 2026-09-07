@@ -1,24 +1,22 @@
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://springboardindia.org";
+import { CONTACT } from "./contact";
+
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atcajmer.com";
 
 export const ORGANISATION = {
   name: "ATC",
   legalName: "ATC",
-  founded: "2006",
-  phones: ["+919636977490", "+918955577492"],
+  founded: "2019",
+  phones: CONTACT.phones.map((phone) => phone.href.slice(4)),
+  email: CONTACT.email,
+  maps: CONTACT.maps,
   address: {
-    street: "Plot A-1, Keshav Vihar, Main Riddhi Siddhi Chouraha, Gopalpura Bypass",
-    locality: "Jaipur",
+    street: "131/10B, 1st Floor, Vijay Sadan, Ajmer Hospital Street, Civil Lines",
+    locality: "Ajmer",
     region: "Rajasthan",
-    postalCode: "302018",
+    postalCode: "305001",
     country: "IN",
   },
-  geo: { lat: 26.8742318, lng: 75.7756519 },
-  sameAs: [
-    "https://www.instagram.com/springboardacademyofficial",
-    "https://www.facebook.com/SpringboardAcademyOfficial/",
-    "https://www.youtube.com/@SpringboardAcademyOnline",
-    "https://t.me/springboard1953",
-  ],
+  sameAs: [CONTACT.instagram, CONTACT.facebook],
 };
 
 /** Every crawlable route, with the relative weight used in the sitemap. */

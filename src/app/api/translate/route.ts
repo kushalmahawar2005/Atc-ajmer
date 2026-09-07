@@ -11,7 +11,7 @@ export const maxDuration = 120;
 const MAX_TEXTS = 400;
 const BATCH_SIZE = 40;
 
-const SYSTEM_PROMPT = `You translate website copy for ATC, a civil services (IAS/RAS) coaching institute in Jaipur, Rajasthan, from English into Hindi.
+const SYSTEM_PROMPT = `You translate website copy for ATC, a civil services (IAS/RAS) coaching institute in Ajmer, Rajasthan, from English into Hindi.
 
 Rules:
 - Return natural, formal Hindi as used in Indian education and government contexts.

@@ -621,6 +621,8 @@ html, body { overflow-x: hidden; }
 
 .info-content::after {
     content: '';
+    /* Decorative fade must not intercept links, even when transparent. */
+    pointer-events: none;
     position: absolute;
     bottom: 0; left: 0; right: 0;
     height: 60px;

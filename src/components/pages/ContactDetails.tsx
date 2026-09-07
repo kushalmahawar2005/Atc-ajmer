@@ -5,6 +5,16 @@ export default function ContactDetails() {
     <div className="content" style={{ overflowWrap: "anywhere" }}>
       <h2>Visit ATC Ajmer</h2>
       <address style={{ fontStyle: "normal", margin: "16px 0 24px" }}>{CONTACT.address}</address>
+      <iframe
+        title="ATC Ajmer location on Google Maps"
+        src={CONTACT.mapEmbed}
+        width="100%"
+        height="360"
+        loading="lazy"
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
+        style={{ display: "block", border: 0, borderRadius: 12, marginBottom: 24 }}
+      />
       <h2>Admissions &amp; Enquiries</h2>
       <p style={{ margin: "16px 0" }}>
         {CONTACT.phones.map((phone) => <span key={phone.href} style={{ display: "block" }}><a href={phone.href}>{phone.label}</a></span>)}

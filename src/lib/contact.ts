@@ -8,6 +8,7 @@ export const CONTACT = {
   whatsapp: "https://wa.me/919460971727",
   address: "ATC, 131/10B, 1st Floor, Vijay Sadan, Ajmer Hospital Street, Civil Lines, Ajmer - 305001",
   maps: "https://maps.app.goo.gl/qU23mk1E1LadQrcu5",
+  mapEmbed: "https://www.google.com/maps?cid=9787375519295967122&output=embed",
   instagram: "https://www.instagram.com/atcias/",
   facebook: "https://www.facebook.com/atcias/",
 };

@@ -38,42 +38,42 @@ export const enrollFeatures = [
 export const homeCourses = [
   {
     href: "/courses/ias-foundation",
-    image: "/images/ias-foundation.jpeg",
+    image: "/images/ias-foundation-atc-v1.png",
     title: "IAS Foundation Course",
     description:
       "This foundation course prepares you for the UPSC civil services exam for all its stages including IAS Prelims + Mains + Interview. There will be regular tests for both subjective and objective exams inclusive of extensive guidance for CSAT paper.",
   },
   {
     href: "/courses/ras-foundation",
-    image: "/images/ras-foundation-course.jpeg",
+    image: "/images/ras-foundation-atc-v1.png",
     title: "RAS Foundation Course",
     description:
       "Starting with the basics of all the subjects covering entire syllabus of RAS exam this foundation course prepares you for RAS Prelims Mains and Interview. Join this course to join the most prestigious services of Rajasthan.",
   },
   {
     href: "/courses/rajasthan-psi",
-    image: "/images/rajasthan-psi.jpg",
+    image: "/images/rajasthan-psi-atc-v1.png",
     title: "Rajasthan PSI Course",
     description:
       "Classroom and Online course for the complete preparation of Rajasthan PSI exam. Objective Test series with latest current affairs also included.",
   },
   {
     href: "/courses/ias-ras-integrated",
-    image: "/images/integrated-course.jpg",
+    image: "/images/ias-ras-integrated-atc-v1.png",
     title: "IAS RAS 3 Years Integrated Course",
     description:
       "Three Years Integrated Course for the Preparation of UPSC and RPSC Exams Along with Graduation.",
   },
   {
     href: "/courses/test-series",
-    image: "/images/test-series.jpeg",
+    image: "/images/test-series-atc-v1.png",
     title: "Test Series Programs",
     description:
       "Subjective and Objective Test series program for the preparation of IAS Prelims and IAS Mains exam.",
   },
   {
     href: "/courses/ias-ras-interview",
-    image: "/images/interview.jpeg",
+    image: "/images/ras-interview-atc-v1.png",
     title: "Interview Guidance Program",
     description:
       "This Exclusive Course for Interview Guidance and Mock Interview Programs Prepares you for Interviews of IAS, RAS and PSI Exams.",

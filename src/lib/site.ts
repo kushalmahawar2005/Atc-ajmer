@@ -45,6 +45,7 @@ export const ROUTES: { path: string; priority: number; changeFrequency: "daily" 
   { path: "/courses/ras-test-series", priority: 0.8, changeFrequency: "weekly" },
   { path: "/courses/psi-test-series", priority: 0.7, changeFrequency: "weekly" },
 
+  { path: "/daily-quiz", priority: 0.8, changeFrequency: "daily" },
   { path: "/content", priority: 0.7, changeFrequency: "weekly" },
   { path: "/content/ncert-pdf-download", priority: 0.7, changeFrequency: "monthly" },
   { path: "/content/rajasthan-sujas", priority: 0.6, changeFrequency: "monthly" },

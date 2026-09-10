@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
     // pg is a native-ish driver; keep it external to the server bundle.
     serverActions: { bodySizeLimit: "2mb" },
   },
-  serverExternalPackages: ["pg"],
+  serverExternalPackages: ["pg", "pdfkit"],
 };
 
 export default nextConfig;

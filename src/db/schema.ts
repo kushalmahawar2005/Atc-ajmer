@@ -1,5 +1,6 @@
 import {
   boolean,
+  jsonb,
   index,
   uniqueIndex,
   integer,
@@ -187,3 +188,13 @@ export const studyMaterials = pgTable(
   },
   (t) => [index("study_materials_category_idx").on(t.category)],
 );
+
+/** One five-question quiz per Indian calendar date. Answers stay server-side. */
+export const dailyQuizzes = pgTable('daily_quizzes', {
+  id: serial('id').primaryKey(),
+  quizDate: varchar('quiz_date', { length: 10 }).notNull().unique(),
+  title: varchar('title', { length: 200 }).notNull(),
+  questions: jsonb('questions').$type<import('../lib/quiz/validation').Question[]>().notNull(),
+  published: boolean('published').default(false).notNull(),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow().notNull(),
+});

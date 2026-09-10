@@ -45,7 +45,7 @@ export const homeCourses = [
   },
   {
     href: "/courses/ras-foundation",
-    image: "/images/ras-foundation-atc-v1.png",
+    image: "/images/ras-foundation-assembly-v2.png",
     title: "RAS Foundation Course",
     description:
       "Starting with the basics of all the subjects covering entire syllabus of RAS exam this foundation course prepares you for RAS Prelims Mains and Interview. Join this course to join the most prestigious services of Rajasthan.",
@@ -96,6 +96,7 @@ export const whyChooseUs = [
 ];
 
 export const quickLinks: { label: string; href: string; external?: boolean }[] = [
+  { label: "Daily Quiz — Questions & Explanations", href: "/daily-quiz" },
   { label: "Knowledge Base For IAS & RAS Exams", href: "/knowledge-base" },
   { label: "Our Past Selections", href: "/about/selections" },
   { label: "NCERT Books PDF Download", href: "/content/ncert-pdf-download" },

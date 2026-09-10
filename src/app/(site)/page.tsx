@@ -1,3 +1,4 @@
+import QuizCard from "@/components/home/QuizCard";
 import AboutSection from "@/components/home/AboutSection";
 import CoursesGrid from "@/components/home/CoursesGrid";
 import EnrollBanner from "@/components/home/EnrollBanner";
@@ -12,12 +13,13 @@ export default function HomePage() {
   return (
     <>
       <StructuredData />
-      <div className="container">
+      <div className="container home-page">
         <HeroSlider />
         <StatsStrip />
         <EnrollBanner />
         <AboutSection />
         <CoursesGrid />
+        <QuizCard />
         <ThreeColumnSection />
         <Testimonials />
       </div>

@@ -1,33 +1,36 @@
 import type { Metadata } from "next";
-import PageShell, { type Crumb } from "@/components/layout/PageShell";
+import PageShell from "@/components/layout/PageShell";
 import CoursePlans from "@/components/pages/CoursePlans";
-
+import { courseDetails } from "@/lib/course-details";
+const details = courseDetails["ias-foundation"];
 export const metadata: Metadata = {
-  title: "IAS Foundation course - Complete Preparation For IAS Prelims + Mains and Interview : ATC",
-  description: "Prepare yourself for IAS Prelims Mains and Interview with IAS foundation course offered by ATC",
+  title: details.title,
+  description: details.sections[0].paragraphs[0],
   alternates: { canonical: "/courses/ias-foundation" },
 };
-
-const breadcrumb: Crumb[] = [
-  { label: "Home", href: "/" },
-  { label: "Our Courses", href: "/courses" },
-  { label: "IAS Foundation Course" },
-];
-
 export default function Page() {
   return (
     <PageShell
-      breadcrumb={breadcrumb}
-      title="IAS Foundation Course by ATC"
+      title={details.title}
+      breadcrumb={[
+        { label: "Home", href: "/" },
+        { label: "Our Courses", href: "/courses" },
+        { label: details.title },
+      ]}
     >
-      <>
-					<div className="content" id="content">
-					<p>ATC’s IAS Foundation course builds a solid base for IAS Prelims, IAS Mains, and the Interview with a structured roadmap and disciplined mentoring for every aspirant’s journey. Available as both Offline and Online course, it blends expert-led classes with updated Study materials to streamline preparation in one place. Learners get Regular tests, detailed performance feedback, and rigorous Answer writing practice to sharpen accuracy and speed. Personalized guidance and mentorship ensure doubt resolution and sustained motivation throughout the program. Batches are offered in both Hindi and English medium for inclusive accessibility and better comprehension.<br />
-	   ATC’s CSAT preparation for IAS Prelims builds strong aptitude, reasoning, and comprehension through expert-led classes, targeted practice, and doubt-clearing. Regular objective test on UPSC pattern reinforces concepts, time-management, and accuracy. Comprehensive study material, bilingual support, and performance analysis ensure steady progress and qualifying scores in CSAT Paper-II for UPSC Prelims success.
-						</p></div>
-   			
-<CoursePlans slug="ias-foundation" />
-</>
+      <div className="content">
+        {details.sections.map((section) => (
+          <section key={section.title} style={{ marginBottom: 28 }}>
+            <h2>{section.title}</h2>
+            {section.paragraphs.map((p) => (
+              <p key={p} style={{ marginTop: 16 }}>
+                {p}
+              </p>
+            ))}
+          </section>
+        ))}
+      </div>
+      <CoursePlans slug="ias-foundation" />
     </PageShell>
   );
 }

@@ -17,6 +17,7 @@ export const adminNav = [
   {
     label: "Website content",
     items: [
+      { href: "/admin/quizzes", icon: "fas fa-list-check", label: "Daily Quiz" },
       { href: "/admin/courses", icon: "fas fa-graduation-cap", label: "Courses" },
       { href: "/admin/course-plans", icon: "fas fa-indian-rupee-sign", label: "Course Plans & Fees" },
       { href: "/admin/testimonials", icon: "fas fa-quote-left", label: "Testimonials" },

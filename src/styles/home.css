@@ -1499,3 +1499,92 @@ a.home-contact-row:hover { color: var(--primary); }
     .testimonials { padding: 22px 16px 26px; }
     .tst-grid { grid-template-columns: 1fr; }
 }
+
+/* Keep course artwork and labels separate on touch screens. */
+.home-course-link {
+    display: block;
+    min-width: 0;
+    text-decoration: none;
+}
+
+.home-course-link:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 4px;
+    border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+    .home-page.container { padding: 16px 16px 32px; }
+    .home-page > * { min-width: 0; }
+
+    .home-page .stats-strip {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-bottom: 24px;
+    }
+    .home-page .stat-item {
+        width: auto;
+        padding: 18px 12px;
+        gap: 8px;
+        border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .home-page .stat-item:nth-child(4n + 1) {
+        border-right: 1px solid rgba(255,255,255,.12);
+    }
+    .home-page .stat-item:nth-last-child(-n + 3) { border-bottom: 0; }
+    .home-page .stat-label { font-size: 11px; letter-spacing: .3px; }
+
+    .home-page .image-link-item {
+        height: auto;
+        background: var(--surface);
+    }
+    .home-page .image-link-item img {
+        height: auto;
+        object-fit: contain;
+        transform: none;
+    }
+    .home-page .image-link-title {
+        position: static;
+        padding: 14px 16px;
+        background: var(--surface);
+        color: var(--navy);
+        font-size: 16px;
+        line-height: 1.5;
+        opacity: 1;
+    }
+    .home-page .image-link-overlay { display: none; }
+    .home-page .image-link-item:hover { transform: none; }
+
+    .home-page .enroll-banner,
+    .home-page .info-full,
+    .home-page .image-links-grid,
+    .home-page .three-column-section { margin-bottom: 24px; }
+    .home-page .enroll-banner-left,
+    .home-page .enroll-banner-right,
+    .home-page .info-full,
+    .home-page .column { padding: 20px; }
+    .home-page .column { min-width: 0; height: auto; overflow: visible; }
+    .home-page .enroll-subtext { font-size: 14px; }
+    .home-page .enroll-feature-pill { white-space: normal; text-align: center; }
+    .home-page .enroll-cta-btn,
+    .home-page .home-enquire-btn {
+        min-height: 48px;
+        height: auto;
+        flex-shrink: 0;
+        width: 100%;
+        justify-content: center;
+        white-space: normal;
+        line-height: 1.5;
+    }
+    .home-page .info-toggle-btn,
+    .home-page .page-link,
+    .home-page .home-contact-row { min-height: 44px; }
+    .home-page .page-link { font-size: 14px; }
+    .home-page .tst-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+.home-quiz-card { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px; margin-bottom: 28px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.home-quiz-card h2 { font-size: 24px; line-height: 1.35; margin-bottom: 10px; color: var(--navy); }
+.home-quiz-card p { color: var(--text-muted); max-width: 650px; }
+.home-quiz-card .enroll-cta-btn { flex-shrink: 0; }
+@media (max-width: 768px) { .home-quiz-card { flex-direction: column; align-items: stretch; padding: 20px; } .home-quiz-card h2 { font-size: 21px; } }

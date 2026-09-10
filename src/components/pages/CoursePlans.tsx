@@ -1,6 +1,7 @@
 import { and, asc, eq } from "drizzle-orm";
 import { db } from "@/db";
 import { coursePlans } from "@/db/schema";
+import { confirmedCoursePlans } from "@/lib/course-fees";
 
 const INR = new Intl.NumberFormat("en-IN");
 
@@ -17,10 +18,11 @@ export default async function CoursePlans({ slug }: { slug: string }) {
       .from(coursePlans)
       .where(and(eq(coursePlans.courseSlug, slug), eq(coursePlans.active, true)))
       .orderBy(asc(coursePlans.sortOrder));
-  } catch (error) {
-    // A database hiccup must not take the whole course page down.
-    console.error(`[course-plans] could not load plans for ${slug}:`, error);
-    return null;
+  } catch {
+    console.error(`[course-plans] database unavailable for ${slug}; using confirmed fees.`);
+    plans = confirmedCoursePlans
+      .filter((plan) => plan.courseSlug === slug)
+      .map((plan, index) => ({ ...plan, id: -(index + 1), active: true }));
   }
 
   if (plans.length === 0) return null;

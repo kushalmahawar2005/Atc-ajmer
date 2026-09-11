@@ -2,7 +2,6 @@ import { Fragment } from "react";
 import Link from "next/link";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import PageSidebar from "./PageSidebar";
-import ExamSeriesBanner from "./RasBanner";
 
 export type Crumb = { label: string; href?: string };
 
@@ -24,8 +23,6 @@ export default function PageShell({
   return (
     <div className="page-wrapper">
       <BreadcrumbJsonLd items={breadcrumb} />
-      <ExamSeriesBanner />
-
       <div className="main-container">
         <div className="left-column">
           <div className="breadcrumb">

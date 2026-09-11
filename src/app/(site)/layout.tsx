@@ -1,4 +1,5 @@
 import EnquireProvider from "@/components/layout/EnquireProvider";
+import ExamSeriesBanner from "@/components/layout/RasBanner";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import LanguageProvider from "@/components/layout/LanguageProvider";
@@ -21,6 +22,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <SocialWidget />
           <WhatsAppFloat />
           <ServiceWorker />
+          <ExamSeriesBanner />
         </div>
       </EnquireProvider>
     </LanguageProvider>

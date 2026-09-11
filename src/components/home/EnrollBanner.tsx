@@ -1,5 +1,7 @@
+"use client";
+
 import { Fragment } from "react";
-import { STUDENT_PORTAL_URL } from "@/lib/navigation";
+import { openExamBanner } from "@/lib/exam-banner";
 import { enrollFeatures, newBatches } from "@/lib/home-content";
 
 export default function EnrollBanner() {
@@ -26,14 +28,9 @@ export default function EnrollBanner() {
             </span>
           ))}
         </div>
-        <a
-          href={STUDENT_PORTAL_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="enroll-cta-btn"
-        >
+        <button type="button" onClick={openExamBanner} className="enroll-cta-btn">
           Register Online Now <span className="enroll-arrow">→</span>
-        </a>
+        </button>
       </div>
     </div>
   );

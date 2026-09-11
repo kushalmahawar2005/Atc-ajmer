@@ -562,6 +562,10 @@ html, body { overflow-x: hidden; }
     transition: all var(--transition);
     box-shadow: 0 4px 16px rgba(0,55,76,0.35);
     white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1.2;
 }
 
 .enroll-cta-btn:hover {

@@ -69,3 +69,27 @@ export function grade(questions: Question[], answers: unknown) {
     })),
   };
 }
+
+export type Contact = { name: string; phone: string; email: string | null };
+
+/**
+ * Details collected alongside a quiz submission. Deliberately forgiving about
+ * phone formatting — people type +91, spaces and dashes — but it insists on
+ * enough digits to be callable, since that is the whole point of the capture.
+ */
+export function validateContact(value: unknown): Contact | null {
+  if (!value || typeof value !== "object") return null;
+  const raw = value as Record<string, unknown>;
+
+  const name = typeof raw.name === "string" ? raw.name.trim() : "";
+  if (name.length < 2 || name.length > 160) return null;
+
+  const phone = typeof raw.phone === "string" ? raw.phone.trim() : "";
+  const digits = phone.replace(/\D/g, "");
+  if (digits.length < 10 || digits.length > 15 || phone.length > 20) return null;
+
+  const email = typeof raw.email === "string" ? raw.email.trim() : "";
+  if (email && (email.length > 200 || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email))) return null;
+
+  return { name, phone, email: email || null };
+}

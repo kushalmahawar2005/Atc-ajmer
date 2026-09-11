@@ -12,6 +12,7 @@ export const adminNav = [
         icon: "fas fa-clipboard-check",
         label: "Test Series Registrations",
       },
+      { href: "/admin/quiz-attempts", icon: "fas fa-user-check", label: "Quiz Leads" },
     ],
   },
   {

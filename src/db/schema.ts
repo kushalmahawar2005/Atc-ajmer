@@ -198,3 +198,25 @@ export const dailyQuizzes = pgTable('daily_quizzes', {
   published: boolean('published').default(false).notNull(),
   updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow().notNull(),
 });
+
+/**
+ * Who sat a daily quiz. The quiz itself stays in daily_quizzes; the date and
+ * title are copied in so a lead survives the quiz being edited or deleted.
+ */
+export const quizAttempts = pgTable(
+  "quiz_attempts",
+  {
+    id: serial("id").primaryKey(),
+    quizId: integer("quiz_id").notNull(),
+    quizDate: varchar("quiz_date", { length: 10 }).notNull(),
+    quizTitle: varchar("quiz_title", { length: 200 }).notNull(),
+    name: varchar("name", { length: 160 }).notNull(),
+    phone: varchar("phone", { length: 20 }).notNull(),
+    email: varchar("email", { length: 200 }),
+    correct: integer("correct").notNull(),
+    attempted: integer("attempted").notNull(),
+    handled: boolean("handled").default(false).notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
+  },
+  (t) => [index("quiz_attempts_created_at_idx").on(t.createdAt)],
+);

@@ -3,7 +3,15 @@ import Link from "next/link";
 import { desc, eq, sql } from "drizzle-orm";
 import AdminShell from "@/components/admin/AdminShell";
 import { db } from "@/db";
-import { batches, banners, courses, enquiries, selections, studyMaterials } from "@/db/schema";
+import {
+  batches,
+  banners,
+  courses,
+  enquiries,
+  quizAttempts,
+  selections,
+  studyMaterials,
+} from "@/db/schema";
 import { requireAdmin } from "@/lib/admin/auth";
 
 export const metadata: Metadata = { title: "Dashboard" };
@@ -15,6 +23,8 @@ export default async function DashboardPage() {
   const [
     enquiryCount,
     newEnquiryCount,
+    quizLeadCount,
+    newQuizLeadCount,
     courseCount,
     batchCount,
     bannerCount,
@@ -27,6 +37,11 @@ export default async function DashboardPage() {
       .select({ n: sql<number>`count(*)::int` })
       .from(enquiries)
       .where(eq(enquiries.handled, false)),
+    db.select({ n: sql<number>`count(*)::int` }).from(quizAttempts),
+    db
+      .select({ n: sql<number>`count(*)::int` })
+      .from(quizAttempts)
+      .where(eq(quizAttempts.handled, false)),
     db.select({ n: sql<number>`count(*)::int` }).from(courses),
     db.select({ n: sql<number>`count(*)::int` }).from(batches),
     db.select({ n: sql<number>`count(*)::int` }).from(banners),
@@ -41,6 +56,12 @@ export default async function DashboardPage() {
       icon: "fas fa-inbox",
       num: enquiryCount[0].n,
       label: `Enquiries (${newEnquiryCount[0].n} unhandled)`,
+    },
+    {
+      href: "/admin/quiz-attempts",
+      icon: "fas fa-user-check",
+      num: quizLeadCount[0].n,
+      label: `Quiz leads (${newQuizLeadCount[0].n} unhandled)`,
     },
     { href: "/admin/courses", icon: "fas fa-graduation-cap", num: courseCount[0].n, label: "Courses" },
     { href: "/admin/batches", icon: "fas fa-calendar-days", num: batchCount[0].n, label: "Batches" },

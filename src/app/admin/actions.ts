@@ -22,7 +22,9 @@ export async function login(_prev: FormState, formData: FormData): Promise<FormS
   try {
     [user] = await db.select().from(adminUsers).where(eq(adminUsers.email, email)).limit(1);
   } catch (error) {
-    console.error("Admin login lookup failed:", error);
+    // Drizzle wraps the driver error, so the useful detail sits on `cause`.
+    const cause = error instanceof Error ? error.cause : undefined;
+    console.error("Admin login lookup failed:", cause ?? error);
     return { error: "Could not reach the database. Try again." };
   }
 

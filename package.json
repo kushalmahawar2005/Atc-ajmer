@@ -12,6 +12,7 @@
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
+    "db:doctor": "node scripts/db-doctor.mjs",
     "db:seed": "tsx --env-file=.env.local src/db/seed.ts",
     "deploy:bundle": "node scripts/bundle-standalone.mjs",
     "admin:create": "node scripts/create-admin.mjs",

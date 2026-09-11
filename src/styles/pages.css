@@ -117,13 +117,13 @@
 .content-area li { margin-bottom: 5px; }
 
 /* Text links in content — excludes all button/widget anchors so their own colors apply */
-.content-area a:not(.btn-download):not(.btn-cta):not(.btn-ghost):not(.download-card):not(.sb-link):not(.page-link):not(.sb-kb-banner):not(.btnbg) {
+.content-area a:not(.btn-download):not(.btn-cta):not(.btn-ghost):not(.download-card):not(.sb-link):not(.page-link):not(.sb-kb-banner):not(.btnbg):not(.quiz-button) {
     color: var(--primary);
     text-decoration: none;
     transition: color var(--transition);
 }
 
-.content-area a:not(.btn-download):not(.btn-cta):not(.btn-ghost):not(.download-card):not(.sb-link):not(.page-link):not(.sb-kb-banner):not(.btnbg):hover {
+.content-area a:not(.btn-download):not(.btn-cta):not(.btn-ghost):not(.download-card):not(.sb-link):not(.page-link):not(.sb-kb-banner):not(.btnbg):not(.quiz-button):hover {
     color: var(--primary-dark);
     text-decoration: underline;
 }

@@ -531,47 +531,196 @@
   margin-top: 4px;
 }
 
+/* ---------------- Mobile drawer chrome ---------------- */
+/* The toggle, backdrop and in-drawer close button only exist below the
+   sidebar breakpoint; on desktop the sidebar is always in the layout. */
+.adm-nav-toggle,
+.adm-side-close {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.adm-side-close {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: transparent;
+  color: #fff;
+}
+
+.adm-side-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  background: rgba(0, 20, 28, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.adm-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.adm-topbar-heading {
+  min-width: 0;
+}
+
 /* ---------------- Responsive ---------------- */
 @media (max-width: 900px) {
   .adm-shell {
-    flex-direction: column;
+    display: block;
   }
 
+  .adm-nav-toggle,
+  .adm-side-close {
+    display: inline-flex;
+  }
+
+  .adm-side-backdrop {
+    display: block;
+  }
+
+  .adm-side-backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Off-canvas drawer: slid out by default, nav stays a vertical list. */
   .adm-side {
-    width: 100%;
-    height: auto;
-    position: static;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: min(82vw, 300px);
+    height: 100dvh;
+    z-index: 60;
+    transform: translateX(-100%);
+    transition: transform var(--transition);
+    box-shadow: none;
+    padding-left: env(safe-area-inset-left);
   }
 
-  .adm-side-nav {
+  .adm-side.is-open {
+    transform: translateX(0);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+  }
+
+  .adm-side-head {
     display: flex;
-    flex-wrap: wrap;
-    padding: 8px;
-    gap: 4px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
   }
 
-  .adm-side-label {
+  /* Bigger tap targets than the desktop list. */
+  .adm-side-link {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .adm-main {
+    min-height: 100dvh;
+  }
+
+  .adm-topbar {
+    padding: 12px 16px;
+    padding-top: max(12px, env(safe-area-inset-top));
+    gap: 10px;
+  }
+
+  .adm-topbar h1 {
+    font-size: 1.05rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .adm-topbar-sub {
     display: none;
   }
 
-  .adm-side-link {
-    padding: 8px 12px;
-    border-left: none;
-    border-radius: var(--radius-sm);
-    font-size: 12.5px;
+  /* Keep the avatar and log-out control, drop the name block that crowded them. */
+  .adm-user-meta,
+  .adm-btn-label {
+    display: none;
   }
 
-  .adm-side-link.is-active {
-    border-left: none;
+  .adm-body {
+    padding: 16px;
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
   }
 
   .adm-grid-2 {
     grid-template-columns: 1fr;
   }
 
-  .adm-body,
-  .adm-topbar {
+  .adm-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .adm-panel-head,
+  .adm-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Narrow columns squash unreadably, so the table scrolls sideways instead. */
+  .adm-table-wrap {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .adm-table {
+    min-width: 600px;
+  }
+
+  .adm-form {
     padding: 16px;
+  }
+
+  /* iOS zooms the page when a focused input is under 16px. */
+  .adm-field input,
+  .adm-field select,
+  .adm-field textarea,
+  .adm-inline-field input {
+    font-size: 16px;
+  }
+
+  .adm-btn {
+    min-height: 40px;
+  }
+
+  .adm-btn-sm {
+    min-height: 34px;
+  }
+
+  .adm-form-actions {
+    flex-wrap: wrap;
+  }
+}
+
+/* Stack the two-column form grid before it gets too cramped to read. */
+@media (max-width: 560px) {
+  .adm-login {
+    padding: 16px;
+  }
+
+  .adm-actions {
+    gap: 8px;
   }
 }
 

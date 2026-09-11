@@ -1,5 +1,6 @@
 import { logout } from "@/app/admin/actions";
 import type { AdminSession } from "@/lib/admin/session";
+import { SidebarToggle } from "./AdminNav";
 
 export default function AdminTopbar({
   title,
@@ -19,20 +20,29 @@ export default function AdminTopbar({
 
   return (
     <header className="adm-topbar">
-      <div>
-        <h1>{title}</h1>
-        {subtitle && <div className="adm-topbar-sub">{subtitle}</div>}
+      <div className="adm-topbar-left">
+        <SidebarToggle />
+        <div className="adm-topbar-heading">
+          <h1>{title}</h1>
+          {subtitle && <div className="adm-topbar-sub">{subtitle}</div>}
+        </div>
       </div>
 
       <div className="adm-user">
         <div className="adm-avatar">{initials}</div>
-        <div>
+        <div className="adm-user-meta">
           <div style={{ fontWeight: 600, color: "var(--text)" }}>{session.name}</div>
           <div style={{ fontSize: 11.5 }}>{session.role}</div>
         </div>
         <form action={logout}>
-          <button type="submit" className="adm-btn adm-btn-ghost adm-btn-sm">
-            <i className="fas fa-right-from-bracket" aria-hidden="true" /> Log out
+          <button
+            type="submit"
+            className="adm-btn adm-btn-ghost adm-btn-sm"
+            aria-label="Log out"
+            title="Log out"
+          >
+            <i className="fas fa-right-from-bracket" aria-hidden="true" />
+            <span className="adm-btn-label">Log out</span>
           </button>
         </form>
       </div>

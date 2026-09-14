@@ -22,6 +22,10 @@ export default function Page() {
     >
       <>
 					<div className="content" id="content">
+					<p>The <strong>PSI Course at ATC</strong> is a focused and result-oriented programme designed to help aspirants prepare systematically for the <strong>Police Sub-Inspector (PSI) examination</strong>. The course combines a structured syllabus, concept-based learning, regular practice, and exam-oriented guidance to build strong fundamentals and improve performance across all important sections. Special emphasis is placed on understanding the examination pattern, strengthening core concepts, developing accuracy, and maintaining consistency throughout the preparation journey.</p><br />
+
+<p>At ATC, the PSI programme goes beyond classroom teaching by creating a disciplined and competitive learning environment. Through <strong>regular tests, practice sessions, performance analysis, revision, and continuous guidance</strong>, students are trained to approach the examination with confidence and clarity. The course is designed to transform preparation into a well-planned journey&mdash;helping aspirants stay focused, track their progress, identify areas for improvement, and move steadily towards their goal of becoming a <strong>Police Sub-Inspector</strong>.</p><br />
+
 					<p>The course covers the complete syllabus prescribed for the Rajasthan Police SI examination, ensuring that no topic is left untouched. Students receive comprehensive study materials prepared by experts, available in both Hindi and English medium, making it convenient for candidates from diverse backgrounds.<br /><br />
 
 One of the key highlights of this program is personal mentorship, where every student is guided individually in their preparation journey. Continuous motivation and guidance by toppers gives aspirants the confidence to perform better and remain focused under pressure.</p><br />

@@ -10,7 +10,7 @@ const rows = [
   {
     "courseSlug": "ias-foundation",
     "groupLabel": "Offline / Classroom Courses for IAS Foundation",
-    "title": "IAS Foundation Course",
+    "title": "IAS Foundation Course (GS)",
     "description": "Exclusive Classroom batch for the preparation of IAS Prelims + Mains",
     "fees": 145000,
     "oneTimePayment": 130000,
@@ -21,18 +21,18 @@ const rows = [
   {
     "courseSlug": "ias-foundation",
     "groupLabel": "Offline / Classroom Courses for IAS Foundation",
-    "title": "IAS / RAS Integrated Course",
-    "description": "3 Years Integrated batch for the preparation of IAS and RAS Exams",
-    "fees": 210000,
-    "oneTimePayment": 185000,
-    "feeNote": "GST Included in the Fees · Duration: 3 years",
+    "title": "Optional Subject - PSIR",
+    "description": "Optional subject batch for PSIR (Political Science & International Relations) for IAS Mains",
+    "fees": 45000,
+    "oneTimePayment": null,
+    "feeNote": "GST Included in the Fees · Duration: 15 months",
     "mode": "Offline / Classroom",
     "sortOrder": 2
   },
   {
     "courseSlug": "ias-foundation",
     "groupLabel": "Online Live from Classroom Course for IAS Foundation",
-    "title": "IAS Foundation - Online",
+    "title": "IAS Foundation - Online (GS)",
     "description": "Online Live from Classroom batch for the Preparation of IAS Exam",
     "fees": 125000,
     "oneTimePayment": null,
@@ -43,11 +43,11 @@ const rows = [
   {
     "courseSlug": "ias-foundation",
     "groupLabel": "Online Live from Classroom Course for IAS Foundation",
-    "title": "IAS-RAS Integrated - Online",
-    "description": "3 Years Online live from classroom batch for the Preparation of IAS and RAS exams",
-    "fees": 150000,
+    "title": "Optional Subject - PSIR - Online",
+    "description": "Online Live from Classroom optional subject batch for PSIR (Political Science & International Relations)",
+    "fees": 45000,
     "oneTimePayment": null,
-    "feeNote": "GST Included in the Fees · Duration: 3 years",
+    "feeNote": "GST Included in the Fees · Duration: 15 months",
     "mode": "Online - Live from Classroom",
     "sortOrder": 4
   },
@@ -100,7 +100,7 @@ const rows = [
     "groupLabel": "Offline / Classroom Courses for Rajasthan PSI Exam",
     "title": "Rajasthan PSI Course",
     "description": "Exclusive Classroom batch for the preparation of Rajasthan Police Sub Inspector Exam (PSI)",
-    "fees": 42000,
+    "fees": 24000,
     "oneTimePayment": null,
     "feeNote": "GST Included in the fees",
     "mode": "Offline / Classroom",
@@ -120,12 +120,12 @@ const rows = [
   {
     "courseSlug": "rajasthan-psi",
     "groupLabel": "Online Course for Rajasthan PSI Exam",
-    "title": "PSI - Recorded Batch",
-    "description": "Latest Recorded batch on our App for Rajasthan PSI",
-    "fees": 14000,
+    "title": "Rajasthan PSI Course - Online",
+    "description": "Online batch for the preparation of Rajasthan Police Sub Inspector Exam (PSI)",
+    "fees": 16000,
     "oneTimePayment": null,
-    "feeNote": "GST Not Included in the Fees",
-    "mode": "Online - Recorded",
+    "feeNote": "GST Included in the fees",
+    "mode": "Online",
     "sortOrder": 3
   },
   {
@@ -141,17 +141,6 @@ const rows = [
   },
   {
     "courseSlug": "ras-foundation",
-    "groupLabel": "Offline / Classroom Courses for RAS Foundation",
-    "title": "IAS / RAS Integrated Course",
-    "description": "3 Years Integrated batch for the preparation of IAS and RAS Exams",
-    "fees": 210000,
-    "oneTimePayment": 185000,
-    "feeNote": "GST Included in the Fees · Duration: 3 years",
-    "mode": "Offline / Classroom",
-    "sortOrder": 2
-  },
-  {
-    "courseSlug": "ras-foundation",
     "groupLabel": "Online Live from Classroom Course for RAS Foundation",
     "title": "RAS Foundation - Online",
     "description": "Online Live from Classroom batch for the Preparation of RAS Exam",
@@ -159,18 +148,7 @@ const rows = [
     "oneTimePayment": null,
     "feeNote": "GST Included in the Fees",
     "mode": "Online - Live from Classroom",
-    "sortOrder": 3
-  },
-  {
-    "courseSlug": "ras-foundation",
-    "groupLabel": "Online Live from Classroom Course for RAS Foundation",
-    "title": "IAS-RAS Integrated - Online",
-    "description": "3 Years Online live from classroom batch for the Preparation of IAS and RAS exams",
-    "fees": 150000,
-    "oneTimePayment": null,
-    "feeNote": "GST Included in the Fees · Duration: 3 years",
-    "mode": "Online - Live from Classroom",
-    "sortOrder": 4
+    "sortOrder": 2
   },
   {
     "courseSlug": "ras-foundation",
@@ -181,7 +159,7 @@ const rows = [
     "oneTimePayment": null,
     "feeNote": "GST Included in the Fees",
     "mode": "Online - Recorded Classes",
-    "sortOrder": 5
+    "sortOrder": 3
   },
   {
     "courseSlug": "ras-foundation",
@@ -192,7 +170,7 @@ const rows = [
     "oneTimePayment": null,
     "feeNote": "GST Included in the Fees",
     "mode": "Online - live Classes",
-    "sortOrder": 6
+    "sortOrder": 4
   }
 ];
 

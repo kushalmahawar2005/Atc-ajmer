@@ -1,10 +1,17 @@
 /** Course copy supplied by ATC in September 2026. */
 export const courseDetails: Record<
   string,
-  { title: string; sections: { title: string; paragraphs: string[] }[] }
+  {
+    title: string;
+    /** ≤160 chars, so Google shows the whole meta description un-truncated. */
+    metaDescription: string;
+    sections: { title: string; paragraphs: string[] }[];
+  }
 > = {
   "ias-foundation": {
     title: "UPSC IAS Comprehensive Course at ATC, Ajmer",
+    metaDescription:
+      "UPSC IAS comprehensive course at ATC Ajmer covering Prelims, Mains and Interview — GS, CSAT and PSIR optional with answer writing and mentorship.",
     sections: [
       {
         title: "Prelims, Mains and Interview",
@@ -17,6 +24,8 @@ export const courseDetails: Record<
   },
   "ras-foundation": {
     title: "RAS Comprehensive Course at ATC, Ajmer",
+    metaDescription:
+      "RAS comprehensive course at ATC Ajmer for Prelims, Mains and Interview — full RPSC syllabus, Rajasthan-specific subjects, tests and answer evaluation.",
     sections: [
       {
         title: "Complete RAS preparation",
@@ -29,6 +38,8 @@ export const courseDetails: Record<
   },
   "ias-ras-integrated": {
     title: "IAS–RAS Integrated Course at ATC, Ajmer",
+    metaDescription:
+      "Three-year IAS–RAS integrated course at ATC Ajmer — one programme preparing you for both the UPSC Civil Services and RPSC RAS examinations.",
     sections: [
       {
         title: "Three-year integrated programme",
@@ -42,6 +53,8 @@ export const courseDetails: Record<
   },
   "ias-test-series": {
     title: "UPSC IAS Prelims and Mains Test Series",
+    metaDescription:
+      "UPSC IAS test series at ATC Ajmer — 60 Prelims tests and 24 Mains tests with answer keys, PDF solutions and evaluation by a team of experts.",
     sections: [
       {
         title: "UPSC IAS Prelims Test Series — 60 Tests",
@@ -64,6 +77,8 @@ export const courseDetails: Record<
   },
   "ras-test-series": {
     title: "RAS Prelims and Mains Test Series",
+    metaDescription:
+      "RAS test series at ATC Ajmer — 18 Prelims tests and 16 Mains tests on the RPSC pattern, with answer evaluation and detailed performance feedback.",
     sections: [
       {
         title: "RAS Prelims Test Series — 18 Tests",

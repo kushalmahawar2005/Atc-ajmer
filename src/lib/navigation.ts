@@ -15,8 +15,6 @@ export type NavItem = {
   children?: NavLink[];
 };
 
-export const STUDENT_PORTAL_URL = "https://student.springboardacademy.co/";
-
 /** Government sources the Study Material menu links straight out to. */
 export const IGNOU_URL = "https://egyankosh.co.in/";
 export const SUJAS_URL =

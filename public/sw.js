@@ -8,7 +8,7 @@
  *    no admin response is ever written to a cache
  *  - everything else (API): straight to the network, never cached
  */
-const VERSION = "atc-v2";
+const VERSION = "atc-v3";
 const PAGES = `${VERSION}-pages`;
 const ASSETS = `${VERSION}-assets`;
 const OFFLINE_URL = "/offline";

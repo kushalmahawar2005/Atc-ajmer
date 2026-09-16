@@ -4,7 +4,7 @@ import { getQuiz } from "@/lib/quiz/data";
 import "@/styles/quiz.css";
 export const dynamic = "force-dynamic";
 export const metadata = {
-  title: "Daily Current Affairs Quiz | ATC Ajmer",
+  title: "Daily Current Affairs Quiz",
   description:
     "Practise five daily questions with answers, explanations and a downloadable PDF.",
   alternates: { canonical: "/daily-quiz" },

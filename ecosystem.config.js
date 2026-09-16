@@ -3,7 +3,7 @@
 module.exports = {
   apps: [
     {
-      name: "springboard",
+      name: "atc-ajmer",
       script: ".next/standalone/server.js",
       instances: 1,
       exec_mode: "fork",

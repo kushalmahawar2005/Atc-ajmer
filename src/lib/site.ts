@@ -16,7 +16,7 @@ export const ORGANISATION = {
     postalCode: "305001",
     country: "IN",
   },
-  sameAs: [CONTACT.instagram, CONTACT.facebook],
+  sameAs: [CONTACT.instagram, CONTACT.facebook, CONTACT.youtube],
 };
 
 /** Every crawlable route, with the relative weight used in the sitemap. */

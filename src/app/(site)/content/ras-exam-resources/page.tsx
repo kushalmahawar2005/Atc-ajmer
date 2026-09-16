@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
-  title: "Resources and Information for the Preparation of RAS Exam and Other RPSC Exams",
+  title: "RAS Exam Pattern, Syllabus & Study Material",
   description: "Resources like Syllabus, Paper Pattern, Useful Study Materials, Answer Copies for the Preparation of RAS Exam. RPSC Exam Content in Hindi and English Medium.",
   alternates: { canonical: "/content/ras-exam-resources" },
 };
@@ -102,7 +102,7 @@ export default function Page() {
 
         <div className="btn-row">
             <a className="btn cta" href="/courses/ras-foundation">
-                RAS Foundation Course by SBA
+                RAS Foundation Course by ATC
             </a>
             <a className="btn ghost" href="/courses/ras-test-series">
                 RAS Prelims & Mains Test Series

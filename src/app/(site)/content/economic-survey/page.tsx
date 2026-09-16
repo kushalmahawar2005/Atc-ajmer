@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
-  title: "Download Economic Survey Of India and Rajasthan in PDF- Hindi and English Medium For UPSC and RPSC Exams",
-  description: "Download PDF of Economic Survey of India which Covers Financial Achievements of Govt of India and Various Economic Aspects including Government Schemes. Rajasthan Economic Survey PDF for Competitive Exams. Economic Review in Hindi and English Medium.",
+  title: "Economic Survey of India & Rajasthan — PDF Download",
+  description: "Download the Economic Survey of India and Rajasthan Economic Review PDFs in Hindi and English — key data and schemes for UPSC and RPSC preparation.",
   alternates: { canonical: "/content/economic-survey" },
 };
 

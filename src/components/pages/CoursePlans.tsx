@@ -1,34 +1,15 @@
-import { and, asc, eq } from "drizzle-orm";
-import { db } from "@/db";
-import { coursePlans } from "@/db/schema";
-import { confirmedCoursePlans } from "@/lib/course-fees";
+import { getCoursePlans, type CoursePlan } from "@/lib/course-plans";
 
 const INR = new Intl.NumberFormat("en-IN");
 
-/**
- * Renders the priced plan cards for one course page, straight from the
- * `course_plans` table so fees can be changed from the admin panel.
- */
+/** Renders the priced plan cards for one course page. */
 export default async function CoursePlans({ slug }: { slug: string }) {
-  let plans: (typeof coursePlans.$inferSelect)[] = [];
-
-  try {
-    plans = await db
-      .select()
-      .from(coursePlans)
-      .where(and(eq(coursePlans.courseSlug, slug), eq(coursePlans.active, true)))
-      .orderBy(asc(coursePlans.sortOrder));
-  } catch {
-    console.error(`[course-plans] database unavailable for ${slug}; using confirmed fees.`);
-    plans = confirmedCoursePlans
-      .filter((plan) => plan.courseSlug === slug)
-      .map((plan, index) => ({ ...plan, id: -(index + 1), active: true }));
-  }
+  const plans = await getCoursePlans(slug);
 
   if (plans.length === 0) return null;
 
   // Preserve the order groups first appear in, so sortOrder controls layout.
-  const groups: { label: string | null; plans: typeof plans }[] = [];
+  const groups: { label: string | null; plans: CoursePlan[] }[] = [];
   for (const plan of plans) {
     const last = groups[groups.length - 1];
     if (last && last.label === plan.groupLabel) last.plans.push(plan);

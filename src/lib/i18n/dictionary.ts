@@ -89,15 +89,7 @@ export const hindiDictionary: Record<string, string> = {
   "IAS & RAS Exam Resources": "आईएएस और आरएएस परीक्षा संसाधन",
   "Explore →": "देखें →",
 
-  // ── Home: exams portal banner ────────────────────────────────────────
-  "SBA Exams Portal": "एसबीए परीक्षा पोर्टल",
-  "🎯 Bilingual  ·  RAS & IAS Focused": "🎯 द्विभाषी  ·  आरएएस और आईएएस केंद्रित",
-  NEW: "नया",
-  "🏆 RAS Prelims 2026 Offline Test Series — To be Organised at 11 Centres of Rajasthan":
-    "🏆 आरएएस प्रीलिम्स 2026 ऑफलाइन टेस्ट सीरीज — राजस्थान के 11 केंद्रों पर आयोजित",
   "Register →": "पंजीकरण →",
-  "📊 MCQ Practice Tests (Subjectwise)": "📊 वस्तुनिष्ठ अभ्यास टेस्ट (विषयवार)",
-  "📰 Current Affairs Objective Questions": "📰 करेंट अफेयर्स वस्तुनिष्ठ प्रश्न",
   "Join Now  →": "अभी जुड़ें  →",
   "Join Now": "अभी जुड़ें",
 
@@ -178,7 +170,7 @@ export const hindiDictionary: Record<string, string> = {
   "🏆 Toppers Gallery": "🏆 टॉपर्स गैलरी",
   "Toppers Gallery": "टॉपर्स गैलरी",
   "Celebrating Excellence in Civil Services — ATC":
-    "सिविल सेवा में उत्कृष्टता का उत्सव — स्प्रिंगबोर्ड अकादमी जयपुर",
+    "सिविल सेवा में उत्कृष्टता का उत्सव — एटीसी अजमेर",
   "🔍 Jump to Exam :": "🔍 परीक्षा पर जाएं :",
   "Search exam group (e.g. RAS 2021, IAS 2024)…":
     "परीक्षा समूह खोजें (जैसे आरएएस 2021, आईएएस 2024)…",

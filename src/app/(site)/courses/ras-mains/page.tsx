@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
+import CourseJsonLd from "@/components/seo/CourseJsonLd";
 
 export const metadata: Metadata = {
-  title: "RAS Mains Exclusive Course in Hindi and English Medium : ATC",
-  description: "RAS Mains Exam Preparation with Regular Classes Mock Tests Answer Writing Evaluation and Personal Guidance, Complete Test Series for RAS Mains Exam Prepares you For The Final Performance to Score Excellent Marks",
+  title: "RAS Mains Exclusive Course — Hindi & English Medium",
+  description: "RAS Mains course at ATC Ajmer with regular classes, answer writing, evaluation, mock tests and personal mentorship for the RPSC RAS Mains exam.",
   alternates: { canonical: "/courses/ras-mains" },
 };
 
@@ -19,6 +20,12 @@ export default function Page() {
       breadcrumb={breadcrumb}
       title="RAS Mains Exam Exclusive Course at ATC"
     >
+      <CourseJsonLd
+        slug="ras-mains"
+        path="/courses/ras-mains"
+        name={"RAS Mains Exam Exclusive Course at ATC"}
+        description={"RAS Mains course at ATC Ajmer with regular classes, answer writing, evaluation, mock tests and personal mentorship for the RPSC RAS Mains examination."}
+      />
       <>
 					<div className="content" id="content">
           <p>RAS Mains Exam Exclusive Course, specially designed to meet the needs of serious aspirants preparing for one of Rajasthan’s most prestigious examination. With years of proven expertise in guiding successful candidates, this RAS Mains Exclusive course offers a well-structured approach to ensure aspirants achieve outstanding results.<br /><br />
@@ -34,7 +41,7 @@ If your goal is to become a successful RAS officer, then ATC’s exclusive cours
         </div>
  
 <div className="new"><h3>New Batch for RAS Mains Will Start After The RAS Prelims Exam</h3></div><br />
-<p><b>For More details about Preparation of RAS Mains exam you can call us or visit our centres at Jaipur and Jodhpur.</b></p>		</>
+<p><b>For More details about Preparation of RAS Mains exam you can call us or visit our centre at Ajmer.</b></p>		</>
     </PageShell>
   );
 }

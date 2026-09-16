@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import CourseJsonLd from "@/components/seo/CourseJsonLd";
 import CoursePlans from "@/components/pages/CoursePlans";
 import { courseDetails } from "@/lib/course-details";
 const details = courseDetails["ias-ras-integrated"];
 export const metadata: Metadata = {
-  title: details.title,
-  description: details.sections[0].paragraphs[0],
+  title: { absolute: details.title },
+  description: details.metaDescription,
   alternates: { canonical: "/courses/ias-ras-integrated" },
 };
 export default function Page() {
@@ -18,6 +19,12 @@ export default function Page() {
         { label: details.title },
       ]}
     >
+      <CourseJsonLd
+        slug="ias-ras-integrated"
+        path="/courses/ias-ras-integrated"
+        name={details.title}
+        description={details.sections[0].paragraphs[0]}
+      />
       <div className="content">
         {details.sections.map((section) => (
           <section key={section.title} style={{ marginBottom: 28 }}>

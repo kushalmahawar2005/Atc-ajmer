@@ -3,7 +3,7 @@ import PageShell from "@/components/layout/PageShell";
 import ContactDetails from "@/components/pages/ContactDetails";
 
 export const metadata: Metadata = {
-  title: "ATC Ajmer — Civil Services Coaching in Civil Lines",
+  title: { absolute: "ATC Ajmer — Civil Services Coaching in Civil Lines" },
   description: "Visit ATC in Civil Lines, Ajmer for UPSC and RAS coaching with guidance for Prelims, Mains and Interview.",
   alternates: { canonical: "/about/ajmer-centre" },
 };

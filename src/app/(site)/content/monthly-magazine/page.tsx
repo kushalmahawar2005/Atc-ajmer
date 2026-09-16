@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
-  title: "Monthly Current Affairs Magazine For UPSC and RPSC Exams::ATC",
-  description: "Prepare for Current Affairs of World India and Rajasthan With Our Monthly Magazine. Best Current Affairs Exam Oriented Compilation for RPSC and UPSC Praparations. Current GK for Competitive Exams.",
+  title: "Monthly Current Affairs Magazine for UPSC & RPSC",
+  description: "Free monthly current affairs magazine from ATC Ajmer covering world, India and Rajasthan news — exam-oriented compilation for UPSC and RPSC aspirants.",
   alternates: { canonical: "/content/monthly-magazine" },
 };
 

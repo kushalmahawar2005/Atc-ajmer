@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { CONTACT } from "@/lib/contact";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
+import CourseJsonLd from "@/components/seo/CourseJsonLd";
 
 export const metadata: Metadata = {
-  title: "Interview Classes and Mock Interviews For IAS RAS and SI Exams : ATC",
-  description: "Our Interview Programs Prepare You For Interviews Conducted by UPSC and RPSC for Various Exams, Mock Interviews are Conducted by Panel of Experts in Various Fields",
+  title: "Mock Interviews & Interview Guidance for IAS, RAS, PSI",
+  description: "Mock interviews and interview guidance at ATC Ajmer for UPSC, RPSC and Rajasthan PSI personality tests, conducted by a panel of experts.",
   alternates: { canonical: "/courses/ias-ras-interview" },
 };
 
@@ -20,6 +21,12 @@ export default function Page() {
       breadcrumb={breadcrumb}
       title="Interview Classes and Mock Interviews for UPSC and RPSC Exams"
     >
+      <CourseJsonLd
+        slug="ias-ras-interview"
+        path="/courses/ias-ras-interview"
+        name={"Interview Classes and Mock Interviews for UPSC and RPSC Exams"}
+        description={"Mock interviews and interview guidance at ATC Ajmer for UPSC, RPSC and Rajasthan PSI personality tests, conducted by a panel of experts."}
+      />
       <>
 					<p>Preparing for the final stage of prestigious exams like UPSC and RPSC requires not only knowledge but also confidence, clarity, and refined personality traits. At ATC, we understand the importance of interviews in shaping your career. Our specialized interview classes are designed to equip aspirants with the right mindset, effective communication skills, and the ability to handle challenging questions with poise.<br /><br />
 At ATC, we understand that every candidate is unique, and our approach reflects this belief. The core of our program lies in conducting a series of mock interviews that replicate the real interview environment. These sessions are conducted by a distinguished panel of experienced members, including former bureaucrats, subject matter experts, and seasoned academicians. This panel&apos;s diverse expertise ensures that you receive a holistic evaluation of your performance, covering everything from your knowledge base and communication skills to your body language and analytical abilities.  	 </p><br />

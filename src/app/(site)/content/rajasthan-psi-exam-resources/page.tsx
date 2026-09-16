@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
-  title: "Resources | Exam Pattern | Study Materials for Preparation of Rajasthan PSI Exam",
+  title: "Rajasthan PSI Exam Pattern, Syllabus & Study Material",
   description: "How to Prepare for Rajasthan Police Sub Inspector Exam - Complete Guide. Exam Syllabus and Study Materials for Rajasthan PSI Exam.",
   alternates: { canonical: "/content/rajasthan-psi-exam-resources" },
 };
@@ -79,7 +79,7 @@ export default function Page() {
 
         <div className="btn-row">
             <a className="btn cta" href="/courses/rajasthan-psi">
-                Rajasthan PSI Course by SBA
+                Rajasthan PSI Course by ATC
             </a>
             <a className="btn ghost" href="/courses/psi-test-series">
                 Rajasthan PSI Test Series

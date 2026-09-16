@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
+import CourseJsonLd from "@/components/seo/CourseJsonLd";
 import CoursePlans from "@/components/pages/CoursePlans";
 
 export const metadata: Metadata = {
-  title: "Subjective and Objective Test Series for IAS / RAS Prelims and Mains Exams : ATC",
-  description: "Mock Test Series for IAS and RAS Exams,Objective Test Series for IAS and RAS Prelims Exams on OMR Sheets,Subjective Test Series for Mains Exams with Evaluation of Answers by Team of Experts",
+  title: "IAS, RAS & PSI Test Series — Prelims and Mains",
+  description: "OMR-based Prelims test series and subjective Mains test series for IAS, RAS and Rajasthan PSI at ATC Ajmer, with answer evaluation by a team of experts.",
   alternates: { canonical: "/courses/test-series" },
 };
 
@@ -20,6 +21,12 @@ export default function Page() {
       breadcrumb={breadcrumb}
       title="Subjective and Objective Test Series for IAS RAS and Rajasthan PSI Exams"
     >
+      <CourseJsonLd
+        slug="test-series"
+        path="/courses/test-series"
+        name={"Subjective and Objective Test Series for IAS RAS and Rajasthan PSI Exams"}
+        description={"Objective OMR-based Prelims test series and subjective Mains test series for IAS, RAS and Rajasthan PSI at ATC Ajmer, with expert answer evaluation."}
+      />
       <>
 					<div className="content" id="content">
          <p>At ATC, we believe that consistent practice and strategic preparation are the keys to cracking competitive examinations. To support aspirants in their journey, we conduct a comprehensive and result-oriented test series designed specifically for exams like IAS, RAS, and Rajasthan PSI. Our test series is planned to cover both the subjective tests for mains exam as well as the objective pattern for prelims, ensuring holistic preparation.<br /><br />
@@ -42,7 +49,7 @@ Our test series for IAS, RAS, and Rajasthan PSI has been carefully curated by su
 	 <dl className="accordions">
 <dt><b><span>RAS Prelims and Mains Test Series - 2025 - 26</span><br /> Offline and Online Test Series For RAS Pre and Mains</b></dt>
 <dd id="sec1">
-<p>Test Series for RAS Prelims and Mains are Conducted at our Centres at Jaipur and Jodhpur as well as Online through our App. All the Test Questions are Prepared by a Team of Experts who are holding long experience in this sector.<br /></p>
+<p>Test Series for RAS Prelims and Mains are Conducted at our Ajmer centre as well as Online through our App. All the Test Questions are Prepared by a Team of Experts who are holding long experience in this sector.<br /></p>
 <p style={{ textAlign: "right" }}><a href="/courses/ras-test-series" className="btnbg">More Information +</a></p>
 </dd>
 </dl>	

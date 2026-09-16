@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
-  title: "IAS | RAS | Rajasthan PSI Courses :: ATC",
-  description: "ATC Offers Wide Range Of Course For the Preparation Of UPSC and RPSC Exams. Regular Batches are Conducted for IAS Prelims and Mains, RAS Prelims and Mains, Rajasthan PSI Exams and Interview Programs. Studies in Both Hindi and English Medium.",
+  title: "IAS | RAS | Rajasthan PSI Courses",
+  description: "IAS, RAS, Rajasthan PSI and interview courses at ATC Ajmer — regular Prelims and Mains batches plus test series, in both Hindi and English medium.",
   alternates: { canonical: "/courses" },
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
-  title: "NCERT Books PDF Download::All Subjects Hindi and English Medium",
+  title: "NCERT Books PDF Download — All Subjects, Hindi & English",
   description: "Download NCERT Books in PDF Of All Subjects In Hindi and English Medium. NCERT ebooks for the Preparation of IAS and RAS Exams.",
   alternates: { canonical: "/content/ncert-pdf-download" },
 };

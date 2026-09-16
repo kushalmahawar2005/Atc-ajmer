@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
+import CourseJsonLd from "@/components/seo/CourseJsonLd";
 import CoursePlans from "@/components/pages/CoursePlans";
 
 export const metadata: Metadata = {
-  title: "Objective Test Series for Rajasthan PSI Exam 2026 : ATC",
-  description: "For the Best Performance in Rajasthan PSI Exam 2026 Practice and Prepare yourself with Our Objective Test Series, Latest Current Affairs and Economic Survey are Covered in this Test Series.",
+  title: "Objective Test Series for Rajasthan PSI Exam 2026",
+  description: "Objective test series for the Rajasthan PSI exam 2026 at ATC Ajmer — full syllabus practice with the latest current affairs and Economic Survey.",
   alternates: { canonical: "/courses/psi-test-series" },
 };
 
@@ -20,6 +21,12 @@ export default function Page() {
       breadcrumb={breadcrumb}
       title="Rajasthan PSI Test Series by ATC"
     >
+      <CourseJsonLd
+        slug="psi-test-series"
+        path="/courses/psi-test-series"
+        name={"Rajasthan PSI Test Series by ATC"}
+        description={"Objective test series for the Rajasthan Police Sub Inspector exam at ATC Ajmer, covering the full syllabus with current affairs and the Economic Survey."}
+      />
       <>
 					<div className="content" id="content">
 					<p>Preparing for the Rajasthan Police Sub-Inspector (PSI) examination requires the right strategy, practice, and guidance. At ATC, we have designed a comprehensive Rajasthan PSI Test Series to help aspirants evaluate their preparation, strengthen concepts, and boost confidence before the final exam.<br /><br />

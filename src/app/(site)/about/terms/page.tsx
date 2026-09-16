@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions of Service :: ATC",
+  title: "Terms and Conditions of Service",
   description: "Terms and Conditions of Service Of ATC",
   alternates: { canonical: "/about/terms" },
 };
@@ -27,7 +27,7 @@ For the purposes of these Terms and Conditions:<br />
 
 <b>Country </b> refers to: Rajasthan, India<br />
 
-<b>Company</b> (referred to as either “the Company”, “We”, “Us” or “Our” in this Agreement) refers to Springboards Spur Private Limited, A-1, Keshav Vihar, Gopalpura Bypass, Ridhi- Siddhi Chouraha, Jaipur.<br /><br />
+<b>Company</b> (referred to as either “the Company”, “We”, “Us” or “Our” in this Agreement) refers to ATC, 131/10B, 1st Floor, Vijay Sadan, Ajmer Hospital Street, Civil Lines, Ajmer, Rajasthan 305001.<br /><br />
 
 <b>Device</b> means any device that can access the Service such as a computer, a cellphone or a digital tablet.<br />
 
@@ -39,7 +39,7 @@ For the purposes of these Terms and Conditions:<br />
 
 <b>Third-party Social Media Service</b> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.<br /><br />
 
-<b>Website</b> refers to Spring Board Academy, accessible from www.springboardindia.org<br /><br />
+<b>Website</b> refers to ATC, accessible from www.atcajmer.com<br /><br />
 
 <b>You </b> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.<br /><br />
 
@@ -129,7 +129,7 @@ By continuing to access or use Our Service after those revisions become effectiv
 <b>Contact Us</b><br />
 If you have any questions about these Terms and Conditions, You can contact us:<br /><br />
 
-By visiting this page on our website: https://springboardindia.org
+By visiting this page on our website: https://atcajmer.com
 	   
 	   
             </p>            

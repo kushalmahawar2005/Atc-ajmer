@@ -27,6 +27,11 @@ export default function EnquireDrawer({
   useEffect(() => {
     if (!open) return;
 
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      onClose();
+      return;
+    }
+
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 

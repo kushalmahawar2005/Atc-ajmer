@@ -5,7 +5,7 @@ import { examGroups } from "@/lib/selections-data";
 import "@/styles/toppers.css";
 
 export const metadata: Metadata = {
-  title: "Our Past Selections — Toppers Gallery : ATC",
+  title: "Our Past Selections — Toppers Gallery",
   description:
     "Toppers of RAS and IAS from ATC — selections across RAS 2024, 2023, 2021, 2018, 2016, 2013, 2008 and IAS.",
   alternates: { canonical: "/about/selections" },

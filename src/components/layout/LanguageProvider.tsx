@@ -22,7 +22,7 @@ type LanguageContextValue = {
 };
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
-const STORAGE_KEY = "sb_page_lang";
+const STORAGE_KEY = "atc_page_lang";
 
 /**
  * The chosen language lives in sessionStorage so it survives navigation, and

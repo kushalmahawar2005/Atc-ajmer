@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
+import CourseJsonLd from "@/components/seo/CourseJsonLd";
 import CoursePlans from "@/components/pages/CoursePlans";
 
 export const metadata: Metadata = {
-  title: "Rajasthan Police Sub Inspector (PSI) Exam Batch : ATC",
-  description: "This Offline and Online Batch for Rajasthan Police Sub Inspector Exam Prepares You for Objective Exam Conducted by RPSC for the Post of PSI. Complete Syllabus Covered in Both Hindi and English Medium along with Comprehensive Test Series.",
+  title: "Rajasthan Police Sub Inspector (PSI) Exam Batch",
+  description: "Offline and online batch at ATC Ajmer for the RPSC Rajasthan Police SI exam — complete syllabus in Hindi and English with a comprehensive test series.",
   alternates: { canonical: "/courses/rajasthan-psi" },
 };
 
@@ -20,6 +21,12 @@ export default function Page() {
       breadcrumb={breadcrumb}
       title="Comprehensive Course for Rajasthan Police Sub Inspector (PSI) Exam"
     >
+      <CourseJsonLd
+        slug="rajasthan-psi"
+        path="/courses/rajasthan-psi"
+        name={"Comprehensive Course for Rajasthan Police Sub Inspector (PSI) Exam"}
+        description={"Offline and online batch at ATC Ajmer for the RPSC Rajasthan Police Sub Inspector exam, with the complete syllabus in Hindi and English and a full test series."}
+      />
       <>
 					<div className="content" id="content">
 					<p>The <strong>PSI Course at ATC</strong> is a focused and result-oriented programme designed to help aspirants prepare systematically for the <strong>Police Sub-Inspector (PSI) examination</strong>. The course combines a structured syllabus, concept-based learning, regular practice, and exam-oriented guidance to build strong fundamentals and improve performance across all important sections. Special emphasis is placed on understanding the examination pattern, strengthening core concepts, developing accuracy, and maintaining consistency throughout the preparation journey.</p><br />

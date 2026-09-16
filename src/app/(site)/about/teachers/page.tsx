@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
+import { ORGANISATION, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Our Faculties For Different Subjects:: ATC",
+  title: "Our Faculties For Different Subjects",
   description: "Faculties at ATC are Permanent and are Having Long Experience of Teaching Their Respective Subjects",
   alternates: { canonical: "/about/teachers" },
 };
@@ -13,136 +14,86 @@ const breadcrumb: Crumb[] = [
   { label: "Our Teachers" },
 ];
 
+/** Permanent faculty, in the order ATC lists them. */
+const teachers = [
+  { name: "Dileep Sir", subject: "Indian Polity and Indian Economy", photo: "/images/teachers/dileep-sir.jpg" },
+  { name: "Rajveer Sir", subject: "Rajasthan History Art and Culture", photo: "/images/teachers/20260811_87d4dfad1ebd1bc9.jpg" },
+  { name: "Narendra Sir", subject: "Indian History Faculty", photo: "/images/teachers/narendra-sir.png" },
+  { name: "Lakshita Madam", subject: "India and World Geography", photo: "/images/teachers/lakshita-mam.jpg" },
+  { name: "Vijay Sir", subject: "Indian Economy and Ethics", photo: "/images/teachers/vijay-sir.jpg" },
+  { name: "Sunil Poonia Sir", subject: "Environment / Biotech / Ecology", photo: "/images/teachers/sunil-sir.jpg" },
+  { name: "Vijay Sihag Sir", subject: "Rajasthan Geography", photo: "/images/teachers/vijay-sihag-sir.jpg" },
+  { name: "Abhishek Sir", subject: "Indian Polity / IR / Economic Survey", photo: "/images/teachers/abhishesk-sir.jpg" },
+  { name: "Krishna Sir", subject: "Maths", photo: "/images/teachers/krishna-sir.jpg" },
+  { name: "Rishi Sir", subject: "Reasoning", photo: "/images/teachers/rishi-sir.jpg" },
+  { name: "Suryabhan Sir", subject: "Indian History", photo: "/images/teachers/surya-sir.png" },
+  { name: "Naveen Sir", subject: "Hindi", photo: "/images/teachers/naveen-sir.jpg" },
+  { name: "Sharwan Sir", subject: "Physics", photo: "/images/teachers/sharwan-sir.jpg" },
+];
+
+/**
+ * Person markup for the faculty. Named, subject-specific teachers tied to the
+ * institute are the clearest expertise signal a coaching site can publish.
+ */
+function FacultyJsonLd() {
+  const graph = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Faculty at ATC Ajmer",
+    itemListElement: teachers.map((teacher, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Person",
+        name: teacher.name,
+        jobTitle: `Faculty — ${teacher.subject}`,
+        image: `${SITE_URL}${teacher.photo}`,
+        knowsAbout: teacher.subject.split(/\s*\/\s*| and /).map((s) => s.trim()),
+        worksFor: { "@id": `${SITE_URL}/#organisation` },
+        affiliation: { "@id": `${SITE_URL}/#organisation` },
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
+    />
+  );
+}
+
 export default function Page() {
   return (
-    <PageShell
-      breadcrumb={breadcrumb}
-      title="Faculties at ATC"
-    >
-      <>
-
-                                
-                <div className="tg-grid">
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/dileep-sir.jpg" alt="Dileep Sir" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">Indian Polity and Indian Economy</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Dileep Sir</figcaption>
-                    </figure>
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/20260811_87d4dfad1ebd1bc9.jpg" alt="Rajveer Sir" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">Rajasthan History Art and Culture</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Rajveer Sir</figcaption>
-                    </figure>
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/narendra-sir.png" alt="Narendra Sir" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">Indian History Faculty</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Narendra Sir</figcaption>
-                    </figure>
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/lakshita-mam.jpg" alt="Lakshita Madam" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">India and World Geography</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Lakshita Madam</figcaption>
-                    </figure>
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/vijay-sir.jpg" alt="Vijay Sir" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">Indian Economy and Ethics</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Vijay Sir</figcaption>
-                    </figure>
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/sunil-sir.jpg" alt="Sunil Poonia Sir" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">Environment / Biotech / Ecology</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Sunil Poonia Sir</figcaption>
-                    </figure>
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/vijay-sihag-sir.jpg" alt="Vijay Sihag Sir" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">Rajasthan Geography</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Vijay Sihag Sir</figcaption>
-                    </figure>
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/abhishesk-sir.jpg" alt="Abhishek Sir" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">Indian Polity / IR / Economic Survey</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Abhishek Sir</figcaption>
-                    </figure>
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/krishna-sir.jpg" alt="Krishna Sir" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">Maths</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Krishna Sir</figcaption>
-                    </figure>
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/rishi-sir.jpg" alt="Rishi Sir" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">Reasoning</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Rishi Sir</figcaption>
-                    </figure>
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/surya-sir.png" alt="Suryabhan Sir" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">Indian History</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Suryabhan Sir</figcaption>
-                    </figure>
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/naveen-sir.jpg" alt="Naveen Sir" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">Hindi</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Naveen Sir</figcaption>
-                    </figure>
-                                                            <figure className="tg-card" tabIndex={0}>
-                      <div className="tg-media">
-                                                    <img src="/images/teachers/sharwan-sir.jpg" alt="Sharwan Sir" loading="lazy" />
-                                                                        <figcaption className="tg-overlay">
-                                                      <span className="tg-subject">Physics</span>
-                                                                            </figcaption>
-                                              </div>
-                      <figcaption className="tg-name">Sharwan Sir</figcaption>
-                    </figure>
-                                    </div>
-                
-            <br /><br /></>
+    <PageShell breadcrumb={breadcrumb} title="Faculties at ATC">
+      <FacultyJsonLd />
+      <p>
+        Every faculty member at {ORGANISATION.name}, Ajmer is permanent and teaches a
+        single subject, so students are taught by the same specialist through the whole
+        course.
+      </p>
+      <div className="tg-grid">
+        {teachers.map((teacher) => (
+          <figure className="tg-card" key={teacher.name} tabIndex={0}>
+            <div className="tg-media">
+              {/* .tg-media reserves a 3:4 box, so the intrinsic size here only
+                  needs to match the file to keep the browser from guessing. */}
+              <img
+                src={teacher.photo}
+                alt={`${teacher.name} — ${teacher.subject} faculty at ATC Ajmer`}
+                width={200}
+                height={200}
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption className="tg-overlay">
+                <span className="tg-subject">{teacher.subject}</span>
+              </figcaption>
+            </div>
+            <figcaption className="tg-name">{teacher.name}</figcaption>
+          </figure>
+        ))}
+      </div>
     </PageShell>
   );
 }

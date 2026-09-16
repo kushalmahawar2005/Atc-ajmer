@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { examOrder, examSeries, type ExamKey } from "@/lib/exam-series";
 import { EXAM_BANNER_OPEN_EVENT } from "@/lib/exam-banner";
 
-const DISMISS_KEY = "sbaExamBanner2026Closed";
+const DISMISS_KEY = "atcExamBanner2026Closed";
 const OPEN_DELAY_MS = 6000;
 
 type Status = "idle" | "sending" | "ok" | "error";

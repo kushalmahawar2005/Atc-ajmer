@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
-  title: "Resources | Exam Pattern | Study Materials for Preparation of IAS / UPSC Exam",
+  title: "IAS / UPSC Exam Pattern, Syllabus & Study Material",
   description: "Explore All Information Required for the Preparation of UPSC Civil Services Exam. Download IAS Exam Syllabus",
   alternates: { canonical: "/content/ias-exam-resources" },
 };
@@ -67,7 +67,7 @@ export default function Page() {
 
         <div className="btn-row">
             <a className="btn cta" href="/courses/ias-foundation">
-                IAS Foundation Course by SBA
+                IAS Foundation Course by ATC
             </a>
             <a className="btn ghost" href="/courses/ias-ras-integrated">
                 Three Years Integrated Course

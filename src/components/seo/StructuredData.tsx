@@ -1,3 +1,4 @@
+import { CONTACT } from "@/lib/contact";
 import { ORGANISATION, SITE_URL } from "@/lib/site";
 
 /**
@@ -12,6 +13,7 @@ export default function StructuredData() {
         "@type": ["EducationalOrganization", "LocalBusiness"],
         "@id": `${SITE_URL}/#organisation`,
         name: ORGANISATION.name,
+        alternateName: ["ATC Ajmer", "ATC IAS Institute"],
         legalName: ORGANISATION.legalName,
         url: SITE_URL,
         logo: `${SITE_URL}/images/atc-logo.png`,
@@ -31,13 +33,26 @@ export default function StructuredData() {
           addressCountry: ORGANISATION.address.country,
         },
         areaServed: { "@type": "State", name: "Rajasthan" },
+        // ATC runs a single centre, so one set of hours covers the business.
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: CONTACT.hours.days,
+            opens: CONTACT.hours.opens,
+            closes: CONTACT.hours.closes,
+          },
+        ],
+        priceRange: "₹₹",
         sameAs: ORGANISATION.sameAs,
       },
       {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
         url: SITE_URL,
-        name: ORGANISATION.name,
+        // Google picks the SERP site name from this plus og:site_name; the two
+        // must agree, and the alternates cover how ATC is listed elsewhere.
+        name: "ATC Ajmer",
+        alternateName: ["ATC", "ATC IAS Institute", "ATC Ajmer — IAS & RAS Coaching"],
         publisher: { "@id": `${SITE_URL}/#organisation` },
         inLanguage: ["en-IN", "hi-IN"],
       },

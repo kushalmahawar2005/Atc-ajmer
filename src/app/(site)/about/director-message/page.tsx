@@ -3,7 +3,7 @@ import PageShell from "@/components/layout/PageShell";
 import AboutContent from "@/components/pages/AboutContent";
 
 export const metadata: Metadata = {
-  title: "Founder & Vision — Arvind Tiwari, ATC Ajmer",
+  title: { absolute: "Founder & Vision — Arvind Tiwari, ATC Ajmer" },
   description: "Learn about ATC founder Arvind Tiwari and the institute's founding vision for civil services aspirants in Ajmer.",
   alternates: { canonical: "/about/director-message" },
 };

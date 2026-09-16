@@ -1,7 +1,7 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 
-export const SESSION_COOKIE = "sba_admin";
+export const SESSION_COOKIE = "atc_admin";
 const MAX_AGE_SECONDS = 60 * 60 * 8; // 8 hours
 
 export type AdminSession = {

@@ -1,6 +1,7 @@
 /**
  * The three offline test series, kept isolated from each other: each exam has
- * its own banner copy, centres and registration records.
+ * its own banner copy, centres and registration records. ATC runs a single
+ * centre — Ajmer — so every offline series is held there.
  */
 export type ExamKey = "ras" | "ias" | "psi";
 
@@ -30,19 +31,7 @@ export const examSeries: Record<ExamKey, ExamSeries> = {
       { icon: "fas fa-video", label: "Video Discussion" },
       { icon: "fas fa-chalkboard-teacher", label: "Real Examination Environment", wide: true },
     ],
-    centres: [
-      "Jaipur",
-      "Jodhpur",
-      "Udaipur",
-      "Kota",
-      "Sikar",
-      "Hanumangarh",
-      "Barmer",
-      "Bikaner",
-      "Ajmer",
-      "Alwar",
-      "Jaisalmer",
-    ],
+    centres: ["Ajmer"],
   },
   ias: {
     key: "ias",
@@ -58,7 +47,7 @@ export const examSeries: Record<ExamKey, ExamSeries> = {
       { icon: "fas fa-video", label: "Video Solutions" },
       { icon: "fas fa-chalkboard-teacher", label: "UPSC Pattern Environment", wide: true },
     ],
-    centres: ["Jaipur", "Jodhpur", "Ajmer", "Kota", "Online"],
+    centres: ["Ajmer", "Online"],
   },
   psi: {
     key: "psi",
@@ -74,7 +63,7 @@ export const examSeries: Record<ExamKey, ExamSeries> = {
       { icon: "fas fa-newspaper", label: "Latest Current Affairs" },
       { icon: "fas fa-chalkboard-teacher", label: "Real Examination Environment", wide: true },
     ],
-    centres: ["Jaipur", "Jodhpur", "Sikar", "Bikaner", "Ajmer"],
+    centres: ["Ajmer"],
   },
 };
 

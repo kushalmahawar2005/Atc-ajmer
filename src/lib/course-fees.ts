@@ -104,7 +104,7 @@ export const confirmedCoursePlans = [
   {
     "courseSlug": "ras-foundation",
     "groupLabel": "Online Live from Classroom Course for RAS Foundation",
-    "title": "RAS Prelims Live from Clssroom",
+    "title": "RAS Prelims Live from Classroom",
     "description": "RAS Prelims live from classroom batch",
     "fees": 26000,
     "oneTimePayment": null,

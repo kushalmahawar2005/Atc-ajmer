@@ -1,6 +1,6 @@
-# Springboard Academy — Website
+# ATC Ajmer — Website
 
-Next.js (App Router) rebuild of springboardindia.org, server-rendered and backed by
+Next.js (App Router) site for ATC Ajmer (atcajmer.com), server-rendered and backed by
 Postgres. Deployed to a Hostinger Node.js host behind Nginx.
 
 ## Stack
@@ -66,7 +66,7 @@ CSV export that carries the current filters through to the download.
 Create the first account, then sign in at `/admin/login`:
 
 ```bash
-npm run admin:create -- you@springboardindia.org 'a-strong-password' 'Your Name' admin
+npm run admin:create -- you@atcajmer.com 'a-strong-password' 'Your Name' admin
 ```
 
 Passwords are scrypt hashes (`node:crypto`, no external dependency). The session
@@ -84,8 +84,8 @@ Tables: `admin_users`, `enquiries`, `courses`, `banners`, `batches`,
 For local development, run Postgres in Docker:
 
 ```bash
-docker run -d --name sba-postgres \
-  -e POSTGRES_PASSWORD=sba_dev -e POSTGRES_USER=sba -e POSTGRES_DB=springboard \
+docker run -d --name atc-postgres \
+  -e POSTGRES_PASSWORD=atc_dev -e POSTGRES_USER=atc -e POSTGRES_DB=atc \
   -p 5433:5432 postgres:17-alpine
 ```
 

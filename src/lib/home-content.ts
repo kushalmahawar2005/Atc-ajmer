@@ -167,5 +167,5 @@ export const footerColumns = [
   },
 ];
 
-export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@SpringboardAcademyOnline";
+export const YOUTUBE_CHANNEL_URL = CONTACT.youtube;
 export const WHATSAPP_CHAT_URL = CONTACT.whatsapp;

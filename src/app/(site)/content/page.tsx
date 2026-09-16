@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
-  title: "Study Materials for the Preparation of UPSC and RPSC Exams::ATC",
+  title: "Free Study Material for UPSC and RPSC Exams",
   description: "Online and Offline Study Materials for the Preparation of Civil Services Exams. Hindi Medium and English Medium Content for RAS and IAS Exams.",
   alternates: { canonical: "/content" },
 };

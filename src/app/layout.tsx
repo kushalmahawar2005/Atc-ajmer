@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Merriweather, Noto_Sans_Devanagari } from "next/font/google";
+import Analytics from "@/components/layout/Analytics";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -28,9 +29,8 @@ const notoDevanagari = Noto_Sans_Devanagari({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      "Best Coaching Institute for RAS / IAS Civil Service Exams : ATC",
-    template: "%s | ATC",
+    default: "Best Coaching Institute for RAS / IAS Civil Services | ATC Ajmer",
+    template: "%s | ATC Ajmer",
   },
   description:
     "ATC Ajmer — UPSC and RAS coaching founded in 2019 by Arvind Tiwari. Complete preparation for Prelims, Mains and Interview.",
@@ -51,21 +51,23 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    siteName: "ATC",
+    // og:site_name is one of the signals Google picks the SERP site name from;
+    // keep it identical to the WebSite schema name in StructuredData.tsx.
+    siteName: "ATC Ajmer",
     locale: "en_IN",
     alternateLocale: ["hi_IN"],
     url: SITE_URL,
     title: "Best Coaching Institute for RAS / IAS Civil Service Exams",
     description:
       "ATC Ajmer — Knowledge is Growth... Growth is Life. 7 selections in RAS 2021 and 5 selections in RAS 2023.",
-    images: [
-      {
-        url: "/images/atc-logo.png",
-        width: 1254,
-        height: 1254,
-        alt: "ATC logo",
-      },
-    ],
+    // The 1200×630 card comes from src/app/opengraph-image.png, which Next
+    // attaches to every route; declaring a square logo here would override it.
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Coaching Institute for RAS / IAS Civil Service Exams",
+    description:
+      "ATC Ajmer — UPSC, RAS and Rajasthan PSI coaching. Courses, test series and free study material.",
   },
   robots: {
     index: true,
@@ -87,10 +89,14 @@ export const metadata: Metadata = {
   },
   formatDetection: { telephone: true, address: true },
   icons: {
+    // Google indexes whatever /favicon.ico serves, so the declared set and the
+    // file on disk both have to be the ATC mark — see scripts/generate-icons.mjs.
     icon: [
-      { url: "/images/atc-logo.png", type: "image/png", sizes: "1254x1254" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-192.png", type: "image/png", sizes: "192x192" },
     ],
-    apple: [{ url: "/images/atc-logo.png", sizes: "1254x1254" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    shortcut: ["/favicon.ico"],
   },
   category: "education",
 };
@@ -121,7 +127,10 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
       </head>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

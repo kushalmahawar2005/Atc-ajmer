@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
 
 export const metadata: Metadata = {
-  title: "Download Rajasthan Sujas PDF For Competitive Exams::ATC",
-  description: "For The Preparation of Rajasthan Current Affairs Download Rajasthan Government Monthly Magazine Rajasthan Sujas. It Covers Latest Information About Government Projects and Schemes.",
+  title: "Download Rajasthan Sujas PDF For Competitive Exams",
+  description: "Download Rajasthan Sujas, the state government's monthly magazine, for Rajasthan current affairs, schemes and projects — free PDFs for RAS and RPSC exams.",
   alternates: { canonical: "/content/rajasthan-sujas" },
 };
 

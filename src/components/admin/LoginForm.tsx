@@ -36,7 +36,7 @@ export default function LoginForm() {
               type="email"
               autoComplete="username"
               required
-              placeholder="you@springboardindia.org"
+              placeholder="you@atcajmer.com"
             />
           </div>
 

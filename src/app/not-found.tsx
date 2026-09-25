@@ -18,7 +18,6 @@ const suggestions = [
   { href: "/courses/test-series", label: "Test Series", note: "Prelims and Mains test series" },
   { href: "/content", label: "Study Material", note: "Free PDFs, magazines and resources" },
   { href: "/about/selections", label: "Our Selections", note: "Toppers from ATC Ajmer" },
-  { href: "/daily-quiz", label: "Daily Quiz", note: "Today's current affairs quiz" },
   { href: "/about/contact", label: "Contact Us", note: "Visit or call the Ajmer centre" },
 ];
 

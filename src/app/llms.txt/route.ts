@@ -10,8 +10,7 @@ const SECTIONS: { heading: string; prefix: string }[] = [
 
 /** Short, factual blurb per URL — what an assistant needs to cite the page. */
 const NOTES: Record<string, string> = {
-  "/": "Home page: courses, selections, daily quiz and free study material.",
-  "/daily-quiz": "A new current affairs quiz every day, with instant scoring.",
+  "/": "Home page: courses, selections and free study material.",
   "/courses": "Every IAS, RAS, Rajasthan PSI and interview course, with fees.",
   "/courses/ias-foundation": "UPSC IAS comprehensive course — Prelims, Mains, Interview, PSIR optional.",
   "/courses/ras-foundation": "RAS comprehensive course — Prelims, Mains and Interview.",

@@ -7,7 +7,7 @@ import "@/styles/toppers.css";
 export const metadata: Metadata = {
   title: "Our Past Selections — Toppers Gallery",
   description:
-    "Toppers of RAS and IAS from ATC — selections across RAS 2024, 2023, 2021, 2018, 2016, 2013, 2008 and IAS.",
+    "ATC Ajmer selections — 5 in RAS 2023 and 7 in RAS 2021.",
   alternates: { canonical: "/about/selections" },
 };
 

@@ -96,7 +96,6 @@ export const whyChooseUs = [
 ];
 
 export const quickLinks: { label: string; href: string; external?: boolean }[] = [
-  { label: "Daily Quiz — Questions & Explanations", href: "/daily-quiz" },
   { label: "Knowledge Base For IAS & RAS Exams", href: "/knowledge-base" },
   { label: "Our Past Selections", href: "/about/selections" },
   { label: "NCERT Books PDF Download", href: "/content/ncert-pdf-download" },

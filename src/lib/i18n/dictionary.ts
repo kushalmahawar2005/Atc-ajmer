@@ -96,9 +96,6 @@ export const hindiDictionary: Record<string, string> = {
   // ── Home: slider / stats / admissions ────────────────────────────────
   "View Our Past Selections →": "हमारे पिछले चयन देखें →",
   "Years of Excellence": "वर्षों की उत्कृष्टता",
-  "In Top 50 — RAS 2024": "आरएएस 2024 में शीर्ष 50 में",
-  "In Top 100 — RAS 2024": "आरएएस 2024 में शीर्ष 100 में",
-  "In Top 100 — RAS 2023": "आरएएस 2023 में शीर्ष 100 में",
   "Admissions Open": "प्रवेश प्रारंभ",
   "New Batches :-": "नए बैच :-",
   "RAS Foundation - 11 August 2026": "आरएएस फाउंडेशन - 11 अगस्त 2026",

@@ -1,4 +1,3 @@
-import QuizCard from "@/components/home/QuizCard";
 import AboutSection from "@/components/home/AboutSection";
 import CoursesGrid from "@/components/home/CoursesGrid";
 import EnrollBanner from "@/components/home/EnrollBanner";
@@ -19,7 +18,6 @@ export default function HomePage() {
         <EnrollBanner />
         <AboutSection />
         <CoursesGrid />
-        <QuizCard />
         <ThreeColumnSection />
         <Testimonials />
       </div>

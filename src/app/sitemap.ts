@@ -4,7 +4,7 @@ import type { MetadataRoute } from "next";
 import { ROUTES, SITE_URL } from "@/lib/site";
 
 /** Pages whose content changes without the source file changing. */
-const ALWAYS_FRESH = new Set(["/", "/daily-quiz"]);
+const ALWAYS_FRESH = new Set(["/"]);
 
 /**
  * The commit date of the page's source file. Stamping every URL with the build

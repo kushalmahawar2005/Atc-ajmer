@@ -21,6 +21,20 @@ function render(size) {
     .toBuffer();
 }
 
+/**
+ * The cropped logo inset on a white square. Google Search shows the favicon
+ * inside a circle, which clipped the "A" and "C" when the logo ran edge to
+ * edge; at 72% it fits the circle. Tab-sized icons keep a thinner margin.
+ */
+async function renderIcon(size) {
+  const inner = Math.round(size * (size <= 32 ? 0.9 : 0.72));
+  const offset = Math.floor((size - inner) / 2);
+  return sharp({ create: { width: size, height: size, channels: 3, background: "#ffffff" } })
+    .composite([{ input: await render(inner), top: offset, left: offset }])
+    .png()
+    .toBuffer();
+}
+
 /** ICO container wrapping PNG payloads — what browsers and Google expect. */
 function ico(entries) {
   const header = Buffer.alloc(6);
@@ -50,7 +64,7 @@ await mkdir(path.join(ROOT, "public/icons"), { recursive: true });
 
 const sizes = [16, 32, 48, 180, 192, 256, 384, 512];
 const rendered = new Map();
-for (const size of sizes) rendered.set(size, await render(size));
+for (const size of sizes) rendered.set(size, await renderIcon(size));
 
 const written = [
   ["public/favicon-192.png", rendered.get(192)],

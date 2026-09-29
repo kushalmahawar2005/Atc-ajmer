@@ -1,30 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Merriweather, Noto_Sans_Devanagari } from "next/font/google";
 import Analytics from "@/components/layout/Analytics";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const merriweather = Merriweather({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-merriweather",
-  display: "swap",
-});
-
-const notoDevanagari = Noto_Sans_Devanagari({
-  subsets: ["devanagari"],
-  weight: ["400", "600", "700"],
-  variable: "--font-noto-devanagari",
-  display: "swap",
-});
-
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -114,12 +91,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${merriweather.variable} ${notoDevanagari.variable}`}
       // Browser extensions (Dark Reader, Grammarly, …) stamp attributes onto
       // <html>/<body> before React hydrates; ignore that diff.
       suppressHydrationWarning
     >
       <head>
+        {/* Loaded by the browser, not fetched at build time: the Hostinger
+            build server hangs when next/font tries to reach Google Fonts. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap"
+        />
         {/* Font Awesome powers the icon set the original markup uses. */}
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
         <link

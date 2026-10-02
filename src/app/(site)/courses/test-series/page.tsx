@@ -3,6 +3,7 @@ import PageShell, { type Crumb } from "@/components/layout/PageShell";
 import CourseJsonLd from "@/components/seo/CourseJsonLd";
 import CoursePlans from "@/components/pages/CoursePlans";
 
+export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "IAS, RAS & PSI Test Series — Prelims and Mains",
   description: "OMR-based Prelims test series and subjective Mains test series for IAS, RAS and Rajasthan PSI at ATC Ajmer, with answer evaluation by a team of experts.",

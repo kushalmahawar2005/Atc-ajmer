@@ -3,6 +3,7 @@ import PageShell, { type Crumb } from "@/components/layout/PageShell";
 import CourseJsonLd from "@/components/seo/CourseJsonLd";
 import CoursePlans from "@/components/pages/CoursePlans";
 
+export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Rajasthan Police Sub Inspector (PSI) Exam Batch",
   description: "Offline and online batch at ATC Ajmer for the RPSC Rajasthan Police SI exam — complete syllabus in Hindi and English with a comprehensive test series.",

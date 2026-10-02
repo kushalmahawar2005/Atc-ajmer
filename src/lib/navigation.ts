@@ -32,7 +32,6 @@ export const mainNav: NavItem[] = [
       { label: "About Institute", href: "/about" },
       { label: "Ajmer Center", href: "/about/ajmer-centre" },
       { label: "Our Past Selections", href: "/about/selections" },
-      { label: "Our Teachers", href: "/about/teachers" },
     ],
   },
   {

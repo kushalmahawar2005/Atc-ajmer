@@ -3,10 +3,7 @@ import { db } from "@/db";
 import { testimonials } from "@/db/schema";
 import TestimonialsSwitcher from "./TestimonialsSwitcher";
 
-/**
- * Testimonials in two groups the visitor swaps between: faculty and students.
- * Renders nothing until the admin adds rows.
- */
+/** Renders student testimonials when the admin adds rows. */
 export default async function Testimonials() {
   let rows: (typeof testimonials.$inferSelect)[] = [];
 
@@ -21,11 +18,10 @@ export default async function Testimonials() {
     return null;
   }
 
-  const faculty = rows.filter((row) => row.kind === "faculty");
   const students = rows.filter((row) => row.kind === "student");
-  if (faculty.length === 0 && students.length === 0) return null;
+  if (students.length === 0) return null;
 
-  return <TestimonialsSwitcher faculty={faculty} students={students} />;
+  return <TestimonialsSwitcher students={students} />;
 }
 
 export type Testimonial = typeof testimonials.$inferSelect;

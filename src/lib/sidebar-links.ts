@@ -45,7 +45,6 @@ export const sidebarSections = [
     icon: "fas fa-link",
     links: [
       { label: "Our Past Selections", href: "/about/selections" },
-      { label: "Our Teachers", href: "/about/teachers" },
       { label: "Contact Us", href: "/about/contact" },
     ],
   },

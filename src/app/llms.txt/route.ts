@@ -26,7 +26,6 @@ const NOTES: Record<string, string> = {
   "/about/director-message": "Message from founder Arvind Tiwari.",
   "/about/ajmer-centre": "The Ajmer centre — ATC's only centre.",
   "/about/selections": "Selected candidates, exam by exam.",
-  "/about/teachers": "Faculty profiles and the subjects each teacher handles.",
   "/about/contact": "Address, phone numbers, email and map for the Ajmer centre.",
   "/content": "Index of every free study resource.",
   "/content/ncert-pdf-download": "Free NCERT textbook PDFs.",

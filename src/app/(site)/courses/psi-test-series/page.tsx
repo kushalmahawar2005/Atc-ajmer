@@ -3,6 +3,7 @@ import PageShell, { type Crumb } from "@/components/layout/PageShell";
 import CourseJsonLd from "@/components/seo/CourseJsonLd";
 import CoursePlans from "@/components/pages/CoursePlans";
 
+export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Objective Test Series for Rajasthan PSI Exam 2026",
   description: "Objective test series for the Rajasthan PSI exam 2026 at ATC Ajmer — full syllabus practice with the latest current affairs and Economic Survey.",

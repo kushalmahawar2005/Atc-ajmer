@@ -3,6 +3,7 @@ import PageShell from "@/components/layout/PageShell";
 import CourseJsonLd from "@/components/seo/CourseJsonLd";
 import CoursePlans from "@/components/pages/CoursePlans";
 import { courseDetails } from "@/lib/course-details";
+export const dynamic = "force-dynamic";
 const details = courseDetails["ias-test-series"];
 export const metadata: Metadata = {
   title: details.title,

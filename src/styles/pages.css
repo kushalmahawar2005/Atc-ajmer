@@ -914,6 +914,16 @@ table.two-col tbody td {
     margin: 8px 0;
 }
 
+.tg-featured {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0 26px;
+}
+
+.tg-grid--faculty {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .tg-card {
     margin: 0;
     background: var(--surface);
@@ -922,6 +932,10 @@ table.two-col tbody td {
     box-shadow: var(--shadow-sm);
     overflow: hidden;
     transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.tg-card--featured {
+    width: min(100%, 280px);
 }
 
 .tg-card:hover {
@@ -955,47 +969,24 @@ table.two-col tbody td {
     align-items: center;
     justify-content: center;
     background: var(--bg);
-    color: var(--border);
-    font-size: 44px;
+    color: var(--navy, var(--text));
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.35;
+    padding: 18px;
+    text-align: center;
 }
 
-.tg-overlay {
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    padding: 26px 12px 10px;
-    background: linear-gradient(to top, rgba(0,0,0,0.88) 45%, rgba(0,0,0,0) 100%);
-    color: #fff;
-    opacity: 0;
-    transition: opacity var(--transition);
-}
-
-.tg-card:hover .tg-overlay,
-.tg-card:focus-within .tg-overlay { opacity: 1; }
-
-.tg-card:focus-visible {
-    outline: 2px solid var(--primary, var(--navy));
-    outline-offset: 2px;
-}
-
+/* "<Subject> Faculty" line under the name and title, styled to match the title. */
 .tg-subject {
     display: block;
+    margin-top: 3px;
+    font-family: var(--font-body);
     font-size: 12px;
-    font-weight: 600;
-    line-height: 1.35;
-}
-
-/* Free-text bio under the subject. Clamped so a long write-up can never
-   grow the overlay over the whole photo. */
-.tg-details {
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin-top: 6px;
-    font-size: 11.5px;
-    font-weight: 400;
-    line-height: 1.45;
-    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text-muted);
 }
 
 .tg-name {
@@ -1017,12 +1008,16 @@ table.two-col tbody td {
     color: var(--text-muted);
 }
 
+@media (max-width: 900px) {
+    .tg-grid--faculty { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 480px) {
     .tg-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 14px; }
+    .tg-grid--faculty { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .tg-featured { margin: 12px 0 20px; }
     .tg-name { font-size: 12.5px; }
     .tg-role { font-size: 11px; }
-    /* keep the subject visible on touch devices where there's no hover */
-    .tg-overlay { opacity: 1; padding: 20px 10px 8px; }
-    /* ...but trim the bio hard there, the cards are much smaller */
-    .tg-details { -webkit-line-clamp: 2; font-size: 11px; }
+    .tg-noimg { font-size: 13px; padding: 12px; }
+    .tg-subject { font-size: 11px; }
 }

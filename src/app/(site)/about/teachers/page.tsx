@@ -14,16 +14,34 @@ const breadcrumb: Crumb[] = [
   { label: "Our Teachers" },
 ];
 
-/** Faculty, in the order ATC lists them. */
-const teachers = [
-  { name: "Arvind Tiwari", role: "Founder, Director & Faculty", subject: "Political Science, Ethics, Rajasthan GK & Optional PSIR", photo: "/images/teachers/arvind-tiwari.jpg" },
-  { name: "Ankita Sharma", role: "Co-Founder & Faculty", subject: "English & Rajasthan Culture", photo: "/images/teachers/ankita-sharma.jpg" },
-  { name: "Priya Verma", role: "Faculty", subject: "General Science & Economics", photo: "/images/teachers/priya-verma.jpg" },
-  { name: "Harshit Sharma", role: "Faculty", subject: "Science & Technology", photo: "/images/teachers/harshit-sharma.jpg" },
-  { name: "Uttam Sharma", role: "Faculty", subject: "Maths & Reasoning", photo: "/images/teachers/uttam-sharma.jpg" },
-  { name: "Nishant Pal", role: "Faculty", subject: "International Relations", photo: "/images/teachers/nishant-pal.jpg" },
-  { name: "Rahul Sen", role: "Faculty", subject: "Maths & Reasoning", photo: "/images/teachers/rahul-sen.jpg" },
+type Teacher = {
+  name: string;
+  /** Position held besides teaching, e.g. Co-Founder. Everyone listed is faculty. */
+  title?: string;
+  subject?: string;
+  photo?: string;
+};
+
+const featuredTeacher: Teacher = {
+  name: "Arvind Tiwari",
+  title: "Founder & Director",
+  subject: "Political Science, Ethics, Rajasthan GK & Optional PSIR",
+  photo: "/images/teachers/arvind-tiwari.jpg",
+};
+
+/** Faculty, in the order requested by ATC. */
+const teachers: Teacher[] = [
+  { name: "Ankita Sharma", title: "Co-Founder", subject: "English & Rajasthan Culture", photo: "/images/teachers/ankita-sharma.jpg" },
+  { name: "Ugmaram Kumawat", subject: "Hindi", photo: "/images/teachers/ugmaram-kumawat.jpg" },
+  { name: "Dr. Divyansh Saxena", photo: "/images/teachers/divyansh-saxena.jpg" },
+  { name: "Harshit Sharma", subject: "Science & Technology", photo: "/images/teachers/harshit-sharma.jpg" },
+  { name: "Priya Verma", subject: "General Science & Economics", photo: "/images/teachers/priya-verma.jpg" },
+  { name: "Uttam Sharma", subject: "Maths & Reasoning", photo: "/images/teachers/uttam-sharma.jpg" },
+  { name: "Nishant Pal", subject: "International Relations", photo: "/images/teachers/nishant-pal.jpg" },
+  { name: "Rahul Sen", subject: "Maths & Reasoning", photo: "/images/teachers/rahul-sen.jpg" },
 ];
+
+const allTeachers = [featuredTeacher, ...teachers];
 
 /**
  * Person markup for the faculty. Named, subject-specific teachers tied to the
@@ -34,15 +52,17 @@ function FacultyJsonLd() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Faculty at ATC Ajmer",
-    itemListElement: teachers.map((teacher, index) => ({
+    itemListElement: allTeachers.map((teacher, index) => ({
       "@type": "ListItem",
       position: index + 1,
       item: {
         "@type": "Person",
         name: teacher.name,
-        jobTitle: teacher.role,
-        image: `${SITE_URL}${teacher.photo}`,
-        knowsAbout: teacher.subject.split(/\s*(?:,|&)\s*/).map((s) => s.trim()),
+        jobTitle: teacher.title ? `${teacher.title} & Faculty` : "Faculty",
+        ...(teacher.photo ? { image: `${SITE_URL}${teacher.photo}` } : {}),
+        ...(teacher.subject
+          ? { knowsAbout: teacher.subject.split(/\s*(?:,|&)\s*/).map((s) => s.trim()) }
+          : {}),
         worksFor: { "@id": `${SITE_URL}/#organisation` },
         affiliation: { "@id": `${SITE_URL}/#organisation` },
       },
@@ -65,31 +85,45 @@ export default function Page() {
         Every faculty member at {ORGANISATION.name}, Ajmer is permanent, so students are
         taught by the same specialists through the whole course.
       </p>
-      <div className="tg-grid">
+      <div className="tg-featured">
+        <TeacherCard teacher={featuredTeacher} featured />
+      </div>
+      <div className="tg-grid tg-grid--faculty">
         {teachers.map((teacher) => (
-          <figure className="tg-card" key={teacher.name} tabIndex={0}>
-            <div className="tg-media">
-              {/* .tg-media reserves a 3:4 box, so the intrinsic size here only
-                  needs to match the file to keep the browser from guessing. */}
-              <img
-                src={teacher.photo}
-                alt={`${teacher.name} — ${teacher.subject} faculty at ATC Ajmer`}
-                width={600}
-                height={600}
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption className="tg-overlay">
-                <span className="tg-subject">{teacher.subject}</span>
-              </figcaption>
-            </div>
-            <div className="tg-name">
-              {teacher.name}
-              <span className="tg-role">{teacher.role}</span>
-            </div>
-          </figure>
+          <TeacherCard teacher={teacher} key={teacher.name} />
         ))}
       </div>
     </PageShell>
+  );
+}
+
+function TeacherCard({ teacher, featured = false }: { teacher: Teacher; featured?: boolean }) {
+  const facultyLine = teacher.subject ? `${teacher.subject} Faculty` : undefined;
+  const details = [teacher.title, facultyLine].filter(Boolean).join(", ");
+
+  return (
+    <figure className={`tg-card${featured ? " tg-card--featured" : ""}`}>
+      <div className="tg-media">
+        {teacher.photo ? (
+          // .tg-media reserves a 3:4 box, so the intrinsic size here only
+          // needs to match the file to keep the browser from guessing.
+          <img
+            src={teacher.photo}
+            alt={details ? `${teacher.name} — ${details} at ATC Ajmer` : `${teacher.name} at ATC Ajmer`}
+            width={600}
+            height={600}
+            loading={featured ? "eager" : "lazy"}
+            decoding="async"
+          />
+        ) : (
+          <div className="tg-noimg">{teacher.name}</div>
+        )}
+      </div>
+      <div className="tg-name">
+        {teacher.name}
+        {teacher.title ? <span className="tg-role">{teacher.title}</span> : null}
+        {facultyLine ? <span className="tg-subject">{facultyLine}</span> : null}
+      </div>
+    </figure>
   );
 }

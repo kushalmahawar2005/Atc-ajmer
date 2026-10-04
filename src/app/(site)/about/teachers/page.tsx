@@ -33,7 +33,7 @@ const featuredTeacher: Teacher = {
 const teachers: Teacher[] = [
   { name: "Ankita Sharma", title: "Co-Founder", subject: "English & Rajasthan Culture", photo: "/images/teachers/ankita-sharma.jpg" },
   { name: "Ugmaram Kumawat", subject: "Hindi", photo: "/images/teachers/ugmaram-kumawat.jpg" },
-  { name: "Dr. Divyansh Saxena", photo: "/images/teachers/divyansh-saxena.jpg" },
+  { name: "Dr. Divyansh Saxena", subject: "History", photo: "/images/teachers/divyansh-saxena.jpg" },
   { name: "Harshit Sharma", subject: "Science & Technology", photo: "/images/teachers/harshit-sharma.jpg" },
   { name: "Priya Verma", subject: "General Science & Economics", photo: "/images/teachers/priya-verma.jpg" },
   { name: "Uttam Sharma", subject: "Maths & Reasoning", photo: "/images/teachers/uttam-sharma.jpg" },

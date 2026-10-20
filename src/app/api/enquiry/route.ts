@@ -1,6 +1,7 @@
-import { NextResponse } from "next/server";
+import { after, NextResponse } from "next/server";
 import { db } from "@/db";
 import { enquiries } from "@/db/schema";
+import { notifyEnquiry } from "@/lib/notify";
 
 export const dynamic = "force-dynamic";
 
@@ -28,15 +29,17 @@ export async function POST(request: Request) {
     );
   }
 
+  const enquiry = {
+    fullName: fullName.slice(0, 160),
+    email: email.slice(0, 200),
+    phone: phone.slice(0, 20),
+    course: field(data, "subject").slice(0, 120) || null,
+    message: field(data, "requirement").slice(0, 2000) || null,
+  };
+
   try {
-    await db.insert(enquiries).values({
-      fullName: fullName.slice(0, 160),
-      email: email.slice(0, 200),
-      phone: phone.slice(0, 20),
-      course: field(data, "subject").slice(0, 120) || null,
-      message: field(data, "requirement").slice(0, 2000) || null,
-      source: "website",
-    });
+    await db.insert(enquiries).values({ ...enquiry, source: "website" });
+    after(() => notifyEnquiry(enquiry));
 
     return NextResponse.json({
       success: true,

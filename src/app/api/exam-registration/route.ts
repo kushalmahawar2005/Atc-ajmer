@@ -1,7 +1,8 @@
-import { NextResponse } from "next/server";
+import { after, NextResponse } from "next/server";
 import { db } from "@/db";
 import { examRegistrations } from "@/db/schema";
 import { isExamKey } from "@/lib/exam-series";
+import { notifyExamRegistration } from "@/lib/notify";
 
 export const dynamic = "force-dynamic";
 
@@ -35,15 +36,18 @@ export async function POST(request: Request) {
     );
   }
 
+  const registration = {
+    exam,
+    name: name.slice(0, 160),
+    fatherName: fatherName.slice(0, 160),
+    phone: phone.slice(0, 20),
+    place: place.slice(0, 160),
+    centre: centre.slice(0, 120) || null,
+  };
+
   try {
-    await db.insert(examRegistrations).values({
-      exam,
-      name: name.slice(0, 160),
-      fatherName: fatherName.slice(0, 160),
-      phone: phone.slice(0, 20),
-      place: place.slice(0, 160),
-      centre: centre.slice(0, 120) || null,
-    });
+    await db.insert(examRegistrations).values(registration);
+    after(() => notifyExamRegistration(registration));
 
     return NextResponse.json({
       success: true,

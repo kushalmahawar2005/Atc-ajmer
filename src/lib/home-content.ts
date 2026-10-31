@@ -21,7 +21,6 @@ export const sliderImages = [
     src: "/images/slider/ras-results.webp",
     alt: "ATC RAS selections and results for 2021 and 2023",
   },
-  { src: "/images/slider/slider5.jpeg", alt: "ATC" },
 ];
 
 export const stats = [

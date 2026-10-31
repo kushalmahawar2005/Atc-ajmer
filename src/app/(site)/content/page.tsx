@@ -36,6 +36,9 @@ export default function Page() {
             <a className="btn btn-cta" href="/content/economic-survey" aria-label="Economic Survey of Rajasthan and India">
                 Economic Survey of India &amp; Rajasthan
             </a>
+            <a className="btn btn-ghost" href="https://www.pib.gov.in/ViewAllEbooklet.aspx?reg=3&lang=1" target="_blank" rel="noopener noreferrer" aria-label="PIB press releases and e-booklets">
+                PIB Press Releases / e-Booklets ↗
+            </a>
         </div>
     </div><br /><br />
 					<div className="content" id="content">

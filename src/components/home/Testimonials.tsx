@@ -23,6 +23,12 @@ const studentStories = [
     name: "Harshita",
     result: "Rank 5 (LV) · RAS 2021",
   },
+  {
+    src: "/images/testimonials/mayank-ras-2024.jpg",
+    alt: "Testimonial from Mayank, RPS, RAS 2024",
+    name: "Mayank",
+    result: "RPS · RAS 2024",
+  },
 ];
 
 /** Shows the supplied student stories and any extra testimonials added by admins. */
@@ -47,7 +53,7 @@ export default async function Testimonials() {
         <h2 className="section-title" id="student-testimonials-title">
           Student Testimonials
         </h2>
-        <p>Experiences from our RAS 2021 achievers</p>
+        <p>Experiences from our RAS achievers</p>
       </header>
 
       <div className="testimonial-poster-grid">

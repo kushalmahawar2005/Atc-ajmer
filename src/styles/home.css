@@ -1525,6 +1525,8 @@ a.home-contact-row:hover { color: var(--primary); }
     box-shadow: var(--shadow-sm);
 }
 
+.testimonial-poster-card:last-child:nth-child(4) { grid-column: 2; }
+
 .testimonial-poster-card img {
     display: block;
     width: 100%;
@@ -1573,6 +1575,7 @@ a.home-contact-row:hover { color: var(--primary); }
 
 @media (max-width: 560px) {
     .testimonial-poster-grid { grid-template-columns: minmax(0, 1fr); }
+    .testimonial-poster-card:last-child:nth-child(4) { grid-column: auto; }
     .testimonial-poster-card { width: min(100%, 380px); margin-inline: auto; }
 }
 

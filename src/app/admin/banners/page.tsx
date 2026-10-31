@@ -13,7 +13,7 @@ export const dynamic = "force-dynamic";
 
 const fields: Field[] = [
   { name: "title", label: "Title", half: true },
-  { name: "imageUrl", label: "Image URL", placeholder: "/images/slider/slider1.jpeg", required: true, half: true },
+  { name: "imageUrl", label: "Image URL", placeholder: "/images/slider/ras-mains-upcoming.webp", required: true, half: true },
   { name: "linkUrl", label: "Link URL", placeholder: "/courses", half: true },
   { name: "sortOrder", label: "Sort order", type: "number", half: true },
   { name: "active", label: "Active", type: "checkbox" },

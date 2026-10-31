@@ -9,9 +9,18 @@ import { CONTACT } from "./contact";
  */
 
 export const sliderImages = [
-  { src: "/images/slider/slider1.jpeg", alt: "ATC" },
-  { src: "/images/slider/slider3.jpeg", alt: "ATC" },
-  { src: "/images/slider/slider4.jpeg", alt: "ATC" },
+  {
+    src: "/images/slider/ras-mains-upcoming.webp",
+    alt: "RAS Mains upcoming batch starting 10 December 2026",
+  },
+  {
+    src: "/images/slider/ras-foundation-upcoming.webp",
+    alt: "RAS Foundation upcoming batch starting 10 December 2026",
+  },
+  {
+    src: "/images/slider/ras-results.webp",
+    alt: "ATC RAS selections and results for 2021 and 2023",
+  },
   { src: "/images/slider/slider5.jpeg", alt: "ATC" },
 ];
 

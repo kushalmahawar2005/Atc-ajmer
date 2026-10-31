@@ -21,7 +21,7 @@ export type ExamGroup = {
 export const examGroups: ExamGroup[] = [
   {
     id: "ras-2023",
-    badge: "State Services",
+    badge: null,
     title: "RAS 2023",
     subtitle: "5 Selections",
     toppers: [
@@ -41,7 +41,7 @@ export const examGroups: ExamGroup[] = [
       },
       {
         frame: "",
-        photo: "/images/selections/20260925_602c688da13f0181.jpg",
+        photo: "/images/selections/payal-ras-2023-white-bg.png",
         initials: null,
         name: "Payal",
         rank: "Rank 542",
@@ -64,7 +64,7 @@ export const examGroups: ExamGroup[] = [
   },
   {
     id: "ras-2021",
-    badge: "State Services",
+    badge: null,
     title: "RAS 2021",
     subtitle: "7 Selections",
     toppers: [
@@ -84,14 +84,14 @@ export const examGroups: ExamGroup[] = [
       },
       {
         frame: "",
-        photo: "/images/selections/20260925_e7e1f14319968359.jpg",
+        photo: "/images/selections/dharmendra-ras-2021-white-bg.png",
         initials: null,
         name: "Dharmendra",
         rank: "Rank 325",
       },
       {
         frame: "",
-        photo: "/images/selections/20260925_83135909fa1af767.jpg",
+        photo: "/images/selections/ravindra-ras-2021-white-bg.png",
         initials: null,
         name: "Ravindra",
         rank: "Rank 84 (ST)",
@@ -105,7 +105,7 @@ export const examGroups: ExamGroup[] = [
       },
       {
         frame: "",
-        photo: "/images/selections/20260925_807d25c6bd8ce897.jpg",
+        photo: "/images/selections/20260925_602c688da13f0181.jpg",
         initials: null,
         name: "Payal",
         rank: "Rank 18 (SCwe)",

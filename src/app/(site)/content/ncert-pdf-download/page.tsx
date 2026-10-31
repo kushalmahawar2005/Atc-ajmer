@@ -22,7 +22,7 @@ export default function Page() {
       <>
 					  <div className="download-card-wrap">
         <div className="pulse-ring"></div>
-        <a className="download-card" href="https://ncert.nic.in/textbook.php" aria-label="Download NCERT Books" target="_blank">
+        <a className="download-card" href="https://ncert.nic.in/textbook.php" aria-label="Download NCERT Books">
             <span className="btn-label">Download NCERT Books in Hindi and English Medium 📚</span>
             <svg className="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>

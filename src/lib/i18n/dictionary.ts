@@ -153,6 +153,7 @@ export const hindiDictionary: Record<string, string> = {
   "New Launch": "नया लॉन्च",
   "RAS Prelims": "आरएएस प्रीलिम्स",
   "Offline Test Series": "ऑफलाइन टेस्ट सीरीज",
+  "Offline Registration": "ऑफलाइन पंजीकरण",
   "What You Get": "आपको क्या मिलेगा",
   "14 Tests": "14 टेस्ट",
   "All India Ranking": "अखिल भारतीय रैंकिंग",

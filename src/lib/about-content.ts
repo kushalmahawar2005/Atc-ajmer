@@ -5,7 +5,7 @@ export const aboutSections = [
     "blocks": [
       {
         "type": "paragraph",
-        "text": "ATC (Ajmer's premier civil services coaching institute) is a pioneer institute dedicated to providing excellence in coaching for the UPSC (Union Public Service Commission) and RPSC (Rajasthan Public Service Commission) civil service examinations. Located on Hospital Street, Civil Lines, Ajmer, ATC has, since its founding, grown into one of the most trusted names for aspirants preparing for India's most prestigious examinations — the UPSC Civil Services Examination and the RAS (Rajasthan Administrative Service) Examination."
+        "text": "ATC (Ajmer's premier civil services coaching institute) is a pioneer institute dedicated to providing excellence in coaching for the UPSC (Union Public Service Commission) and RPSC (Rajasthan Public Service Commission) civil service examinations. Located on Ajmer Hospital Street, Civil Lines, Ajmer, ATC has, since its founding, grown into one of the most trusted names for aspirants preparing for India's most prestigious examinations — the UPSC Civil Services Examination and the RAS (Rajasthan Administrative Service) Examination."
       },
       {
         "type": "paragraph",

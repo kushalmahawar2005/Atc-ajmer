@@ -54,13 +54,6 @@ Our test series for IAS, RAS, and Rajasthan PSI has been carefully curated by su
 <p style={{ textAlign: "right" }}><a href="/courses/ras-test-series" className="btnbg">More Information +</a></p>
 </dd>
 </dl>	
-	 <dl className="accordions">
-<dt><b><span>Rajasthan PSI Test Series - 2026</span><br /> Offline and Online Test Series For Rajasthan PSI Exam</b></dt>
-<dd id="sec1">
-<p>This Objective Test Series for Rajasthan PSI Exam 2026 Covers Entire Syllabus through Subject wise and Full Length Tests. Latest  Current Affairs And Economic Survey are Parts of All Question Papers.<br /></p>
-<p style={{ textAlign: "right" }}><a href="/courses/psi-test-series" className="btnbg">More Information +</a></p>
-</dd>
-</dl>	
 					<br /><br />
 <CoursePlans slug="test-series" />
 </>

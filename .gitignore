@@ -51,3 +51,15 @@ tsconfig.tsbuildinfo
 
 # Large downloadable PDFs — synced to the server, not tracked in git
 public/download/
+!public/download/
+public/download/*
+!public/download/ras-exam-scheme.pdf
+!public/download/ras-pre-syllabus-hindi.pdf
+!public/download/ras-pre-syllabus-english.pdf
+!public/download/ras-mains-syllabus-hindi.pdf
+!public/download/ras-mains-syllabus-english.pdf
+!public/download/upsc-syllabus.pdf
+!public/download/upsc-syllabus-hindi.pdf
+!public/download/psi-physical.pdf
+!public/download/psi-paper-1.pdf
+!public/download/psi-paper-2.pdf

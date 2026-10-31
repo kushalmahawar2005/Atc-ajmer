@@ -5,8 +5,8 @@ import CoursePlans from "@/components/pages/CoursePlans";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
-  title: "Objective Test Series for Rajasthan PSI Exam 2026",
-  description: "Objective test series for the Rajasthan PSI exam 2026 at ATC Ajmer — full syllabus practice with the latest current affairs and Economic Survey.",
+  title: "Objective Test Series for Rajasthan PSI Exam",
+  description: "Objective test series for the Rajasthan PSI exam at ATC Ajmer — full syllabus practice with the latest current affairs and Economic Survey.",
   alternates: { canonical: "/courses/psi-test-series" },
 };
 
@@ -39,28 +39,6 @@ Additionally, we provide personal mentorship to every aspirant. Our mentors guid
 	With dedicated practice, professional guidance, and structured assessments, the Rajasthan PSI Test Series by ATC is the ideal platform for serious aspirants aiming to succeed in the PSI exam.
 					</p></div>
          
-	 <div className="new"><h3>Rajasthan PSI (Sub-Inspector) Test Series -2026 </h3></div><br />
- <dl className="accordions">
-<dt><b><span>Starts From: 24th  May, 2026</span><br /> Strengthen your Rajasthan PSI preparation with a structured and exam-oriented test series.</b></dt>
-<dd id="sec1">
-<p> *📌 Key Features*<br />
-•	सभी प्रश्न पत्र RPSC के नवीनतम पाठ्यक्रम तथा पैटर्न के अनुसार आयोजित करवाये जायेंगे।<br />
-•	प्रत्येक प्रश्न पत्र के बाद Detailed Answer Key उपलब्ध करवाई जायेगी।<br />
-•	प्रत्येक टेस्ट के लिए Solution Discussion Video उपलब्ध करवाया जाएगा। <br />
-•	टेस्ट पेपर की PDF अगले दिन डाउनलोड के लिए उपलब्ध करवाई जायेगी।<br />
-•	हिन्दी के प्रश्नपत्र में ज्यादा स्कोरिंग टॉपिक जैसे- पारिभाषिक शब्दावली, वाक्य-शुद्धि, मुहावरे, लोकोक्तियाँ, विराम चिह्नों का प्रयोग आदि पर विशेष ध्यान दिया जाएगा।  <br />
-•	सामान्य ज्ञान के प्रत्येक Sectional Test (200 Marks) में मुख्य विषय के साथ आर्थिक समीक्षा (राजस्थान), करेंट अफेयर्स, गणित एवं रीज़निंग के प्रश्न भी शामिल होंगे।<br />
-•	RPSC द्वारा आयोजित की जाने वाली परीक्षा से पूर्व टेस्ट सीरीज में सम्पूर्ण पाठ्यक्रम का 4 बार रीविजन करवा दिया जाएगा।   <br />
-•	मेरिट लिस्ट में उन ही Online अभ्यर्थियों को शामिल किया जायेगा, जिन्होंने Test वाले दिन ही रात 12:00 बजे तक टेस्ट दिया हो। <br />
-•	ऑनलाइन अभ्यर्थी को ऑफलाइन टेस्ट देने की अनुमति नहीं होगी।<br />
-<br />
-
-*💰 <b>Fees*</b>
-<b>* ₹2000/- For Non-ATC Students |&nbsp;&nbsp; ₹1000/- (GST extra) For ATC students | Free for candidates Selected in 2021 Vacancy</b><br />
-</p>
-<p style={{ textAlign: "right" }}><a href="/download/psi-test-2026-may.pdf" className="btnbg">Download Test Schedule </a></p>
-</dd>
-</dl>
 <CoursePlans slug="psi-test-series" />
 </>
     </PageShell>

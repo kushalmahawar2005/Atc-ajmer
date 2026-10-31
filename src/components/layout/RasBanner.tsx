@@ -119,13 +119,6 @@ export default function ExamSeriesBanner() {
             {series.title} <span>{series.year}</span>
           </h3>
           <p className="ras-banner-subtitle">{series.subtitle}</p>
-
-          <div className="ras-banner-date">
-            <i className="far fa-calendar-check" aria-hidden="true" />
-            <span>
-              Starts <strong>{series.startsOn}</strong>
-            </span>
-          </div>
         </div>
 
         {/* Exam switcher — each tab is a separate series and a separate record. */}

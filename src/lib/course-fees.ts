@@ -17,7 +17,7 @@ export const confirmedCoursePlans = [
     "courseSlug": "ias-foundation",
     "groupLabel": "Offline / Classroom Courses for IAS Foundation",
     "title": "Optional Subject - PSIR",
-    "description": "Optional subject batch for PSIR (Political Science & International Relations) for IAS Mains",
+    "description": "Optional Subject PSIR (Political Science & International Relations) for IAS",
     "fees": 45000,
     "oneTimePayment": null,
     "feeNote": "GST Included in the Fees · Duration: 15 months",
@@ -69,6 +69,39 @@ export const confirmedCoursePlans = [
     "sortOrder": 2
   },
   {
+    "courseSlug": "ras-test-series",
+    "groupLabel": "RAS Prelims / Mains Test Series",
+    "title": "RAS Prelims Test Series",
+    "description": "Test Series will be available soon",
+    "fees": null,
+    "oneTimePayment": null,
+    "feeNote": null,
+    "mode": null,
+    "sortOrder": 1
+  },
+  {
+    "courseSlug": "ras-test-series",
+    "groupLabel": "RAS Prelims / Mains Test Series",
+    "title": "RAS Mains Test Series",
+    "description": "Test Series will be available soon",
+    "fees": null,
+    "oneTimePayment": null,
+    "feeNote": null,
+    "mode": null,
+    "sortOrder": 2
+  },
+  {
+    "courseSlug": "psi-test-series",
+    "groupLabel": "Rajasthan PSI Test Series",
+    "title": "PSI Test Series",
+    "description": "Available Soon",
+    "fees": null,
+    "oneTimePayment": null,
+    "feeNote": null,
+    "mode": null,
+    "sortOrder": 1
+  },
+  {
     "courseSlug": "ras-foundation",
     "groupLabel": "Offline / Classroom Courses for RAS Foundation",
     "title": "RAS Foundation Course",
@@ -89,17 +122,6 @@ export const confirmedCoursePlans = [
     "feeNote": "GST Included in the Fees",
     "mode": "Online - Live from Classroom",
     "sortOrder": 2
-  },
-  {
-    "courseSlug": "ras-foundation",
-    "groupLabel": "Online Live from Classroom Course for RAS Foundation",
-    "title": "RAS Foundation Recorded",
-    "description": "RAS Foundation Recorded Calsses.",
-    "fees": 26000,
-    "oneTimePayment": null,
-    "feeNote": "GST Included in the Fees",
-    "mode": "Online - Recorded Classes",
-    "sortOrder": 3
   },
   {
     "courseSlug": "ras-foundation",

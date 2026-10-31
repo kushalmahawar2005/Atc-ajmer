@@ -49,16 +49,6 @@ export default function Page() {
             </a>
         </div>
 
-        <div className="section-divider"><span>Rajasthan Economic Survey &#x2014; ATC Summary</span></div>
-        <div className="btn-row">
-            <a className="btn btn-cta" href="/download/economic-survey-raj-eng.pdf" aria-label="Economic Survey of Rajasthan English Summary" target="_blank">
-                <i className="fas fa-download"></i> English PDF
-            </a>
-            <a className="btn btn-ghost" href="/download/economic-survey-raj-hindi.pdf" aria-label="Economic Survey of Rajasthan Hindi Summary" target="_blank">
-                <i className="fas fa-download"></i> &#x939;&#x93F;&#x902;&#x926;&#x940; PDF
-            </a>
-        </div>
-
         <div className="info-text">
             <i className="fas fa-circle-info"></i> Click any button to open or download the PDF of your choice.
         </div>

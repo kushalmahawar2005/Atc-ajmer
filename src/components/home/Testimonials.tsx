@@ -1,9 +1,31 @@
 import { asc, eq } from "drizzle-orm";
+import Image from "next/image";
 import { db } from "@/db";
 import { testimonials } from "@/db/schema";
 import TestimonialsSwitcher from "./TestimonialsSwitcher";
 
-/** Renders student testimonials when the admin adds rows. */
+const studentStories = [
+  {
+    src: "/images/testimonials/dharmendra-ras-2021.jpg",
+    alt: "Testimonial from Dharmendra, Rank 325, RAS 2021",
+    name: "Dharmendra",
+    result: "Rank 325 · RAS 2021",
+  },
+  {
+    src: "/images/testimonials/monika-ras-2021.jpg",
+    alt: "Testimonial from Monika Khandelwal, Rank 174, RAS 2021",
+    name: "Monika Khandelwal",
+    result: "Rank 174 · RAS 2021",
+  },
+  {
+    src: "/images/testimonials/harshita-ras-2021.jpg",
+    alt: "Testimonial from Harshita, Rank 5 (LV), RAS 2021",
+    name: "Harshita",
+    result: "Rank 5 (LV) · RAS 2021",
+  },
+];
+
+/** Shows the supplied student stories and any extra testimonials added by admins. */
 export default async function Testimonials() {
   let rows: (typeof testimonials.$inferSelect)[] = [];
 
@@ -15,13 +37,45 @@ export default async function Testimonials() {
       .orderBy(asc(testimonials.sortOrder));
   } catch (error) {
     console.error("[testimonials] could not load:", error);
-    return null;
   }
 
   const students = rows.filter((row) => row.kind === "student");
-  if (students.length === 0) return null;
 
-  return <TestimonialsSwitcher students={students} />;
+  return (
+    <section className="testimonials student-testimonials" aria-labelledby="student-testimonials-title">
+      <header className="student-testimonials-heading">
+        <h2 className="section-title" id="student-testimonials-title">
+          Student Testimonials
+        </h2>
+        <p>Experiences from our RAS 2021 achievers</p>
+      </header>
+
+      <div className="testimonial-poster-grid">
+        {studentStories.map((story) => (
+          <figure className="testimonial-poster-card" key={story.src}>
+            <Image
+              src={story.src}
+              alt={story.alt}
+              width={853}
+              height={1280}
+              sizes="(max-width: 700px) 100vw, (max-width: 1050px) 50vw, 33vw"
+            />
+            <figcaption>
+              <strong>{story.name}</strong>
+              <span>{story.result}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+
+      {students.length > 0 && (
+        <div className="admin-testimonials">
+          <h3 className="admin-testimonials-title">More from our students</h3>
+          <TestimonialsSwitcher students={students} />
+        </div>
+      )}
+    </section>
+  );
 }
 
 export type Testimonial = typeof testimonials.$inferSelect;

@@ -28,7 +28,7 @@ export default function Page() {
       <article className={styles.vision}>
         <figure className={styles.portrait}>
           <Image
-            src="/images/arvind-tiwari-founder.png"
+            src="/images/arvind-tiwari-founder-clean.png"
             alt="Arvind Tiwari, Founder & Director of ATC, Ajmer"
             width={1440}
             height={1440}

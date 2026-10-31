@@ -1499,9 +1499,81 @@ a.home-contact-row:hover { color: var(--primary); }
     margin-top: 1px;
 }
 
+.student-testimonials-heading .section-title { margin-bottom: 8px; }
+
+.student-testimonials-heading > p {
+    margin: 0 0 24px;
+    color: var(--text-muted);
+    text-align: center;
+    font-size: 14px;
+}
+
+.testimonial-poster-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 20px;
+}
+
+.testimonial-poster-card {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+}
+
+.testimonial-poster-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.testimonial-poster-card figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px 14px;
+    text-align: center;
+}
+
+.testimonial-poster-card figcaption strong {
+    color: var(--navy);
+    font-size: 15px;
+}
+
+.testimonial-poster-card figcaption span {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.admin-testimonials { margin-top: 28px; }
+
+.admin-testimonials-title {
+    margin: 0 0 16px;
+    color: var(--navy);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.admin-testimonials .testimonials {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+}
+
 @media (max-width: 768px) {
     .testimonials { padding: 22px 16px 26px; }
     .tst-grid { grid-template-columns: 1fr; }
+    .testimonial-poster-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+}
+
+@media (max-width: 560px) {
+    .testimonial-poster-grid { grid-template-columns: minmax(0, 1fr); }
+    .testimonial-poster-card { width: min(100%, 380px); margin-inline: auto; }
 }
 
 /* Keep course artwork and labels separate on touch screens. */

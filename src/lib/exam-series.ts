@@ -11,7 +11,6 @@ export type ExamSeries = {
   title: string;
   year: string;
   subtitle: string;
-  startsOn: string;
   features: { icon: string; label: string; wide?: boolean }[];
   centres: string[];
 };
@@ -22,8 +21,7 @@ export const examSeries: Record<ExamKey, ExamSeries> = {
     label: "RAS",
     title: "RAS Prelims",
     year: "2026",
-    subtitle: "Offline Test Series",
-    startsOn: "23 August 2026",
+    subtitle: "Offline Registration",
     features: [
       { icon: "fas fa-file-alt", label: "14 Tests" },
       { icon: "fas fa-trophy", label: "All India Ranking" },
@@ -38,8 +36,7 @@ export const examSeries: Record<ExamKey, ExamSeries> = {
     label: "IAS",
     title: "IAS Prelims",
     year: "2026",
-    subtitle: "Offline & Online Test Series",
-    startsOn: "23 August 2026",
+    subtitle: "Offline Registration",
     features: [
       { icon: "fas fa-file-alt", label: "18 Tests" },
       { icon: "fas fa-trophy", label: "Merit List" },
@@ -54,8 +51,7 @@ export const examSeries: Record<ExamKey, ExamSeries> = {
     label: "PSI",
     title: "Rajasthan PSI",
     year: "2026",
-    subtitle: "Offline Test Series",
-    startsOn: "23 August 2026",
+    subtitle: "Offline Registration",
     features: [
       { icon: "fas fa-file-alt", label: "Objective Tests" },
       { icon: "fas fa-trophy", label: "All India Ranking" },

@@ -66,7 +66,7 @@
 /* Head / Hero */
 .ras-banner-head{
     position:relative;
-    padding:22px 20px 18px;
+    padding:22px 20px 14px;
     color:#fff;
     background:linear-gradient(135deg, #002a3a 0%, #00374c 55%, #075f7f 120%);
     border-radius:16px 16px 0 0;
@@ -99,15 +99,6 @@
     font-size:15px;font-weight:600;letter-spacing:.3px;
     opacity:.95;
 }
-.ras-banner-date{
-    display:inline-flex;align-items:center;gap:7px;
-    margin-top:13px;
-    background:rgba(15,23,42,.22);
-    padding:7px 12px;border-radius:10px;
-    font-size:13px;
-}
-.ras-banner-date strong{ font-weight:700; }
-
 /* Body */
 .ras-banner-body{ padding:16px 18px 4px; }
 .ras-banner-section{ margin-bottom:14px; }

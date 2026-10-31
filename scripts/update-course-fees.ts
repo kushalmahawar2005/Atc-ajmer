@@ -1,4 +1,4 @@
-import { and, eq } from "drizzle-orm";
+import { and, eq, isNull } from "drizzle-orm";
 import { coursePlans } from "../src/db/schema";
 import { confirmedCoursePlans } from "../src/lib/course-fees";
 
@@ -19,7 +19,7 @@ async function main() {
         const matches = await tx.select().from(coursePlans).where(and(
           eq(coursePlans.courseSlug, plan.courseSlug),
           eq(coursePlans.title, plan.title),
-          eq(coursePlans.mode, plan.mode),
+          plan.mode === null ? isNull(coursePlans.mode) : eq(coursePlans.mode, plan.mode),
         ));
         if (matches.length > 1) throw new Error(`Ambiguous plan: ${plan.courseSlug} / ${plan.title}. No changes committed.`);
         if (!matches.length) {

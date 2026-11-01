@@ -19,6 +19,7 @@ export type NavItem = {
 export const IGNOU_URL = "https://egyankosh.co.in/";
 export const SUJAS_URL =
   "https://dipr.rajasthan.gov.in/pages/sm/government-order/attachments/134/85/10/1702";
+export const PIB_URL = "https://www.pib.gov.in/ViewAllEbooklet.aspx?reg=3&lang=1";
 
 export const PHONE_PRIMARY = CONTACT.phones[0].label;
 export const PHONE_SECONDARY = CONTACT.phones[1].label;
@@ -64,6 +65,7 @@ export const mainNav: NavItem[] = [
       { label: "IGNOU Study Material ↗", href: IGNOU_URL, external: true },
       { label: "Rajasthan Sujas ↗", href: SUJAS_URL, external: true },
       { label: "Economic Survey", href: "/content/economic-survey" },
+      { label: "PIB Prism ↗", href: PIB_URL, external: true },
       { label: "Explore All Study Materials", href: "/content" },
     ],
   },

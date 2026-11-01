@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
+import { PIB_URL } from "@/lib/navigation";
 
 export const metadata: Metadata = {
   title: "Free Study Material for UPSC and RPSC Exams",
@@ -20,8 +21,8 @@ export default function Page() {
     >
       <>
 					 <div className="button-container">
-        <h2 className="container-title">📊 Useful Resources for UPSC Civil Services exam</h2>        
-        
+        <h2 className="container-title">📊 Useful Resources for UPSC and RPSC Exams</h2>
+
         <div className="btn-row">
             <a className="btn btn-cta" href="/content/ncert-pdf-download" aria-label="NCERT Books PDF Download">
                 NCERT Books in PDF Download
@@ -29,15 +30,11 @@ export default function Page() {
             <a className="btn btn-ghost" href="/content/rajasthan-sujas" aria-label="Rajasthan Sujas Download">
                 Rajasthan Sujas Download
             </a>
-        </div>
-        <div className="section-divider"><span>More Resources</span></div>
-        
-        <div className="btn-row">
             <a className="btn btn-cta" href="/content/economic-survey" aria-label="Economic Survey of Rajasthan and India">
                 Economic Survey of India &amp; Rajasthan
             </a>
-            <a className="btn btn-ghost" href="https://www.pib.gov.in/ViewAllEbooklet.aspx?reg=3&lang=1" target="_blank" rel="noopener noreferrer" aria-label="PIB press releases and e-booklets">
-                PIB Press Releases / e-Booklets ↗
+            <a className="btn btn-ghost" href={PIB_URL} target="_blank" rel="noopener noreferrer" aria-label="PIB Prism press releases and e-booklets">
+                PIB Prism ↗
             </a>
         </div>
     </div><br /><br />

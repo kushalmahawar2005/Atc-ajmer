@@ -72,6 +72,7 @@ export const hindiDictionary: Record<string, string> = {
   "Economic Survey (Raj & India)": "आर्थिक समीक्षा (राजस्थान और भारत)",
   "IGNOU Study Material ↗": "इग्नू अध्ययन सामग्री ↗",
   "Rajasthan Sujas ↗": "राजस्थान सुजस ↗",
+  "PIB Prism ↗": "पीआईबी प्रिज़्म ↗",
   "Explore All Study Materials": "सभी अध्ययन सामग्री देखें",
   "RAS Exam": "आरएएस परीक्षा",
   "RAS Exam Guide": "आरएएस परीक्षा गाइड",

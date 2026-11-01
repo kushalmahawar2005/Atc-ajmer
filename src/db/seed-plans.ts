@@ -75,7 +75,7 @@ const rows = [
   },
   {
     "courseSlug": "ias-test-series",
-    "groupLabel": "IAS Prelims / Mains  Offline and Online test Series",
+    "groupLabel": "IAS Prelims / Mains Offline Test Series",
     "title": "IAS Mains Offline Test Series",
     "description": "Test Series will be available soon",
     "fees": null,
@@ -86,8 +86,8 @@ const rows = [
   },
   {
     "courseSlug": "ias-test-series",
-    "groupLabel": "IAS Prelims / Mains  Offline and Online test Series",
-    "title": "IAS Mains Online Test Series",
+    "groupLabel": "IAS Prelims / Mains Offline Test Series",
+    "title": "IAS Prelims Offline Test Series",
     "description": "Test Series will be available soon",
     "fees": null,
     "oneTimePayment": null,

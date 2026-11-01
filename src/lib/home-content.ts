@@ -31,10 +31,8 @@ export const stats = [
 ];
 
 export const newBatches = [
-  "RAS Foundation - 11 August 2026",
-  "RAS Pre / PSI - 14 July 2026",
-  "IAS & RAS Integrated Batch - 16 June 2026",
-  "IAS Foundation Batch - 16 June 2026",
+  "RAS Mains - 10 December 2026",
+  "RAS Foundation - 10 December 2026",
 ];
 
 export const enrollFeatures = [

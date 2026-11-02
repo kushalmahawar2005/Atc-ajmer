@@ -30,6 +30,9 @@ export const adminNav = [
   },
   {
     label: "Access",
-    items: [{ href: "/admin/users", icon: "fas fa-user-shield", label: "Admin Users" }],
+    items: [
+      { href: "/admin/launch", icon: "fas fa-rocket", label: "Website Launch" },
+      { href: "/admin/users", icon: "fas fa-user-shield", label: "Admin Users" },
+    ],
   },
 ];

@@ -1,11 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { SESSION_COOKIE } from "@/lib/admin/session";
-
-/**
- * While on, every public page shows the "under development" screen. The admin
- * panel and API keep working. Set MAINTENANCE_MODE=off to bring the site back.
- */
-const MAINTENANCE_MODE = process.env.MAINTENANCE_MODE !== "off";
+import { isSiteLive } from "@/lib/site-status";
 
 /**
  * Lets the client see the real site during maintenance: opening any page with
@@ -21,7 +16,7 @@ const PREVIEW_COOKIE = "atc_preview";
  * reach a page that would query the database. The signature is still verified
  * per page by requireAdmin(); this only avoids the round trip.
  */
-export function proxy(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (pathname.startsWith("/admin")) {
@@ -34,7 +29,11 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  if (MAINTENANCE_MODE && PREVIEW_KEY) {
+  // While the site is not live, every public page shows the "under
+  // development" screen; it goes live from /admin/launch (see site-status).
+  const maintenance = !(await isSiteLive());
+
+  if (maintenance && PREVIEW_KEY) {
     if (request.nextUrl.searchParams.get("preview") === PREVIEW_KEY) {
       const url = request.nextUrl.clone();
       url.searchParams.delete("preview");
@@ -55,7 +54,7 @@ export function proxy(request: NextRequest) {
     }
   }
 
-  if (MAINTENANCE_MODE && pathname !== "/maintenance") {
+  if (maintenance && pathname !== "/maintenance") {
     const url = request.nextUrl.clone();
     url.pathname = "/maintenance";
     url.search = "";

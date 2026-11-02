@@ -220,3 +220,13 @@ export const quizAttempts = pgTable(
   },
   (t) => [index("quiz_attempts_created_at_idx").on(t.createdAt)],
 );
+
+/**
+ * Small key/value switches the site reads at runtime, e.g. `site_live`, which
+ * decides whether visitors see the website or the "under development" page.
+ */
+export const siteSettings = pgTable("site_settings", {
+  key: varchar("key", { length: 64 }).primaryKey(),
+  value: text("value").notNull(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow().notNull(),
+});

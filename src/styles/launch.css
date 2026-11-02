@@ -1,0 +1,139 @@
+/* Full-screen launch ceremony shown on the office display (/admin/launch). */
+.launch-screen {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 35%, #0b5a78 0%, #00374c 55%, #001f2c 100%);
+    color: #fff;
+    text-align: center;
+    z-index: 100000;
+}
+
+.launch-confetti {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.launch-card {
+    position: relative;
+    max-width: 900px;
+}
+
+.launch-logo {
+    width: clamp(90px, 14vw, 140px);
+    height: auto;
+    margin: 0 auto 24px;
+    padding: 10px;
+    border-radius: 24px;
+    background: #fff;
+}
+
+.launch-heading {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 7vw, 84px);
+    line-height: 1.05;
+}
+
+.launch-subheading {
+    margin: 12px 0 40px;
+    font-size: clamp(18px, 3vw, 32px);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #f5c86a;
+}
+
+.launch-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 48px;
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f5a623, #ff7b1c);
+    color: #fff;
+    font-size: clamp(22px, 3.4vw, 36px);
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.6);
+    animation: launchPulse 1.8s infinite;
+}
+
+.launch-button:hover { transform: scale(1.03); }
+
+@keyframes launchPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.55); }
+    70%  { box-shadow: 0 0 0 28px rgba(245, 166, 35, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0); }
+}
+
+.launch-count {
+    font-family: var(--font-heading);
+    font-size: clamp(140px, 30vw, 320px);
+    font-weight: 800;
+    line-height: 1;
+    color: #f5c86a;
+    animation: launchTick 1s ease-out;
+}
+
+@keyframes launchTick {
+    0%   { opacity: 0; transform: scale(1.6); }
+    25%  { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.85; transform: scale(0.92); }
+}
+
+.launch-status,
+.launch-live {
+    margin: 0;
+    font-size: clamp(32px, 6vw, 72px);
+    font-weight: 800;
+}
+
+.launch-live { animation: launchTick 1.2s ease-out; }
+
+.launch-url {
+    margin: 16px 0 0;
+    font-size: clamp(18px, 3vw, 30px);
+    color: #f5c86a;
+}
+
+.launch-error {
+    margin: 0 0 20px;
+    font-size: 18px;
+    color: #ffb4a8;
+}
+
+.launch-admin {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+    font-size: 15px;
+}
+
+.launch-link,
+.launch-danger {
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 999px;
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.launch-danger { border-color: #ff8a7a; background: #c0392b; }
+
+@media (prefers-reduced-motion: reduce) {
+    .launch-button,
+    .launch-count,
+    .launch-live { animation: none; }
+}

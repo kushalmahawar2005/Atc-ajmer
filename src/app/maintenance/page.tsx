@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import LaunchWatcher from "@/components/launch/LaunchWatcher";
 
 export const metadata: Metadata = {
   title: "Website under development",
@@ -68,6 +69,7 @@ export default function Maintenance() {
           वेबसाइट पर अभी काम चल रहा है। कृपया जल्द ही दोबारा देखें।
         </p>
       </div>
+      <LaunchWatcher />
     </main>
   );
 }

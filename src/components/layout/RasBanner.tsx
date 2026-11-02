@@ -2,12 +2,13 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { examOrder, examSeries, type ExamKey } from "@/lib/exam-series";
+import { CONTACT } from "@/lib/contact";
 import { EXAM_BANNER_OPEN_EVENT } from "@/lib/exam-banner";
 
 const DISMISS_KEY = "atcExamBanner2026Closed";
 const OPEN_DELAY_MS = 6000;
 
-type Status = "idle" | "sending" | "ok" | "error";
+type Status = "idle" | "ok";
 
 /**
  * Centred modal promo for the offline test series. It opens by itself a few
@@ -78,27 +79,33 @@ export default function ExamSeriesBanner() {
     };
   }, [open, dismiss]);
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  /** Saves the registration and opens WhatsApp with the details ready to send to ATC. */
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const form = event.currentTarget;
+    const data = new FormData(event.currentTarget);
+    const value = (key: string) => String(data.get(key) ?? "").trim();
 
-    setStatus("sending");
-    setMessage("");
+    const stage = track ? ` (${track.label})` : "";
+    const course = [`${series.title}${stage}`, series.year].filter(Boolean).join(" ");
+    const text = [
+      "Test Series Registration",
+      `Exam: ${course}`,
+      `Name: ${value("name")}`,
+      `Father's Name: ${value("fatherName")}`,
+      `Mobile: ${value("phone")}`,
+      `Place: ${value("place")}`,
+      `Centre / Mode: ${hiddenCentre ? series.centres[0] : value("centre")}`,
+    ].join("\n");
 
-    try {
-      const response = await fetch("/api/exam-registration", {
-        method: "POST",
-        body: new FormData(form),
-      });
-      const result = (await response.json()) as { success: boolean; message: string };
+    // Open WhatsApp first, inside the click, so browsers don't block it.
+    window.open(`${CONTACT.whatsapp}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
 
-      setStatus(result.success ? "ok" : "error");
-      setMessage(result.message);
-      if (result.success) form.reset();
-    } catch {
-      setStatus("error");
-      setMessage("Network error. Please try again.");
-    }
+    // Also keep the lead in the admin panel, even if the student never presses Send.
+    fetch("/api/exam-registration", { method: "POST", body: data, keepalive: true }).catch(() => {
+      // WhatsApp already carries the details; a failed save must not block the student.
+    });
+    setStatus("ok");
+    setMessage("WhatsApp opened. Please press Send to complete your registration.");
   }
 
   return (
@@ -247,9 +254,8 @@ export default function ExamSeriesBanner() {
                 <input type="text" name="website" defaultValue="" tabIndex={-1} />
               </div>
 
-              <button type="submit" className="ras-banner-btn" disabled={status === "sending"}>
-                <i className="fas fa-paper-plane" aria-hidden="true" />{" "}
-                {status === "sending" ? "Submitting…" : "Submit Registration"}
+              <button type="submit" className="ras-banner-btn">
+                <i className="fab fa-whatsapp" aria-hidden="true" /> Register on WhatsApp
               </button>
             </form>
           )}

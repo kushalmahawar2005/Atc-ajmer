@@ -164,6 +164,8 @@ export const hindiDictionary: Record<string, string> = {
   "Test Centres": "परीक्षा केंद्र",
   "Register Now": "अभी पंजीकरण करें",
   "Limited seats": "सीमित सीटें",
+  "Register on WhatsApp": "व्हाट्सएप पर पंजीकरण करें",
+  "WhatsApp opened. Please press Send to complete your registration.": "व्हाट्सएप खुल गया है। पंजीकरण पूरा करने के लिए Send दबाएं।",
   "Register": "पंजीकरण",
   "Prelims": "प्रारंभिक",
   "Mains": "मुख्य",

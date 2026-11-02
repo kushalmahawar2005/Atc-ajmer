@@ -13,16 +13,23 @@ type Status = "idle" | "sending" | "ok" | "error";
  * Centred modal promo for the offline test series. It opens by itself a few
  * seconds into the first visit, and on demand when any CTA fires
  * EXAM_BANNER_OPEN_EVENT. The three exams are isolated: switching tabs swaps
- * the copy, centres and the exam the form registers for.
+ * the copy, stages and the exam the form registers for.
  */
 export default function ExamSeriesBanner() {
   const [open, setOpen] = useState(false);
   const [exam, setExam] = useState<ExamKey>("ras");
+  const [trackKey, setTrackKey] = useState("prelims");
   const [showForm, setShowForm] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
   const series = examSeries[exam];
+  const track = series.tracks?.find((item) => item.key === trackKey) ?? series.tracks?.[0];
+  const features = track?.features ?? series.features;
+  const hiddenCentre =
+    series.centres.length === 1
+      ? [track?.label, series.centres[0]].filter(Boolean).join(" - ")
+      : null;
 
   const dismiss = useCallback(() => {
     setOpen(false);
@@ -104,7 +111,7 @@ export default function ExamSeriesBanner() {
         className="ras-banner"
         role="dialog"
         aria-modal="true"
-        aria-label={`${series.title} ${series.year} Test Series`}
+        aria-label={`${series.title} Test Series`}
         onClick={(event) => event.stopPropagation()}
       >
         <button className="ras-banner-close" aria-label="Close banner" onClick={dismiss}>
@@ -116,7 +123,7 @@ export default function ExamSeriesBanner() {
             <i className="fas fa-bolt" aria-hidden="true" /> New Launch
           </span>
           <h3 className="ras-banner-title">
-            {series.title} <span>{series.year}</span>
+            {series.title} {series.year && <span>{series.year}</span>}
           </h3>
           <p className="ras-banner-subtitle">{series.subtitle}</p>
         </div>
@@ -140,34 +147,48 @@ export default function ExamSeriesBanner() {
           ))}
         </div>
 
+        {series.tracks && (
+          <div className="ras-exam-tabs ras-track-tabs" role="tablist" aria-label="Choose stage">
+            {series.tracks.map((item) => (
+              <button
+                key={item.key}
+                role="tab"
+                aria-selected={item.key === track?.key}
+                className={`ras-exam-tab${item.key === track?.key ? " is-active" : ""}`}
+                onClick={() => {
+                  setTrackKey(item.key);
+                  setStatus("idle");
+                  setMessage("");
+                }}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        )}
+
         <div className="ras-banner-body">
-          <div className="ras-banner-section">
-            <div className="ras-banner-section-head">
-              <i className="fas fa-star" aria-hidden="true" /> What You Get
+          {series.availableSoon ? (
+            <p className="ras-banner-soon">Available Soon</p>
+          ) : (
+            <div className="ras-banner-section">
+              <div className="ras-banner-section-head">
+                <i className="fas fa-star" aria-hidden="true" /> What You Get
+              </div>
+              <ul className="ras-feature-grid">
+                {features.map((feature) => (
+                  <li key={feature.label} className={feature.wide ? "ras-feature-wide" : undefined}>
+                    <i className={feature.icon} aria-hidden="true" /> {feature.label}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="ras-feature-grid">
-              {series.features.map((feature) => (
-                <li key={feature.label} className={feature.wide ? "ras-feature-wide" : undefined}>
-                  <i className={feature.icon} aria-hidden="true" /> {feature.label}
-                </li>
-              ))}
-            </ul>
-          </div>
+          )}
 
-          <div className="ras-banner-section">
-            <div className="ras-banner-section-head">
-              <i className="fas fa-map-marker-alt" aria-hidden="true" /> Test Centres
-            </div>
-            <div className="ras-centres">
-              {series.centres.map((centre) => (
-                <span key={centre}>{centre}</span>
-              ))}
-            </div>
-          </div>
-
-          {showForm && (
+          {showForm && !series.availableSoon && (
             <form className="ras-reg-form" onSubmit={handleSubmit}>
               <input type="hidden" name="exam" value={exam} />
+              {hiddenCentre && <input type="hidden" name="centre" value={hiddenCentre} />}
 
               {message && (
                 <div className={`ras-reg-msg${status === "ok" ? " is-ok" : " is-err"}`}>
@@ -206,17 +227,21 @@ export default function ExamSeriesBanner() {
                 <input name="place" required maxLength={160} placeholder="City / town" />
               </label>
 
-              <label className="ras-reg-field">
-                <span>Preferred Centre</span>
-                <select name="centre" defaultValue="">
-                  <option value="">Select a centre</option>
-                  {series.centres.map((centre) => (
-                    <option key={centre} value={centre}>
-                      {centre}
+              {!hiddenCentre && (
+                <label className="ras-reg-field">
+                  <span>Test Mode</span>
+                  <select name="centre" defaultValue="" required>
+                    <option value="" disabled>
+                      Select a mode
                     </option>
-                  ))}
-                </select>
-              </label>
+                    {series.centres.map((centre) => (
+                      <option key={centre} value={centre}>
+                        {centre}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
 
               <div style={{ display: "none" }}>
                 <input type="text" name="website" defaultValue="" tabIndex={-1} />
@@ -230,12 +255,12 @@ export default function ExamSeriesBanner() {
           )}
         </div>
 
-        {!showForm && (
+        {!showForm && !series.availableSoon && (
           <div className="ras-banner-cta">
             <button className="ras-banner-btn" onClick={() => setShowForm(true)}>
               <i className="fas fa-pen-to-square" aria-hidden="true" /> Register Now
             </button>
-            <span className="ras-banner-cta-note">Limited seats per centre</span>
+            <span className="ras-banner-cta-note">Limited seats</span>
           </div>
         )}
       </div>

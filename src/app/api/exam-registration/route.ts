@@ -47,7 +47,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: "Registered! Our team will confirm your centre shortly.",
+      message: "Registered! Our team will contact you shortly.",
     });
   } catch (error) {
     console.error("Exam registration failed:", error);

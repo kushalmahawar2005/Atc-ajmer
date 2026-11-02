@@ -284,3 +284,12 @@
     opacity: .6;
     cursor: not-allowed;
 }
+
+.ras-track-tabs { margin-top: 8px; }
+
+.ras-banner-soon {
+    margin: 8px 0 14px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}

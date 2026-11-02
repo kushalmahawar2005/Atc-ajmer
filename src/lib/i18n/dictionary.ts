@@ -163,7 +163,15 @@ export const hindiDictionary: Record<string, string> = {
   "Real Examination Environment": "वास्तविक परीक्षा वातावरण",
   "Test Centres": "परीक्षा केंद्र",
   "Register Now": "अभी पंजीकरण करें",
-  "Limited seats per centre": "प्रत्येक केंद्र पर सीमित सीटें",
+  "Limited seats": "सीमित सीटें",
+  "Register": "पंजीकरण",
+  "Prelims": "प्रारंभिक",
+  "Mains": "मुख्य",
+  "18 Tests": "18 टेस्ट",
+  "16 Tests": "16 टेस्ट",
+  "60 Tests": "60 टेस्ट",
+  "Available Soon": "जल्द उपलब्ध",
+  "Test Mode": "टेस्ट मोड",
 
   // ── Toppers gallery ──────────────────────────────────────────────────
   "🏆 Toppers Gallery": "🏆 टॉपर्स गैलरी",

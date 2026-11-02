@@ -5,29 +5,42 @@
  */
 export type ExamKey = "ras" | "ias" | "psi";
 
+export type ExamFeature = { icon: string; label: string; wide?: boolean };
+
+/** A separately registered stage of one exam, e.g. RAS Prelims and RAS Mains. */
+export type ExamTrack = { key: string; label: string; features: ExamFeature[] };
+
 export type ExamSeries = {
   key: ExamKey;
   label: string;
   title: string;
-  year: string;
+  year?: string;
   subtitle: string;
-  features: { icon: string; label: string; wide?: boolean }[];
+  features: ExamFeature[];
+  tracks?: ExamTrack[];
   centres: string[];
+  availableSoon?: boolean;
+};
+
+const tests = (count: number): ExamFeature => ({ icon: "fas fa-file-alt", label: `${count} Tests` });
+const pdfSolutions: ExamFeature = { icon: "fas fa-file-pdf", label: "PDF Solutions" };
+const realEnvironment: ExamFeature = {
+  icon: "fas fa-chalkboard-teacher",
+  label: "Real Examination Environment",
+  wide: true,
 };
 
 export const examSeries: Record<ExamKey, ExamSeries> = {
   ras: {
     key: "ras",
     label: "RAS",
-    title: "RAS Prelims",
+    title: "RAS Exam",
     year: "2026",
     subtitle: "Offline Registration",
-    features: [
-      { icon: "fas fa-file-alt", label: "14 Tests" },
-      { icon: "fas fa-trophy", label: "All India Ranking" },
-      { icon: "fas fa-file-pdf", label: "PDF Solutions" },
-      { icon: "fas fa-video", label: "Video Discussion" },
-      { icon: "fas fa-chalkboard-teacher", label: "Real Examination Environment", wide: true },
+    features: [],
+    tracks: [
+      { key: "prelims", label: "Prelims", features: [tests(18), pdfSolutions, realEnvironment] },
+      { key: "mains", label: "Mains", features: [tests(16), pdfSolutions, realEnvironment] },
     ],
     centres: ["Ajmer"],
   },
@@ -38,10 +51,8 @@ export const examSeries: Record<ExamKey, ExamSeries> = {
     year: "2026",
     subtitle: "Offline Registration",
     features: [
-      { icon: "fas fa-file-alt", label: "18 Tests" },
-      { icon: "fas fa-trophy", label: "Merit List" },
+      tests(60),
       { icon: "fas fa-file-pdf", label: "Answer Key + PDF" },
-      { icon: "fas fa-video", label: "Video Solutions" },
       { icon: "fas fa-chalkboard-teacher", label: "UPSC Pattern Environment", wide: true },
     ],
     centres: ["Ajmer", "Online"],
@@ -50,16 +61,10 @@ export const examSeries: Record<ExamKey, ExamSeries> = {
     key: "psi",
     label: "PSI",
     title: "Rajasthan PSI",
-    year: "2026",
-    subtitle: "Offline Registration",
-    features: [
-      { icon: "fas fa-file-alt", label: "Objective Tests" },
-      { icon: "fas fa-trophy", label: "All India Ranking" },
-      { icon: "fas fa-file-pdf", label: "PDF Solutions" },
-      { icon: "fas fa-newspaper", label: "Latest Current Affairs" },
-      { icon: "fas fa-chalkboard-teacher", label: "Real Examination Environment", wide: true },
-    ],
-    centres: ["Ajmer"],
+    subtitle: "Available Soon",
+    features: [],
+    centres: [],
+    availableSoon: true,
   },
 };
 

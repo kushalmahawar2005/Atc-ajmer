@@ -114,6 +114,28 @@ export const confirmedCoursePlans = [
   },
   {
     "courseSlug": "ras-foundation",
+    "groupLabel": "Offline / Classroom Courses for RAS Foundation",
+    "title": "RAS Prelims Course",
+    "description": "Exclusive Classroom batch for the preparation of RAS Prelims Exam",
+    "fees": 35000,
+    "oneTimePayment": null,
+    "feeNote": "GST Included in the Fees · Duration: 5 months",
+    "mode": "Offline / Classroom",
+    "sortOrder": 2
+  },
+  {
+    "courseSlug": "ras-foundation",
+    "groupLabel": "Offline / Classroom Courses for RAS Foundation",
+    "title": "RAS Mains Course",
+    "description": "Exclusive Classroom batch for the preparation of RAS Mains Exam",
+    "fees": 60000,
+    "oneTimePayment": 55000,
+    "feeNote": "GST Included in the Fees · Duration: 5 months",
+    "mode": "Offline / Classroom",
+    "sortOrder": 3
+  },
+  {
+    "courseSlug": "ras-foundation",
     "groupLabel": "Online Live from Classroom Course for RAS Foundation",
     "title": "RAS Foundation - Online",
     "description": "Online Live from Classroom batch for the Preparation of RAS Exam",
@@ -121,7 +143,7 @@ export const confirmedCoursePlans = [
     "oneTimePayment": null,
     "feeNote": "GST Included in the Fees",
     "mode": "Online - Live from Classroom",
-    "sortOrder": 2
+    "sortOrder": 4
   },
   {
     "courseSlug": "ras-foundation",
@@ -132,6 +154,6 @@ export const confirmedCoursePlans = [
     "oneTimePayment": null,
     "feeNote": "GST Included in the Fees",
     "mode": "Online - live Classes",
-    "sortOrder": 4
+    "sortOrder": 5
   }
 ];

@@ -97,18 +97,7 @@ The UPSC marking scheme varies across different stages:<br />
 <b>Syllabus Overview</b><br /><br />
 <b>Prelims Syllabus: </b>The General Studies Paper covers Indian and World History, Geography, Indian Polity, Economics, Environment, Science and Technology, and Current Affairs. CSAT includes Quantitative Aptitude, Reasoning, English Comprehension, and Decision Making.<br /><br />
 
-<b>Mains Syllabus: </b><br />
-The four GS papers form the backbone of Mains preparation:<br />
-
-<b>GS Paper I</b> focuses on Indian culture, heritage, history, and world geography. It requires strong factual knowledge and analytical understanding of historical processes.<br /><br />
-
-<b>GS Paper II </b>covers governance, constitution, social justice, and international relations. Current awareness and understanding of government schemes are essential.<br /><br />
-
-<b>GS Paper III </b> emphasizes economic development, technology, disaster management, and security issues. This paper requires integration of current affairs with conceptual knowledge.<br /><br />
-
-<b>GS Paper IV </b> tests ethical dimensions and integrity. It includes case studies, attitude questions, and philosophical understanding of ethics in administration.<br /><br />
-		 
-		 <b>Optional Papers</b><br />
+<b>Optional Papers</b><br />
 Candidates must choose one optional subject from a list of 48 subjects. These include 25 core subjects like History, Geography, Sociology, Political Science, Public Administration, Economics, and Anthropology, plus 23 literature subjects in various Indian and foreign languages.<br /><br />
 
 Popular optional subjects include Geography, History, Sociology, Public Administration, and Political Science due to their overlap with General Studies and scoring potential. The optional subject contributes 500 marks (two papers of 250 marks each) to the final score.<br /><br />

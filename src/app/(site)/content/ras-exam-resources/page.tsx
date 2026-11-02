@@ -143,24 +143,6 @@ Four descriptive papers; each 3 hours; each 200 marks; total 800; minimum qualif
 
 Final merit is Mains (800) + Interview (100) = 900.<br /><br />
 		 
-		<b> GS Paper 1 syllabus</b><br />
-Focus: History, Economy, Sociology/Management basics, Rajasthan culture and geography as per consolidated guides; units commonly grouped as History, Economy, and Social subjects; detailed breakups and question counts per part (short/medium/long) are 25×2 marks, 16×5 marks, 7×10 marks = 200 as per pattern summary used in coaching resources.<br />
-
-Typical weightage by units in paper structure: Part A short (50), Part B medium (80), Part C long (70), totaling 200; this is a marks distribution by question type rather than subject weight, but it guides answer-depth planning.<br /><br />
-		 
-		<b> GS Paper 2 syllabus</b><br />
-Focus: Administrative ethics, General Science & Technology, Earth Science/Geography and Geology; paper organized into short/medium/long questions (e.g., 15×2, 14×5, 10×10) totaling 200 in several exam analyses.<br />
-
-Emphasis areas: ethics frameworks in administration, S&T; developments and applications, physical geography/earth systems relevant to Rajasthan and India.<br /><br />
-
-<b>GS Paper 3 syllabus</b><br />
-Focus: Indian Political System, World Politics, Current Affairs; Public Administration & Management; Sports, Yoga, Behaviour & Law; question pattern aligned to short/medium/long akin to Paper 1.<br />
-
-Strong current affairs linkage with policy/governance and international relations.<br /><br />
-		 
-		<b> GS Paper 4 syllabus</b><br />
-General Hindi and General English: grammar and usage, comprehension, translation, précis, composition and letter/essay writing; total 200 marks, with internal partition across Hindi, English, and composition sections in preparation guides.<br /><br />
-		 
 		<b> Interview (Personality Test)</b><br />
 Marks: 100; final merit = Mains 800 + Interview 100.<br />
 

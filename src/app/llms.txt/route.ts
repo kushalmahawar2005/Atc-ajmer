@@ -32,7 +32,6 @@ const NOTES: Record<string, string> = {
   "/content/ncert-pdf-download": "Free NCERT textbook PDFs.",
   "/content/rajasthan-sujas": "Rajasthan Sujas monthly magazine PDFs.",
   "/content/economic-survey": "Economic Survey of India and Rajasthan Economic Review PDFs.",
-  "/content/monthly-magazine": "ATC's monthly current affairs magazine, Hindi and English.",
   "/content/ias-exam-resources": "UPSC IAS exam pattern, syllabus and preparation guidance.",
   "/content/ras-exam-resources": "RPSC RAS exam pattern, syllabus and preparation guidance.",
   "/content/rajasthan-psi-exam-resources": "Rajasthan PSI exam pattern, syllabus and physical standards.",

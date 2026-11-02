@@ -20,6 +20,11 @@ const nextConfig: NextConfig = {
     serverActions: { bodySizeLimit: "2mb" },
   },
   serverExternalPackages: ["pg", "pdfkit"],
+  async redirects() {
+    return [
+      { source: "/content/monthly-magazine", destination: "/content", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

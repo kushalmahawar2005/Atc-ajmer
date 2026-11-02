@@ -49,7 +49,6 @@ export const ROUTES: { path: string; priority: number; changeFrequency: "daily" 
   { path: "/content/ncert-pdf-download", priority: 0.7, changeFrequency: "monthly" },
   { path: "/content/rajasthan-sujas", priority: 0.6, changeFrequency: "monthly" },
   { path: "/content/economic-survey", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/content/monthly-magazine", priority: 0.6, changeFrequency: "monthly" },
   { path: "/content/ias-exam-resources", priority: 0.7, changeFrequency: "monthly" },
   { path: "/content/ras-exam-resources", priority: 0.7, changeFrequency: "monthly" },
   { path: "/content/rajasthan-psi-exam-resources", priority: 0.7, changeFrequency: "monthly" },

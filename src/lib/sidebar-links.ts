@@ -1,5 +1,11 @@
+import { IGNOU_URL, PIB_URL, SUJAS_URL } from "./navigation";
+
 /** Right-column sidebar shared by every inner page. */
-export const sidebarSections = [
+export const sidebarSections: {
+  heading: string;
+  icon: string;
+  links: { label: string; href: string; external?: boolean }[];
+}[] = [
   {
     heading: "Our Courses",
     icon: "fas fa-graduation-cap",
@@ -25,10 +31,11 @@ export const sidebarSections = [
     heading: "Study Material",
     icon: "fas fa-book-open",
     links: [
-      { label: "NCERT Books PDF", href: "/content/ncert-pdf-download" },
-      { label: "Rajasthan Sujas", href: "/content/rajasthan-sujas" },
+      { label: "NCERT Books Online", href: "/content/ncert-pdf-download" },
+      { label: "IGNOU Study Material ↗", href: IGNOU_URL, external: true },
+      { label: "Rajasthan Sujas ↗", href: SUJAS_URL, external: true },
       { label: "Economic Survey", href: "/content/economic-survey" },
-      { label: "Monthly Magazine", href: "/content/monthly-magazine" },
+      { label: "PIB Prism ↗", href: PIB_URL, external: true },
     ],
   },
   {

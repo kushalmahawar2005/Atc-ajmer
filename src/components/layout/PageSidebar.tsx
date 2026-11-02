@@ -32,7 +32,12 @@ export default function PageSidebar() {
           </div>
           <div className="sb-links">
             {section.links.map((link) => (
-              <Link href={link.href} className="sb-link" key={link.href}>
+              <Link
+                href={link.href}
+                className="sb-link"
+                key={link.href}
+                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              >
                 <i className="fas fa-chevron-right" aria-hidden="true" />
                 {link.label}
               </Link>

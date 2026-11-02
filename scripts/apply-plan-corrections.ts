@@ -28,9 +28,36 @@ const edits = [
     title: "IAS Mains Online Test Series",
     set: { title: "IAS Prelims Offline Test Series", groupLabel: IAS_TEST_GROUP },
   },
+  // Keep the online group after the three offline RAS boxes.
+  { courseSlug: "ras-foundation", title: "RAS Foundation - Online", set: { sortOrder: 4 } },
+  { courseSlug: "ras-foundation", title: "RAS Prelims Live from Classroom", set: { sortOrder: 5 } },
 ];
 
-const additions = [
+const RAS_OFFLINE_GROUP = "Offline / Classroom Courses for RAS Foundation";
+const FIVE_MONTH_FEE_NOTE = "GST Included in the Fees · Duration: 5 months";
+
+const additions: (typeof coursePlans.$inferInsert)[] = [
+  {
+    courseSlug: "ras-foundation",
+    groupLabel: RAS_OFFLINE_GROUP,
+    title: "RAS Prelims Course",
+    description: "Exclusive Classroom batch for the preparation of RAS Prelims Exam",
+    fees: 35000,
+    feeNote: FIVE_MONTH_FEE_NOTE,
+    mode: "Offline / Classroom",
+    sortOrder: 2,
+  },
+  {
+    courseSlug: "ras-foundation",
+    groupLabel: RAS_OFFLINE_GROUP,
+    title: "RAS Mains Course",
+    description: "Exclusive Classroom batch for the preparation of RAS Mains Exam",
+    fees: 60000,
+    oneTimePayment: 55000,
+    feeNote: FIVE_MONTH_FEE_NOTE,
+    mode: "Offline / Classroom",
+    sortOrder: 3,
+  },
   {
     courseSlug: "ras-test-series",
     groupLabel: "RAS Prelims / Mains Test Series",

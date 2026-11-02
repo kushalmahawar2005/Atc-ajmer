@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
 import { examOrder, examSeries, type ExamKey } from "@/lib/exam-series";
 import { CONTACT } from "@/lib/contact";
 import { EXAM_BANNER_OPEN_EVENT } from "@/lib/exam-banner";
@@ -189,6 +190,11 @@ export default function ExamSeriesBanner() {
                   </li>
                 ))}
               </ul>
+              {series.knowMoreHref && (
+                <Link href={series.knowMoreHref} className="ras-know-more" onClick={dismiss}>
+                  Know More <i className="fas fa-arrow-right" aria-hidden="true" />
+                </Link>
+              )}
             </div>
           )}
 

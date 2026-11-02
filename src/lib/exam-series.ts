@@ -19,6 +19,8 @@ export type ExamSeries = {
   features: ExamFeature[];
   tracks?: ExamTrack[];
   centres: string[];
+  /** Course page opened by the popup's "Know More" button. */
+  knowMoreHref?: string;
   availableSoon?: boolean;
 };
 
@@ -43,6 +45,7 @@ export const examSeries: Record<ExamKey, ExamSeries> = {
       { key: "mains", label: "Mains", features: [tests(16), pdfSolutions, realEnvironment] },
     ],
     centres: ["Ajmer"],
+    knowMoreHref: "/courses/ras-foundation",
   },
   ias: {
     key: "ias",
@@ -56,6 +59,7 @@ export const examSeries: Record<ExamKey, ExamSeries> = {
       { icon: "fas fa-chalkboard-teacher", label: "UPSC Pattern Environment", wide: true },
     ],
     centres: ["Ajmer", "Online"],
+    knowMoreHref: "/courses/ias-foundation",
   },
   psi: {
     key: "psi",

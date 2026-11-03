@@ -3,7 +3,6 @@ import CoursesGrid from "@/components/home/CoursesGrid";
 import EnrollBanner from "@/components/home/EnrollBanner";
 import HeroSlider from "@/components/home/HeroSlider";
 import YoutubeSection from "@/components/home/YoutubeSection";
-import InstallApp from "@/components/layout/InstallApp";
 import StatsStrip from "@/components/home/StatsStrip";
 import Testimonials from "@/components/home/Testimonials";
 import ThreeColumnSection from "@/components/home/ThreeColumnSection";
@@ -18,7 +17,6 @@ export default function HomePage() {
         <HeroSlider />
         <StatsStrip />
         <EnrollBanner />
-        <InstallApp />
         <AboutSection />
         <CoursesGrid />
         <ThreeColumnSection />

@@ -221,6 +221,8 @@
 
 /* Featured action button */
 .downloadBtn {
+  font-family: inherit;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 6px;

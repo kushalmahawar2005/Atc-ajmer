@@ -1,7 +1,6 @@
 /**
  * The three offline test series, kept isolated from each other: each exam has
- * its own banner copy, centres and registration records. ATC runs a single
- * centre — Ajmer — so every offline series is held there.
+ * its own banner copy, batch modes and registration records.
  */
 export type ExamKey = "ras" | "ias" | "psi";
 
@@ -32,6 +31,16 @@ const realEnvironment: ExamFeature = {
   wide: true,
 };
 
+const answerKeyPdf: ExamFeature = { icon: "fas fa-file-pdf", label: "Answer Key + PDF" };
+const upscEnvironment: ExamFeature = {
+  icon: "fas fa-chalkboard-teacher",
+  label: "UPSC Pattern Environment",
+  wide: true,
+};
+
+/** Batch modes offered for every exam; shown in the popup form as "Batch Mode". */
+const BATCH_MODES = ["Offline", "Online"];
+
 export const examSeries: Record<ExamKey, ExamSeries> = {
   ras: {
     key: "ras",
@@ -44,21 +53,21 @@ export const examSeries: Record<ExamKey, ExamSeries> = {
       { key: "prelims", label: "Prelims", features: [tests(18), pdfSolutions, realEnvironment] },
       { key: "mains", label: "Mains", features: [tests(16), pdfSolutions, realEnvironment] },
     ],
-    centres: ["Ajmer"],
+    centres: BATCH_MODES,
     knowMoreHref: "/courses/ras-foundation",
   },
   ias: {
     key: "ias",
     label: "IAS",
-    title: "IAS Prelims",
+    title: "IAS Exam",
     year: "2026",
     subtitle: "Offline Registration",
-    features: [
-      tests(60),
-      { icon: "fas fa-file-pdf", label: "Answer Key + PDF" },
-      { icon: "fas fa-chalkboard-teacher", label: "UPSC Pattern Environment", wide: true },
+    features: [],
+    tracks: [
+      { key: "prelims", label: "Prelims", features: [tests(60), answerKeyPdf, upscEnvironment] },
+      { key: "mains", label: "Mains", features: [tests(24), answerKeyPdf, upscEnvironment] },
     ],
-    centres: ["Ajmer", "Online"],
+    centres: BATCH_MODES,
     knowMoreHref: "/courses/ias-foundation",
   },
   psi: {

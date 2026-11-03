@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const breadcrumb: Crumb[] = [
   { label: "Home", href: "/" },
-  { label: "Our Courses", href: "/courses" },
+  { label: "Test Series", href: "/courses/test-series" },
   { label: "Rajasthan PSI Test Series" },
 ];
 

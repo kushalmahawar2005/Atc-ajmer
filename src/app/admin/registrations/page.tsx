@@ -63,7 +63,7 @@ export default async function RegistrationsPage({
                   <th>Candidate</th>
                   <th>Mobile</th>
                   <th>Place</th>
-                  <th>Centre</th>
+                  <th>Batch Mode</th>
                   <th>Registered</th>
                   <th>Status</th>
                   <th />

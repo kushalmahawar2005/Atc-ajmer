@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { sliderImages } from "@/lib/home-content";
 
 const AUTOPLAY_MS = 5000;
@@ -81,10 +80,6 @@ export default function HeroSlider() {
           ❯
         </button>
       </div>
-
-      <Link href="/about/selections" className="selections-badge">
-        <span className="selections-badge-text">View Our Past Selections →</span>
-      </Link>
     </div>
   );
 }

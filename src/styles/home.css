@@ -376,39 +376,6 @@ html, body { overflow-x: hidden; }
 .slider-prev { left: 14px; }
 .slider-next { right: 14px; }
 
-.selections-badge {
-    position: absolute;
-    bottom: 18px; right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(255,255,255,0.97);
-    border-radius: var(--radius-sm);
-    padding: 13px 20px;
-    box-shadow: var(--shadow-lg);
-    text-decoration: none;
-    border: 2px solid var(--primary);
-    transition: all var(--transition);
-    z-index: 20;
-    max-width: 300px;
-}
-
-.selections-badge:hover {
-    background: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,55,76,0.38);
-}
-
-.selections-badge-text {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--primary-dark);
-    line-height: 1.3;
-    transition: color var(--transition);
-}
-
-.selections-badge:hover .selections-badge-text { color: #fff; }
-
 /* ================================================================
    STATS STRIP
    ================================================================ */
@@ -573,6 +540,37 @@ html, body { overflow-x: hidden; }
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0,55,76,0.45);
     color: #fff !important;
+}
+
+.enroll-cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.enroll-selections-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background: #fff;
+    color: var(--primary-dark) !important;
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 1.2;
+    transition: all var(--transition);
+}
+
+.enroll-selections-btn:hover {
+    background: var(--primary);
+    color: #fff !important;
+    transform: translateY(-2px);
 }
 
 .enroll-arrow {
@@ -1274,21 +1272,6 @@ a.home-contact-row:hover { color: var(--primary); }
     .slider-prev { left: 8px; }
     .slider-next { right: 8px; }
 
-    .selections-badge {
-        position: static;
-        max-width: 100%;
-        border-radius: 0;
-        border: none;
-        border-top: 2px solid var(--primary);
-        justify-content: center;
-        background: #fff;
-        padding: 10px 16px;
-        box-shadow: none;
-    }
-
-    .selections-badge-text { color: var(--primary-dark); font-size: 13px; }
-    .selections-badge:hover { background: var(--primary); transform: none; box-shadow: none; }
-
     .stats-strip { border-radius: 0 0 var(--radius) var(--radius); }
     .stat-item { width: 50%; }
 
@@ -1510,12 +1493,14 @@ a.home-contact-row:hover { color: var(--primary); }
 
 .testimonial-poster-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* Six tracks, two per card, so a short last row of two sits centred. */
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     align-items: start;
     gap: 20px;
 }
 
 .testimonial-poster-card {
+    grid-column: span 2;
     min-width: 0;
     margin: 0;
     overflow: hidden;
@@ -1525,7 +1510,9 @@ a.home-contact-row:hover { color: var(--primary); }
     box-shadow: var(--shadow-sm);
 }
 
-.testimonial-poster-card:last-child:nth-child(4) { grid-column: 2; }
+.testimonial-poster-card:nth-child(3n + 1):nth-last-child(2) { grid-column: 2 / span 2; }
+.testimonial-poster-card:nth-child(3n + 1):last-child { grid-column: 3 / span 2; }
+.testimonial-poster-card:nth-child(3n + 2):last-child { grid-column: 4 / span 2; }
 
 .testimonial-poster-card img {
     display: block;
@@ -1571,12 +1558,17 @@ a.home-contact-row:hover { color: var(--primary); }
     .testimonials { padding: 22px 16px 26px; }
     .tst-grid { grid-template-columns: 1fr; }
     .testimonial-poster-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .testimonial-poster-card,
+    .testimonial-poster-card:nth-child(3n + 1):nth-last-child(2),
+    .testimonial-poster-card:nth-child(3n + 1):last-child,
+    .testimonial-poster-card:nth-child(3n + 2):last-child { grid-column: auto; }
+    .testimonial-poster-card:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 7px); justify-self: center; }
 }
 
 @media (max-width: 560px) {
     .testimonial-poster-grid { grid-template-columns: minmax(0, 1fr); }
-    .testimonial-poster-card:last-child:nth-child(4) { grid-column: auto; }
-    .testimonial-poster-card { width: min(100%, 380px); margin-inline: auto; }
+    .testimonial-poster-card,
+    .testimonial-poster-card:last-child:nth-child(odd) { grid-column: auto; width: min(100%, 380px); margin-inline: auto; justify-self: auto; }
 }
 
 /* Keep course artwork and labels separate on touch screens. */
@@ -1717,4 +1709,33 @@ a.home-contact-row:hover { color: var(--primary); }
 @media (max-width: 640px) {
     .install-banner { flex-direction: column; text-align: center; padding: 18px 16px; }
     .install-banner-btn { width: 100%; justify-content: center; }
+}
+
+/* Install-steps popup (shown when the browser has no native install prompt) */
+.install-steps-overlay {
+    position: fixed; inset: 0; z-index: 2000;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(0,20,30,0.55);
+    padding: 16px;
+}
+.install-steps-modal {
+    position: relative;
+    width: 100%; max-width: 380px;
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 26px 24px 22px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+}
+.install-steps-modal h3 { margin: 0 0 10px; color: var(--primary-dark); }
+.install-steps-modal p { margin: 0 0 18px; line-height: 1.6; }
+.install-steps-close {
+    position: absolute; top: 10px; right: 12px;
+    background: none; border: none; cursor: pointer;
+    font-size: 16px; color: var(--primary-dark);
+}
+.install-steps-ok {
+    padding: 10px 26px; border: none; cursor: pointer;
+    background: var(--primary); color: #fff; font-weight: 700;
+    border-radius: var(--radius-sm); font-family: inherit;
 }

@@ -47,7 +47,6 @@ export const mainNav: NavItem[] = [
         href: "/courses/ias-ras-integrated",
       },
       { label: "Rajasthan PSI Course", href: "/courses/rajasthan-psi" },
-      { label: "IAS & RAS Interview", href: "/courses/ias-ras-interview" },
     ],
   },
   {

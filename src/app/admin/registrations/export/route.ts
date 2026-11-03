@@ -27,7 +27,7 @@ export async function GET(request: Request) {
   );
 
   const csv = toCsv(
-    ["ID", "Exam", "Name", "Father's Name", "Mobile", "Place", "Centre", "Handled", "Registered"],
+    ["ID", "Exam", "Name", "Father's Name", "Mobile", "Place", "Batch Mode", "Handled", "Registered"],
     rows.map((row) => [
       row.id,
       row.exam.toUpperCase(),

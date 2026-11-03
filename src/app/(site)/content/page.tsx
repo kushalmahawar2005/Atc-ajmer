@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageShell, { type Crumb } from "@/components/layout/PageShell";
-import { PIB_URL } from "@/lib/navigation";
+import { IGNOU_URL, PIB_URL } from "@/lib/navigation";
 
 export const metadata: Metadata = {
   title: "Free Study Material for UPSC and RPSC Exams",
@@ -32,6 +32,9 @@ export default function Page() {
             </a>
             <a className="btn btn-cta" href="/content/economic-survey" aria-label="Economic Survey of Rajasthan and India">
                 Economic Survey of India &amp; Rajasthan
+            </a>
+            <a className="btn btn-cta" href={IGNOU_URL} target="_blank" rel="noopener noreferrer" aria-label="IGNOU Study Material on eGyanKosh">
+                IGNOU Study Material ↗
             </a>
             <a className="btn btn-ghost" href={PIB_URL} target="_blank" rel="noopener noreferrer" aria-label="PIB Prism press releases and e-booklets">
                 PIB Prism ↗

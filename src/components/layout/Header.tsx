@@ -6,10 +6,10 @@ import Link from "next/link";
 import {
   PHONE_PRIMARY,
   PHONE_SECONDARY,
-  SELECTIONS_HREF,
   mainNav,
 } from "@/lib/navigation";
 import { useLanguage } from "./LanguageProvider";
+import InstallButton from "./InstallButton";
 import MobileMenu from "./MobileMenu";
 import styles from "./Header.module.css";
 
@@ -119,9 +119,7 @@ export default function Header() {
               })}
             </ul>
 
-            <Link href={SELECTIONS_HREF} className={styles.downloadBtn}>
-              <i className="fas fa-trophy" aria-hidden="true" /> View Our Past Selections
-            </Link>
+            <InstallButton className={styles.downloadBtn} />
           </div>
         </div>
       </header>

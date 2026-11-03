@@ -15,7 +15,6 @@ export const sidebarSections: {
       { label: "Rajasthan PSI Course", href: "/courses/rajasthan-psi" },
       { label: "3 Year Integrated Course", href: "/courses/ias-ras-integrated" },
       { label: "RAS Mains Exclusive", href: "/courses/ras-mains" },
-      { label: "IAS & RAS Interview", href: "/courses/ias-ras-interview" },
     ],
   },
   {

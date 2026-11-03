@@ -16,7 +16,7 @@ export default function Page() {
       title={details.title}
       breadcrumb={[
         { label: "Home", href: "/" },
-        { label: "Our Courses", href: "/courses" },
+        { label: "Test Series", href: "/courses/test-series" },
         { label: details.title },
       ]}
     >

@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment } from "react";
+import Link from "next/link";
 import { openExamBanner } from "@/lib/exam-banner";
 import { enrollFeatures, newBatches } from "@/lib/home-content";
 
@@ -28,9 +29,14 @@ export default function EnrollBanner() {
             </span>
           ))}
         </div>
-        <button type="button" onClick={openExamBanner} className="enroll-cta-btn">
-          Register Online Now <span className="enroll-arrow">→</span>
-        </button>
+        <div className="enroll-cta-row">
+          <Link href="/about/selections" className="enroll-selections-btn">
+            <i className="fas fa-trophy" aria-hidden="true" /> View Our Past Selections
+          </Link>
+          <button type="button" onClick={openExamBanner} className="enroll-cta-btn">
+            Register Online Now <span className="enroll-arrow">→</span>
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -29,6 +29,12 @@ const studentStories = [
     name: "Mayank",
     result: "RPS · RAS 2024",
   },
+  {
+    src: "/images/testimonials/payal-ras-2023.jpg",
+    alt: "Testimonial from Ms. Payal, R.Ac.S., RAS 2023",
+    name: "Payal",
+    result: "R.Ac.S. · RAS 2023",
+  },
 ];
 
 /** Shows the supplied student stories and any extra testimonials added by admins. */

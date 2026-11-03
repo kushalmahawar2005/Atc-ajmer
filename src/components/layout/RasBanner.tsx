@@ -28,10 +28,6 @@ export default function ExamSeriesBanner() {
   const series = examSeries[exam];
   const track = series.tracks?.find((item) => item.key === trackKey) ?? series.tracks?.[0];
   const features = track?.features ?? series.features;
-  const hiddenCentre =
-    series.centres.length === 1
-      ? [track?.label, series.centres[0]].filter(Boolean).join(" - ")
-      : null;
 
   const dismiss = useCallback(() => {
     setOpen(false);
@@ -95,7 +91,7 @@ export default function ExamSeriesBanner() {
       `Father's Name: ${value("fatherName")}`,
       `Mobile: ${value("phone")}`,
       `Place: ${value("place")}`,
-      `Centre / Mode: ${hiddenCentre ? series.centres[0] : value("centre")}`,
+      `Batch Mode: ${value("centre").split(" - ").pop()}`,
     ].join("\n");
 
     // Open WhatsApp first, inside the click, so browsers don't block it.
@@ -201,7 +197,6 @@ export default function ExamSeriesBanner() {
           {showForm && !series.availableSoon && (
             <form className="ras-reg-form" onSubmit={handleSubmit}>
               <input type="hidden" name="exam" value={exam} />
-              {hiddenCentre && <input type="hidden" name="centre" value={hiddenCentre} />}
 
               {message && (
                 <div className={`ras-reg-msg${status === "ok" ? " is-ok" : " is-err"}`}>
@@ -240,18 +235,21 @@ export default function ExamSeriesBanner() {
                 <input name="place" required maxLength={160} placeholder="City / town" />
               </label>
 
-              {!hiddenCentre && (
+              {series.centres.length > 0 && (
                 <label className="ras-reg-field">
-                  <span>Test Mode</span>
-                  <select name="centre" defaultValue="" required>
+                  <span>Batch Mode</span>
+                  <select key={`${exam}-${track?.key}`} name="centre" defaultValue="" required>
                     <option value="" disabled>
-                      Select a mode
+                      Select batch mode
                     </option>
-                    {series.centres.map((centre) => (
-                      <option key={centre} value={centre}>
-                        {centre}
-                      </option>
-                    ))}
+                    {series.centres.map((centre) => {
+                      const value = [track?.label, centre].filter(Boolean).join(" - ");
+                      return (
+                        <option key={value} value={value}>
+                          {centre}
+                        </option>
+                      );
+                    })}
                   </select>
                 </label>
               )}

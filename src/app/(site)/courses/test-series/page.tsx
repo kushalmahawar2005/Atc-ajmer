@@ -12,8 +12,7 @@ export const metadata: Metadata = {
 
 const breadcrumb: Crumb[] = [
   { label: "Home", href: "/" },
-  { label: "Our Courses", href: "/courses" },
-  { label: "IAS RAS and PSI Test Series" },
+  { label: "Test Series" },
 ];
 
 export default function Page() {
@@ -53,7 +52,14 @@ Our test series for IAS, RAS, and Rajasthan PSI has been carefully curated by su
 <p>Test Series for RAS Prelims and Mains are Conducted at our Ajmer centre as well as Online through our App. All the Test Questions are Prepared by a Team of Experts who are holding long experience in this sector.<br /></p>
 <p style={{ textAlign: "right" }}><a href="/courses/ras-test-series" className="btnbg">More Information +</a></p>
 </dd>
-</dl>	
+</dl>
+	 <dl className="accordions">
+<dt><b><span>Rajasthan PSI Test Series</span><br /> Objective Test Series For Rajasthan PSI Exam</b></dt>
+<dd id="sec1">
+<p>Objective OMR-based test series for the Rajasthan PSI exam, covering the full syllabus with the latest current affairs, detailed performance analysis and All India Ranking after every test.<br /></p>
+<p style={{ textAlign: "right" }}><a href="/courses/psi-test-series" className="btnbg">More Information +</a></p>
+</dd>
+</dl>
 					<br /><br />
 <CoursePlans slug="test-series" />
 </>

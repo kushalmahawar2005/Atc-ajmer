@@ -6,9 +6,9 @@ import Link from "next/link";
 import {
   PHONE_PRIMARY,
   PHONE_SECONDARY,
-  SELECTIONS_HREF,
   mainNav,
 } from "@/lib/navigation";
+import InstallButton from "./InstallButton";
 import styles from "./MobileMenu.module.css";
 
 type Props = {
@@ -136,9 +136,7 @@ export default function MobileMenu({ open, onClose, onSwitchToHindi }: Props) {
           })}
         </ul>
 
-        <Link href={SELECTIONS_HREF} className={styles.appBtn} onClick={onClose}>
-          <i className="fas fa-trophy" aria-hidden="true" /> View Our Past Selections
-        </Link>
+        <InstallButton className={styles.appBtn} onDone={onClose} />
       </div>
     </>
   );

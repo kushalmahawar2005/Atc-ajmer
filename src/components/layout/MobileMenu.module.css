@@ -226,6 +226,8 @@
 
 /* Featured action button */
 .appBtn {
+  font-family: inherit;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;

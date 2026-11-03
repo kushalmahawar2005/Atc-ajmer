@@ -12,17 +12,14 @@ export default function PageSidebar() {
   return (
     <div className="right-column">
       {/* 1. Knowledge Base banner */}
-      <Link href="/knowledge-base" className="sb-kb-banner">
+      <div className="sb-kb-banner">
         <div className="sb-kb-icon">📚</div>
         <div className="sb-kb-text">
           <div className="sb-kb-label">Free Study Resources</div>
           <div className="sb-kb-title">Knowledge Base</div>
           <div className="sb-kb-sub">IAS &amp; RAS Exam Resources</div>
         </div>
-        <div className="sb-kb-arrow">
-          <i className="fas fa-arrow-right" aria-hidden="true" />
-        </div>
-      </Link>
+      </div>
 
       {/* 2–7. Categorised link groups */}
       {sidebarSections.map((section) => (

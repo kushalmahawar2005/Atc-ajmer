@@ -1,4 +1,5 @@
 import { CONTACT } from "./contact";
+import { PIB_URL } from "./navigation";
 
 /**
  * Home page content, mirroring the live site.
@@ -102,7 +103,8 @@ export const whyChooseUs = [
 ];
 
 export const quickLinks: { label: string; href: string; external?: boolean }[] = [
-  { label: "Knowledge Base For IAS & RAS Exams", href: "/knowledge-base" },
+  { label: "UPSC Exam Resources", href: "/content/ias-exam-resources" },
+  { label: "RAS Exam Resources", href: "/content/ras-exam-resources" },
   { label: "Our Past Selections", href: "/about/selections" },
   { label: "NCERT Books PDF Download", href: "/content/ncert-pdf-download" },
   {
@@ -111,8 +113,7 @@ export const quickLinks: { label: string; href: string; external?: boolean }[] =
     external: true,
   },
   { label: "Economic Survey (Raj & India)", href: "/content/economic-survey" },
-  { label: "UPSC Exam Resources", href: "/content/ias-exam-resources" },
-  { label: "RAS Exam Resources", href: "/content/ras-exam-resources" },
+  { label: "PIB Prism", href: PIB_URL, external: true },
 ];
 
 export const videos = [
@@ -123,22 +124,23 @@ export const videos = [
     title: "The Story of Emergency (1971-75)",
   },
   {
-    id: "tjaD4AxyReg",
-    image: `https://i.ytimg.com/vi/tjaD4AxyReg/hqdefault.jpg`,
-    alt: "The Atal Story (1996-2004) | Part 1",
-    title: "The Atal Story (1996-2004) | Part 1",
+    id: "cBdD9AeyFiQ",
+    image: `https://i.ytimg.com/vi/cBdD9AeyFiQ/hqdefault.jpg`,
+    alt: "RAS Interview Guidance Part 1 | By Arvind Tiwari",
+    title: "RAS Interview Guidance Part 1 | By Arvind Tiwari",
   },
   {
-    id: "VH8q4Gsd_0w",
-    image: `https://i.ytimg.com/vi/VH8q4Gsd_0w/hqdefault.jpg`,
-    alt: "Monika, Rank 174 | RAS Topper 2021 | Mock Interview",
-    title: "Monika, Rank 174 | RAS Topper 2021 | Mock Interview",
+    id: "XtRs9BQ-HnQ",
+    image: `https://i.ytimg.com/vi/XtRs9BQ-HnQ/hqdefault.jpg`,
+    alt: "Ramprasad, Rank 123 | RAS Topper 2021 | Mock Interview",
+    title: "Ramprasad, Rank 123 | RAS Topper 2021 | Mock Interview",
   },
 ];
 
 export const socialLinks = [
   { key: "instagram", href: CONTACT.instagram, title: "Instagram", icon: "fab fa-instagram" },
   { key: "facebook", href: CONTACT.facebook, title: "Facebook", icon: "fab fa-facebook-f" },
+  { key: "youtube", href: CONTACT.youtube, title: "YouTube", icon: "fab fa-youtube" },
   { key: "whatsapp", href: CONTACT.whatsapp, title: "WhatsApp", icon: "fab fa-whatsapp" },
 ];
 

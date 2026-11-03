@@ -1520,6 +1520,105 @@ a.home-contact-row:hover { color: var(--primary); }
     height: auto;
 }
 
+.testimonial-poster-open {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+}
+
+/* Full-screen viewer for one testimonial poster. */
+.poster-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 2100;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 12, 20, 0.92);
+}
+
+.poster-viewer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.poster-viewer-title {
+    min-width: 0;
+    overflow: hidden;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.poster-viewer-tools { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+.poster-viewer-tools button,
+.poster-viewer-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.poster-viewer-tools button:disabled { opacity: 0.35; cursor: default; }
+
+.poster-viewer-zoom { min-width: 44px; text-align: center; font-size: 13px; font-weight: 600; }
+
+.poster-viewer-stage {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    display: flex;
+    padding: 0 16px 16px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.poster-viewer-frame {
+    margin: auto;
+    flex-shrink: 0;
+    cursor: zoom-in;
+}
+
+.poster-viewer-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.poster-viewer-frame:has(img.is-zoomed) { cursor: zoom-out; }
+
+.poster-viewer-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.poster-viewer-nav.prev { left: 16px; }
+.poster-viewer-nav.next { right: 16px; }
+
+@media (max-width: 700px) {
+    .poster-viewer-nav { top: auto; bottom: 16px; transform: none; }
+}
+
 .testimonial-poster-card figcaption {
     display: flex;
     flex-direction: column;
@@ -1729,6 +1828,21 @@ a.home-contact-row:hover { color: var(--primary); }
 }
 .install-steps-modal h3 { margin: 0 0 10px; color: var(--primary-dark); }
 .install-steps-modal p { margin: 0 0 18px; line-height: 1.6; }
+.install-steps-list {
+    list-style: none; margin: 4px 0 20px; padding: 0;
+    display: grid; gap: 10px; text-align: left;
+}
+.install-steps-list li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px; line-height: 1.45;
+    background: #f3f7f9; border-radius: var(--radius-sm);
+}
+.install-steps-list li > i { color: var(--primary); width: 18px; text-align: center; flex-shrink: 0; }
+.install-steps-num {
+    flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--primary); color: #fff; font-size: 13px; font-weight: 700;
+}
 .install-steps-close {
     position: absolute; top: 10px; right: 12px;
     background: none; border: none; cursor: pointer;

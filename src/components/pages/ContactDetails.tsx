@@ -28,6 +28,7 @@ export default function ContactDetails() {
       <p style={{ display: "flex", flexWrap: "wrap", gap: 24, marginTop: 16 }}>
         <a href={CONTACT.instagram} target="_blank" rel="noopener noreferrer">Instagram @atcias</a>
         <a href={CONTACT.facebook} target="_blank" rel="noopener noreferrer">Facebook @atcias</a>
+        <a href={CONTACT.youtube} target="_blank" rel="noopener noreferrer">YouTube @atcajmer7151</a>
       </p>
     </div>
   );

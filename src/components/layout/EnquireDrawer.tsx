@@ -7,8 +7,8 @@ import { useEffect, useRef, useState } from "react";
 type Status = "idle" | "success";
 
 const COURSE_OPTIONS = [
-  { value: "IAS", label: "IAS Foundation" },
-  { value: "RAS", label: "RAS Foundation" },
+  { value: "IAS", label: "IAS Course" },
+  { value: "RAS", label: "RAS Course" },
   { value: "PSI", label: "Rajasthan PSI" },
   { value: "Interview", label: "IAS / RAS Interview" },
 ];

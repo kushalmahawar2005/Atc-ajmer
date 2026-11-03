@@ -85,7 +85,7 @@ export default function ExamSeriesBanner() {
     const stage = track ? ` (${track.label})` : "";
     const course = [`${series.title}${stage}`, series.year].filter(Boolean).join(" ");
     const text = [
-      "Test Series Registration",
+      "Offline Exam Registration",
       `Exam: ${course}`,
       `Name: ${value("name")}`,
       `Father's Name: ${value("fatherName")}`,

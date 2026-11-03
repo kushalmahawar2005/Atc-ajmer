@@ -1,8 +1,8 @@
 import { asc, eq } from "drizzle-orm";
-import Image from "next/image";
 import { db } from "@/db";
 import { testimonials } from "@/db/schema";
 import TestimonialsSwitcher from "./TestimonialsSwitcher";
+import TestimonialPosters from "./TestimonialPosters";
 
 const studentStories = [
   {
@@ -35,6 +35,12 @@ const studentStories = [
     name: "Payal",
     result: "R.Ac.S. · RAS 2023",
   },
+  {
+    src: "/images/testimonials/gaurav-ras-2023.jpg",
+    alt: "Testimonial from Gaurav Raizada, Rank 287, RAS 2023",
+    name: "Gaurav Raizada",
+    result: "Rank 287 · RAS 2023",
+  },
 ];
 
 /** Shows the supplied student stories and any extra testimonials added by admins. */
@@ -62,23 +68,7 @@ export default async function Testimonials() {
         <p>Experiences from our RAS achievers</p>
       </header>
 
-      <div className="testimonial-poster-grid">
-        {studentStories.map((story) => (
-          <figure className="testimonial-poster-card" key={story.src}>
-            <Image
-              src={story.src}
-              alt={story.alt}
-              width={853}
-              height={1280}
-              sizes="(max-width: 700px) 100vw, (max-width: 1050px) 50vw, 33vw"
-            />
-            <figcaption>
-              <strong>{story.name}</strong>
-              <span>{story.result}</span>
-            </figcaption>
-          </figure>
-        ))}
-      </div>
+      <TestimonialPosters stories={studentStories} />
 
       {students.length > 0 && (
         <div className="admin-testimonials">

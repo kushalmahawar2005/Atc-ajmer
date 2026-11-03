@@ -39,6 +39,22 @@ function wire() {
   });
 }
 
+export type InstallPlatform = "ios" | "mac-safari" | "other";
+
+/**
+ * Safari never fires `beforeinstallprompt`, so these browsers need manual steps.
+ * iPadOS reports itself as "Macintosh", so touch support tells iPad from Mac.
+ */
+function detectPlatform(): InstallPlatform {
+  if (typeof navigator === "undefined") return "other";
+  const ua = navigator.userAgent;
+  const isIpad = /macintosh/i.test(ua) && navigator.maxTouchPoints > 1;
+  if (/iphone|ipad|ipod/i.test(ua) || isIpad) return "ios";
+  const isSafari = /safari/i.test(ua) && !/chrome|chromium|crios|fxios|edg|opr/i.test(ua);
+  if (/macintosh/i.test(ua) && isSafari) return "mac-safari";
+  return "other";
+}
+
 export function useInstallApp() {
   const [, setTick] = useState(0);
   const [showSteps, setShowSteps] = useState(false);
@@ -71,13 +87,13 @@ export function useInstallApp() {
     notify();
   }, []);
 
-  const isIos = typeof navigator !== "undefined" && /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const platform = detectPlatform();
 
   return {
     installed: installedFlag,
     install,
     showSteps,
     closeSteps: () => setShowSteps(false),
-    isIos,
+    platform,
   };
 }

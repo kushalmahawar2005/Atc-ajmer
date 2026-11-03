@@ -117,22 +117,22 @@ export const quickLinks: { label: string; href: string; external?: boolean }[] =
 
 export const videos = [
   {
-    id: "eytXGJE1cjo",
-    image: "/images/toppers-meet.jpeg",
-    alt: "71 Toppers of RAS 2023",
-    title: "71 Toppers of RAS 2023 Share their Strategy",
+    id: "YEwjqkZKsdw",
+    image: `https://i.ytimg.com/vi/YEwjqkZKsdw/hqdefault.jpg`,
+    alt: "The Story of Emergency (1971-75)",
+    title: "The Story of Emergency (1971-75)",
   },
   {
-    id: "jQBMFpfi4vA",
-    image: "/images/syllabus.jpeg",
-    alt: "Overview of RAS Syllabus Change",
-    title: "Overview of RAS Syllabus Change",
+    id: "tjaD4AxyReg",
+    image: `https://i.ytimg.com/vi/tjaD4AxyReg/hqdefault.jpg`,
+    alt: "The Atal Story (1996-2004) | Part 1",
+    title: "The Atal Story (1996-2004) | Part 1",
   },
   {
-    id: "-EXJhpM_8Wc",
-    image: "/images/daf-guidance.jpeg",
-    alt: "How to Fill DAF for RAS Interview",
-    title: "How to Fill DAF for RAS Interview - Vijay Sir",
+    id: "VH8q4Gsd_0w",
+    image: `https://i.ytimg.com/vi/VH8q4Gsd_0w/hqdefault.jpg`,
+    alt: "Monika, Rank 174 | RAS Topper 2021 | Mock Interview",
+    title: "Monika, Rank 174 | RAS Topper 2021 | Mock Interview",
   },
 ];
 
@@ -167,6 +167,7 @@ export const footerColumns = [
       { label: "IAS Foundation Course", href: "/courses/ias-foundation" },
       { label: "RAS Foundation Course", href: "/courses/ras-foundation" },
       { label: "Rajasthan PSI & RAS Pre", href: "/courses/rajasthan-psi" },
+      { label: "IAS & RAS Interview", href: "/courses/ias-ras-interview" },
       { label: "View All Courses", href: "/courses" },
     ],
   },

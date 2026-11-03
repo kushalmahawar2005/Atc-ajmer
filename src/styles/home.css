@@ -1667,3 +1667,54 @@ a.home-contact-row:hover { color: var(--primary); }
 .home-quiz-card p { color: var(--text-muted); max-width: 650px; }
 .home-quiz-card .enroll-cta-btn { flex-shrink: 0; }
 @media (max-width: 768px) { .home-quiz-card { flex-direction: column; align-items: stretch; padding: 20px; } .home-quiz-card h2 { font-size: 21px; } }
+
+/* Install App banner, sits under the admissions banner */
+.install-banner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: -12px 0 32px;
+    padding: 18px 24px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+.install-banner-icon {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 24px;
+}
+.install-banner-text { flex: 1; min-width: 0; }
+.install-banner-text h2 { margin: 0 0 4px; font-size: 1.15rem; color: var(--primary); }
+.install-banner-text p { margin: 0; font-size: 14px; color: #55656e; line-height: 1.5; }
+.install-banner-text .install-banner-steps { margin-top: 8px; font-weight: 600; color: var(--primary); }
+.install-banner-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 26px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: var(--primary);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,55,76,0.35);
+    transition: all var(--transition);
+}
+.install-banner-btn:hover { transform: translateY(-2px); }
+@media (max-width: 640px) {
+    .install-banner { flex-direction: column; text-align: center; padding: 18px 16px; }
+    .install-banner-btn { width: 100%; justify-content: center; }
+}

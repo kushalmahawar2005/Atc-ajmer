@@ -44,6 +44,7 @@ export default function YoutubeSection() {
                 width={400}
                 height={225}
                 loading="lazy"
+                unoptimized
               />
               <div className="play-button" />
             </div>

@@ -4,7 +4,7 @@ import { CONTACT } from "@/lib/contact";
 
 import { useEffect, useRef, useState } from "react";
 
-type Status = "idle" | "sending" | "success" | "error";
+type Status = "idle" | "success";
 
 const COURSE_OPTIONS = [
   { value: "IAS", label: "IAS Foundation" },
@@ -46,31 +46,42 @@ export default function EnquireDrawer({
     };
   }, [open, onClose]);
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  /** Saves the enquiry and opens WhatsApp with the details ready to send to ATC. */
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
+    const data = new FormData(form);
+    const value = (key: string) => String(data.get(key) ?? "").trim();
 
-    setStatus("sending");
-    setMessage("");
+    // Honeypot filled: a bot, so neither open WhatsApp nor save anything.
+    if (value("website")) return;
 
-    try {
-      const response = await fetch("/api/enquiry", {
-        method: "POST",
-        body: new FormData(form),
-      });
-      const result = (await response.json()) as { success: boolean; message: string };
+    const course = COURSE_OPTIONS.find((option) => option.value === value("subject"))?.label ?? value("subject");
+    const text = [
+      "Enquiry from ATC website",
+      `Name: ${value("name")}`,
+      `Email: ${value("email")}`,
+      `Phone: ${value("phone")}`,
+      `Course: ${course}`,
+      value("requirement") ? `Message: ${value("requirement")}` : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
 
-      setStatus(result.success ? "success" : "error");
-      setMessage(result.message);
-      if (result.success) form.reset();
-    } catch {
-      setStatus("error");
-      setMessage("Network error. Please try again.");
-    }
+    // Open WhatsApp first, inside the click, so browsers don't block it.
+    window.open(`${CONTACT.whatsapp}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+
+    // Also keep the lead in the admin panel, even if the student never presses Send.
+    fetch("/api/enquiry", { method: "POST", body: data, keepalive: true }).catch(() => {
+      // WhatsApp already carries the details; a failed save must not block the student.
+    });
+
+    form.reset();
+    setStatus("success");
+    setMessage("WhatsApp opened. Please press Send to complete your enquiry.");
   }
 
-  const msgClass =
-    status === "success" ? "eq-msg success" : status === "error" ? "eq-msg error" : "eq-msg";
+  const msgClass = status === "success" ? "eq-msg success" : "eq-msg";
 
   return (
     <>
@@ -179,15 +190,10 @@ export default function EnquireDrawer({
               <input type="text" name="website" defaultValue="" tabIndex={-1} />
             </div>
 
-            <button
-              type="submit"
-              className={`eq-submit-btn${status === "sending" ? " loading" : ""}`}
-              disabled={status === "sending"}
-            >
+            <button type="submit" className="eq-submit-btn">
               <span className="eq-btn-text">
-                <i className="fas fa-paper-plane" aria-hidden="true" /> &nbsp;Send Enquiry
+                <i className="fab fa-whatsapp" aria-hidden="true" /> &nbsp;Send Enquiry on WhatsApp
               </span>
-              <span className="eq-spinner" />
             </button>
           </form>
 

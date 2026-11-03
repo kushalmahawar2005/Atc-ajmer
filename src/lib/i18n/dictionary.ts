@@ -132,6 +132,8 @@ export const hindiDictionary: Record<string, string> = {
   "Select a Course": "पाठ्यक्रम चुनें",
   "Message / Requirement": "संदेश / आवश्यकता",
   "Send Enquiry": "पूछताछ भेजें",
+  "Send Enquiry on WhatsApp": "व्हाट्सएप पर पूछताछ भेजें",
+  "WhatsApp opened. Please press Send to complete your enquiry.": "व्हाट्सएप खुल गया है। पूछताछ पूरी करने के लिए Send दबाएं।",
   "Prefer to call?": "कॉल करना चाहेंगे?",
   "Your full name": "आपका पूरा नाम",
   "Any specific questions or requirements...":

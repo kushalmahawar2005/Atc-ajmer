@@ -43,8 +43,8 @@ export default function Page() {
         <div>
           <strong>RAS Interview Guidance</strong>
           <p>
-            Personality Test ke liye expert mentoring, realistic mock interviews
-            aur detailed feedback ke saath apni final preparation ko strong banayein.
+            Strengthen your final preparation for the Personality Test with expert
+            mentoring, realistic mock interviews, and detailed feedback.
           </p>
         </div>
         <Link href="/courses/ias-ras-interview" className="btnbg">

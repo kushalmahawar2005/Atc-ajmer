@@ -13,8 +13,8 @@ const studentStories = [
   },
   {
     src: "/images/testimonials/monika-ras-2021.jpg",
-    alt: "Testimonial from Monika Khandelwal, Rank 174, RAS 2021",
-    name: "Monika Khandelwal",
+    alt: "Testimonial from Monika, Rank 174, RAS 2021",
+    name: "Monika",
     result: "Rank 174 · RAS 2021",
   },
   {
@@ -31,8 +31,8 @@ const studentStories = [
   },
   {
     src: "/images/testimonials/gaurav-ras-2023.jpg",
-    alt: "Testimonial from Gaurav Raizada, Rank 287, RAS 2023",
-    name: "Gaurav Raizada",
+    alt: "Testimonial from Gaurav, Rank 287, RAS 2023",
+    name: "Gaurav",
     result: "Rank 287 · RAS 2023",
   },
   {

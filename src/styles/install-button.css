@@ -8,7 +8,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-color: transparent !important;
+  border-color: #ffd84d !important;
 }
 
 .installAction::before {
@@ -20,8 +20,8 @@
   background: conic-gradient(
     from var(--install-border-angle),
     transparent 0deg 285deg,
-    #ffd84d 320deg,
-    #fff4ad 345deg,
+    #ffeb70 320deg,
+    #ffd84d 345deg,
     transparent 360deg
   );
   border-radius: inherit;

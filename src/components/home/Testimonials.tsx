@@ -24,12 +24,6 @@ const studentStories = [
     result: "Rank 5 (LV) · RAS 2021",
   },
   {
-    src: "/images/testimonials/mayank-ras-2024.jpg",
-    alt: "Testimonial from Mayank, RPS, RAS 2024",
-    name: "Mayank",
-    result: "RPS · RAS 2024",
-  },
-  {
     src: "/images/testimonials/payal-ras-2023.jpg",
     alt: "Testimonial from Ms. Payal, R.Ac.S., RAS 2023",
     name: "Payal",
@@ -40,6 +34,12 @@ const studentStories = [
     alt: "Testimonial from Gaurav Raizada, Rank 287, RAS 2023",
     name: "Gaurav Raizada",
     result: "Rank 287 · RAS 2023",
+  },
+  {
+    src: "/images/testimonials/mayank-ras-2024.jpg",
+    alt: "Testimonial from Mayank, RPS, RAS 2024",
+    name: "Mayank",
+    result: "RPS · RAS 2024",
   },
 ];
 

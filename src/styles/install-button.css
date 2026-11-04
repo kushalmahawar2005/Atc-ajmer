@@ -1,0 +1,94 @@
+@property --install-border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.installAction {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-color: transparent !important;
+}
+
+.installAction::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  content: "";
+  padding: 2px;
+  background: conic-gradient(
+    from var(--install-border-angle),
+    transparent 0deg 285deg,
+    #ffd84d 320deg,
+    #fff4ad 345deg,
+    transparent 360deg
+  );
+  border-radius: inherit;
+  animation: spinBorder 3.2s linear infinite;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.installAction::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(
+      64deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.12) 42%,
+      rgba(255, 255, 255, 0.12) 47%,
+      transparent 59%
+    ),
+    linear-gradient(
+      64deg,
+      transparent 42%,
+      rgba(255, 255, 255, 0.1) 51%,
+      transparent 60%
+    ),
+    linear-gradient(
+      64deg,
+      transparent 55%,
+      rgba(255, 255, 255, 0.08) 63%,
+      transparent 71%
+    );
+  filter: blur(2px);
+  transform: translateX(-120%);
+  animation: reflectionMove 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.installAction-content {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes spinBorder {
+  to {
+    --install-border-angle: 360deg;
+  }
+}
+
+@keyframes reflectionMove {
+  0%,
+  15% {
+    transform: translateX(-120%);
+  }
+
+  65%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .installAction::before,
+  .installAction::after {
+    animation: none;
+  }
+}

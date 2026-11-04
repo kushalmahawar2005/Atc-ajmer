@@ -39,6 +39,8 @@ export default function Header() {
             </span>
           </div>
 
+          <InstallButton className={styles.mobileDownloadBtn} />
+
           <button
             type="button"
             className={styles.navToggle}

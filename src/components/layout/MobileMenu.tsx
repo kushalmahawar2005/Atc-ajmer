@@ -8,7 +8,6 @@ import {
   PHONE_SECONDARY,
   mainNav,
 } from "@/lib/navigation";
-import InstallButton from "./InstallButton";
 import styles from "./MobileMenu.module.css";
 
 type Props = {
@@ -136,7 +135,6 @@ export default function MobileMenu({ open, onClose, onSwitchToHindi }: Props) {
           })}
         </ul>
 
-        <InstallButton className={styles.appBtn} onDone={onClose} />
       </div>
     </>
   );

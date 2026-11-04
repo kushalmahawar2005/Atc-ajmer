@@ -38,7 +38,6 @@ Our test series for IAS, RAS, and Rajasthan PSI has been carefully curated by su
 		 In summary, the ATC test series is not just about evaluation—it is a complete learning system. With subjective and objective tests, expert evaluation, toppers copies, OMR practice, and an exam-like environment, it equips students with the right strategies to excel in some of the toughest competitive exams in the country.</p>
         </div>
 
-		 <div className="new"><h3>Rajasthan PSI Offline and Online test Series</h3></div><br />
  <dl className="accordions">
 <dt><b><span>IAS Prelims and Mains Test Series - 2026</span><br /> Offline and Online Test Series For IAS Pre and Mains</b></dt>
 <dd id="sec1">

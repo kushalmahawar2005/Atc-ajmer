@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageShell from "@/components/layout/PageShell";
 import CourseJsonLd from "@/components/seo/CourseJsonLd";
 import CoursePlans from "@/components/pages/CoursePlans";
@@ -37,6 +38,18 @@ export default function Page() {
             ))}
           </section>
         ))}
+      </div>
+      <div className="interviewPromo">
+        <div>
+          <strong>IAS Interview Guidance</strong>
+          <p>
+            Personality Test ke liye expert mentoring, realistic mock interviews
+            aur detailed feedback ke saath apni final preparation ko strong banayein.
+          </p>
+        </div>
+        <Link href="/courses/ias-ras-interview" className="btnbg">
+          Explore Interview Program
+        </Link>
       </div>
       <CoursePlans slug="ias-foundation" />
     </PageShell>

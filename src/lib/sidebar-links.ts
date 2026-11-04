@@ -10,8 +10,8 @@ export const sidebarSections: {
     heading: "Our Courses",
     icon: "fas fa-graduation-cap",
     links: [
-      { label: "IAS Mains & Prelims Exclusive Course", href: "/courses/ias-foundation" },
-      { label: "RAS Mains & Prelims Exclusive Course", href: "/courses/ras-foundation" },
+      { label: "IAS Course", href: "/courses/ias-foundation" },
+      { label: "RAS Course", href: "/courses/ras-foundation" },
       { label: "Rajasthan PSI Course", href: "/courses/rajasthan-psi" },
       { label: "3 Year Integrated Course", href: "/courses/ias-ras-integrated" },
     ],

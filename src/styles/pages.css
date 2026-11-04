@@ -1007,3 +1007,49 @@ table.two-col tbody td {
     .tg-noimg { font-size: 13px; padding: 12px; }
     .tg-subject { font-size: 11px; }
 }
+.interviewPromo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 8px 0 24px;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #f3f8fa, #ffffff);
+    border: 1px solid #d5e3e8;
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+.interviewPromo strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--primary-dark);
+    font-family: var(--font-heading);
+    font-size: 18px;
+}
+
+.interviewPromo p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.interviewPromo .btnbg {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .interviewPromo {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+        padding: 16px;
+    }
+
+    .interviewPromo .btnbg {
+        align-self: flex-start;
+    }
+}

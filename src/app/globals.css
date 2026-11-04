@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "../styles/tokens.css";
 @import "../styles/components.css";
+@import "../styles/install-button.css";
 
 /* Expose the design tokens to Tailwind utilities too. */
 @theme inline {

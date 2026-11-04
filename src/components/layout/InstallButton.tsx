@@ -38,13 +38,15 @@ export default function InstallButton({
     <>
       <button
         type="button"
-        className={className}
+        className={["installAction", className].filter(Boolean).join(" ")}
         onClick={() => {
           void install();
           onDone?.();
         }}
       >
-        <i className="fas fa-download" aria-hidden="true" /> Install App
+        <span className="installAction-content">
+          <i className="fas fa-download" aria-hidden="true" /> Install App
+        </span>
       </button>
       {showSteps &&
         createPortal(

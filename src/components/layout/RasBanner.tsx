@@ -1,10 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { examOrder, examSeries, type ExamKey } from "@/lib/exam-series";
 import { CONTACT } from "@/lib/contact";
 import { EXAM_BANNER_OPEN_EVENT } from "@/lib/exam-banner";
+import { isPromoPopupOpen, PROMO_POPUP_CLOSED_EVENT } from "@/lib/promo-popup";
 
 const DISMISS_KEY = "atcExamBanner2026Closed";
 const OPEN_DELAY_MS = 6000;
@@ -24,6 +25,8 @@ export default function ExamSeriesBanner() {
   const [showForm, setShowForm] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+  // Set once the modal has been opened on demand, so the timed auto-open never re-pops it.
+  const openedOnDemand = useRef(false);
 
   const series = examSeries[exam];
   const track = series.tracks?.find((item) => item.key === trackKey) ?? series.tracks?.[0];
@@ -45,13 +48,27 @@ export default function ExamSeriesBanner() {
     } catch {
       // Private mode / blocked storage: just show the banner.
     }
-    const timer = setTimeout(() => setOpen(true), OPEN_DELAY_MS);
+    let timer = setTimeout(function tryOpen() {
+      // Don't stack on top of the festival offer popup; open shortly after it closes.
+      if (isPromoPopupOpen()) {
+        window.addEventListener(
+          PROMO_POPUP_CLOSED_EVENT,
+          () => {
+            timer = setTimeout(tryOpen, 2500);
+          },
+          { once: true },
+        );
+        return;
+      }
+      if (!openedOnDemand.current) setOpen(true);
+    }, OPEN_DELAY_MS);
     return () => clearTimeout(timer);
   }, []);
 
   // Open on demand from any CTA on the page.
   useEffect(() => {
     const onOpen = () => {
+      openedOnDemand.current = true;
       setShowForm(true);
       setStatus("idle");
       setMessage("");

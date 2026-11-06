@@ -310,3 +310,68 @@
 }
 
 .ras-know-more:hover { background: var(--primary); color: #fff; }
+
+/* ================================================================
+   FESTIVAL OFFER POPUP — image banner shown on site open
+   ================================================================ */
+.offer-popup-overlay{
+    position:fixed;
+    inset:0;
+    z-index:10060;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:rgba(8,20,30,.7);
+    -webkit-backdrop-filter:blur(4px);
+    backdrop-filter:blur(4px);
+    opacity:0;
+    visibility:hidden;
+    transition:opacity .35s ease, visibility .35s;
+}
+.offer-popup-overlay.open{ opacity:1; visibility:visible; }
+
+.offer-popup{
+    position:relative;
+    width:960px;
+    max-width:100%;
+    border-radius:14px;
+    overflow:hidden;
+    background:#fff8ee;
+    box-shadow:0 28px 70px rgba(8,20,30,.5), 0 4px 14px rgba(0,0,0,.2);
+    transform:translateY(18px) scale(.96);
+    opacity:0;
+    transition:transform .45s cubic-bezier(.16,1,.3,1), opacity .35s ease;
+}
+.offer-popup-overlay.open .offer-popup{ transform:none; opacity:1; }
+
+.offer-popup-link{ display:block; width:100%; padding:0; border:0; background:none; line-height:0; cursor:pointer; }
+.offer-popup-link img{ display:block; width:100%; height:auto; }
+
+.offer-popup-close{
+    position:absolute;
+    top:10px;
+    right:10px;
+    z-index:2;
+    width:36px;height:36px;
+    border:2px solid #fff;
+    border-radius:50%;
+    background:rgba(8,20,30,.78);
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+    transition:background .2s, transform .2s;
+}
+.offer-popup-close:hover{ background:#00374c; transform:rotate(90deg); }
+
+@media (max-width:600px){
+    .offer-popup-overlay{ padding:12px; }
+    .offer-popup{ border-radius:10px; }
+    .offer-popup-close{ top:6px; right:6px; width:30px; height:30px; font-size:13px; }
+}
+
+@media (prefers-reduced-motion:reduce){
+    .offer-popup-overlay, .offer-popup{ transition:none; }
+}

@@ -1,3 +1,4 @@
+import DiwaliOfferPopup from "@/components/layout/DiwaliOfferPopup";
 import EnquireProvider from "@/components/layout/EnquireProvider";
 import ExamSeriesBanner from "@/components/layout/RasBanner";
 import Footer from "@/components/layout/Footer";
@@ -25,6 +26,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <WhatsAppFloat />
           <ServiceWorker />
           <ExamSeriesBanner />
+          <DiwaliOfferPopup />
         </div>
       </EnquireProvider>
     </LanguageProvider>

@@ -366,9 +366,10 @@
 }
 .offer-popup-close:hover{ background:#00374c; transform:rotate(90deg); }
 
-@media (max-width:600px){
+@media (max-width:767px){
     .offer-popup-overlay{ padding:12px; }
-    .offer-popup{ border-radius:10px; }
+    /* Portrait 4:5 banner: never taller than the screen. */
+    .offer-popup{ width:min(100%, calc((100dvh - 24px) * .8)); border-radius:12px; }
     .offer-popup-close{ top:6px; right:6px; width:30px; height:30px; font-size:13px; }
 }
 

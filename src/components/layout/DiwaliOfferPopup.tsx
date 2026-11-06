@@ -1,17 +1,32 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import { openExamBanner } from "@/lib/exam-banner";
 import {
   DIWALI_OFFER_ENDS_AT,
   PROMO_POPUP_CLOSED_EVENT,
   PROMO_POPUP_OPEN_ATTR,
 } from "@/lib/promo-popup";
-import offerBanner from "../../../public/images/offers/diwali-offer-2026.png";
+import offerBannerDesktop from "../../../public/images/offers/diwali-offer-2026.png";
+import offerBannerMobile from "../../../public/images/offers/diwali-offer-2026-mobile.png";
 
 const DISMISS_KEY = "atcDiwaliOffer2026Closed";
 const OPEN_DELAY_MS = 500;
+/** Below this width the portrait mobile banner is shown instead of the wide one. */
+const MOBILE_QUERY = "(max-width: 767px)";
+
+const BANNER_ALT =
+  "Diwali discount: 10% off RAS Mains and RAS Foundation Course on registration up to 20 November 2026. Enroll now.";
+
+// Art direction: a wide banner for desktop/tablet, a portrait one for phones.
+const DESKTOP_SIZES = "(max-width: 1000px) 100vw, 960px";
+const {
+  props: { srcSet: desktopSrcSet },
+} = getImageProps({ src: offerBannerDesktop, alt: BANNER_ALT, sizes: DESKTOP_SIZES });
+const {
+  props: { srcSet: mobileSrcSet, ...mobileImgProps },
+} = getImageProps({ src: offerBannerMobile, alt: BANNER_ALT, sizes: "100vw", loading: "eager" });
 
 /**
  * Diwali discount banner that pops up as soon as the website opens.
@@ -90,13 +105,11 @@ export default function DiwaliOfferPopup() {
             openExamBanner();
           }}
         >
-          <Image
-            src={offerBanner}
-            alt="Diwali discount: 10% off RAS Mains and RAS Foundation Course on registration up to 20 November 2026. Enroll now."
-            sizes="(max-width: 1000px) 100vw, 960px"
-            priority
-            placeholder="blur"
-          />
+          <picture>
+            <source media={MOBILE_QUERY} srcSet={mobileSrcSet} />
+            <source srcSet={desktopSrcSet} sizes={DESKTOP_SIZES} />
+            <img {...mobileImgProps} alt={BANNER_ALT} />
+          </picture>
         </button>
       </div>
     </div>

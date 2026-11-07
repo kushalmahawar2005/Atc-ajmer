@@ -11,6 +11,10 @@ import { PIB_URL } from "./navigation";
 
 export const sliderImages = [
   {
+    src: "/images/slider/diwali-discount-2026-v2.webp",
+    alt: "Diwali discount: 10% off on registration for RAS Mains and RAS Foundation courses, register by 20 November 2026",
+  },
+  {
     src: "/images/slider/ras-mains-upcoming.webp",
     alt: "RAS Mains upcoming batch starting 10 December 2026",
   },
